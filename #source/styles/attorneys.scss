@@ -1,0 +1,206 @@
+@import 'variables';
+
+.attorney {
+
+    &__title {
+        padding-left: 20px;
+        position: relative;
+        color: #f0efef;
+        &:before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background-color: #d8d8d8;
+            left: 0;
+            top: 0;
+        }
+    }
+    &__subtitle {
+        display: block;
+        font-family: $mainFont;
+        font-size: 18px;
+        font-weight: 400;
+        color: #d8d8d8;
+        letter-spacing: 1px;
+    }
+
+    &__wrapper {
+        padding-top: 30px;
+    }
+
+    &__card {
+        width: 70%;
+    }
+
+    &__image {
+        width: 30%;
+        background-color: #ffffff;
+    }
+
+    &__spacer {
+        margin: 10px 0;
+    }
+
+    &__columns {
+        -webkit-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
+        -moz-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
+        box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
+    }
+
+    &__image-wrapper {
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+
+    &__image-wrapper {
+        img {
+            -webkit-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
+            -moz-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
+            box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
+        }
+    }
+
+    &__more {
+        margin: 30px 0 60px;
+    }
+    &__region {
+        padding-top: 10px;
+        border-top: 2px solid #e2e9f1;
+        margin: 20px 20px 0;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+    }
+}
+
+.card {
+    &__row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px 20px 10px 15px;
+        border: 1px solid #ffffff;
+        background-color: #f6f7f8;
+
+        &_top-margin {
+            margin-top: 20px;
+        }
+
+        &_white {
+            background-color: #ffffff;
+            padding: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+    }
+
+    &__title {
+        flex: 0 0 30%;
+        font-weight: 500;
+        color: #535353;
+
+        &_red {
+            color: $accentColor;
+        }
+    }
+
+    &__text {
+        flex: 0 0 70%;
+        text-align: left;
+        padding-left: 15px;
+        font-family: $mainFont;
+
+        &_for-images {
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+            &:after {
+                content: attr(data-reason);
+                display: inline-block;
+                position: absolute;
+                top: -13px;
+                left: 70px;
+                padding: 10px;
+                border: 1px solid #e2e9f1;
+                background-color: #ffffff;
+                border-radius: 10px;
+                -webkit-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
+                -moz-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
+                box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
+                opacity: 0;
+                max-width: 550px;
+                font-size: 14px;
+            }
+            &:hover:after {
+                opacity: 1;
+                transition: all 0.4s ease; 
+            }
+
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__logo-container {
+        height: 100px;
+        width: auto;
+        margin: 0 0 15px 10px;
+
+        img {
+            max-height: 100%;
+            width: auto;
+        }
+    }
+
+    &__graph-container {
+        color: red;
+    }
+}
+
+.spacer {
+    background-color: #e2e9f1;
+    padding: 15px 0;
+    text-align: center;
+
+    &__title {
+        color: $blue;
+        font-size: 19px;
+        text-transform: uppercase;
+    }
+}
+
+.more {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #e2e9f1;
+    // border: 2px solid #224e81;
+    box-shadow:0px 0px 15px 1px rgba(22, 43, 62, 0.55)inset;
+    -webkit-box-shadow:0px 0px 15px 1px rgba(22, 43, 62, 0.55)inset;
+    -moz-box-shadow:0px 0px 15px 1px rgba(22, 43, 62, 0.55)inset;
+
+    &__text {
+        color: $fontColor;
+        font-family: $mainFont;
+        font-weight: 400;
+        text-transform: uppercase;
+        &_big {
+            font-size: 18px;
+            font-weight: 500;
+            color: #162b3e;
+        }
+    }
+
+    &__link {
+        border-bottom: 1px dashed #162b3e;
+
+    }
+}
+
+

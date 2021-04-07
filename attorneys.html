@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="x-rim-auto-match" content="none">
-    <title>Патентный Поверенный ХХХ></title>
+    <title>Патентный Поверенный ХХХ</title>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
     <link href="" rel="canonical"/>
@@ -27,14 +27,14 @@
     <link rel="dns-prefetch" href="//google-analytics.com/">
 
     <link rel="stylesheet" href="styles/critical.css">
+    <link rel="stylesheet" href="styles/attorneys.css">
     <!--[if lt IE 9]>
     <script src="scripts/html5.js"></script> <![endif]-->
 
 </head>
 
 <body>
-    <header>
-
+    <header class="header">  
     </header>
 
     <main id="attorney">
@@ -43,8 +43,10 @@
             
             <div class="title-wrapper">
                 <div class="content-container">
-                    <p class="subtitle attorney__subtitle">патентный поверенный</p>
-                    <h1 class="title attorney__title">Иванова Иванна Ивановна</h1>
+                    <h1 class="title attorney__title">
+                        <span class="attorney__subtitle">патентный поверенный № XXX</span>
+                        Иванова Иванна Ивановна
+                    </h1>
                 </div>
             </div>
 
@@ -109,18 +111,14 @@
                             </div>
                             <div class="card__row card__row_top-margin">
                                 <div class="card__title card__title_red">ИСКЛЮЧЕН:</div>
-                                <div class="card__text card__text_for-images">
-                                    <img src="images/attorney-page/reshenie_suda.png" alt="По решению суда" title="По решению суда"> 
-                                    <img src="images/attorney-page/zayavlenie.png" alt="По заявлению патентного поверенного" title="По заявлению патентного поверенного">
-                                    <img src="images/attorney-page/death.png" alt="По причине смерти" title="По причине смерти">
+                                <div class="card__text card__text_for-images" data-reason="По решению суда">
+                                    <img src="images/attorney-page/isklyuchen.png" alt="По решению суда"> 
                                 </div> 
                             </div>
                             <div class="card__row">
                                 <div class="card__title card__title_red">ЖАЛОБА:</div>
-                                <div class="card__text card__text_for-images">
-                                    <img src="images/attorney-page/no-dogovor.png" alt="По решению суда" title="Ненадлежащее оформление отношений с клиентами"> 
-                                    <img src="images/attorney-page/ne-ispolnenie.png" alt="По заявлению патентного поверенного" title="Ненадлежащее исполнение обязательств по договору">
-                                    
+                                <div class="card__text card__text_for-images" data-reason="Ненадлежащее оформление отношений с клиентами">
+                                    <img src="images/attorney-page/zhaloba.png" alt="По решению суда">                                   
                                 </div> 
                             </div>
                             <div class="spacer attorney__spacer">
@@ -162,9 +160,9 @@
                                 <div class="card__text"></div> 
                             </div>
                             <div class="card__row card__row_white">
-                                <div class="card__graph-container">
+                                <a class="card__graph-container" data-fancybox="graph"  href="images/attorney-page/graph_1.png">
                                     <img src="images/attorney-page/graph_1.png" alt="">
-                                </div>
+                                </a>
                             </div>
                             <div class="card__row card__row_dark">
                                 <div class="card__title">Личная эффективность:</div>
@@ -175,11 +173,14 @@
                             <div class="attorney__image-wrapper">
                                 <img src="images/attorney-page/flag_ekb.jpg" alt="">
                             </div>
+                            <p class="attorney__region">
+                                Свердловская обл., г. Екатеринбург
+                            </p>
                         </div>
                     </div> 
                     <div class="attorney__more more">
-                        <p class="more__text">Ещё 1539 патентных поверенных в независимом рейтинге ХХХ</p>
-                        <p class="more__text">Смотрите <a class="more__link" href="#">рейтинг патентных поверенных</a></p>
+                        <p class="more__text">Ещё <span class="more__text_big">1539</span> патентных поверенных в независимом рейтинге ХХХ</p>
+                        <p class="more__text">Смотрите <a class="more__link more__text_big" href="#">рейтинг патентных поверенных</a></p>
                     </div>
                     </div> 
                 </div>
@@ -202,5 +203,9 @@
     <footer></footer>
 
 
-<link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/fancybox.min.css">
+    <script src="scripts/fancybox.min.js"></script>
+
 </body>
+</html>

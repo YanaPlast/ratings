@@ -1,64 +1,64 @@
 @charset "UTF-8";
-@import url("font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
-/* @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap'); */
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap");
+.footer {
+  background-color: #1b242d;
+  padding: 40px 0;
+  height: 90px;
+}
+
+.header {
+  height: 90px;
+  background-color: #f6f7f8;
+}
+
 /* font-family: 'EB Garamond', 'Times New Roman', serif;
 font-family: 'Bitter', 'Times New Roman', serif;
 font-family: 'EB Garamond', 'Times New Roman', serif;
 */
 /* @font-face {
-    font-family: 'Rubik';
+    font-family: 'Roboto';
     font-display: swap;
-    src: url("fonts/Rubik-Light.eot");
-    src: local("☺"),
-        url("fonts/Rubik-Light.woff2") format("woff2"),
-        url("fonts/Rubik-Light.woff") format("woff"), 
-        url("fonts/Rubik-Light.ttf") format("truetype"), 
-        url("fonts/Rubik-Light.svg") format("svg");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Rubik';
-    font-display: swap;
-    src: url("fonts/Rubik-Regular.eot");
-    src: local("☺"),
-        url("fonts/Rubik-Regular.woff2") format("woff2"),
-        url("fonts/Rubik-Regular.woff") format("woff"),
-        url("fonts/Rubik-Regular.ttf") format("truetype"),
-        url("fonts/Rubik-Regular.svg") format("svg");
+    src: url('fonts/Roboto-Regular.eot');
+    src: local('☺'),
+        url('fonts/Roboto-Regular.woff2') format('woff2'),
+        url('fonts/Roboto-Regular.woff') format('woff'),
+        url('fonts/Roboto-Regular.ttf') format('truetype'),
+        url('fonts/Roboto-Regular.svg') format('svg');
     font-weight: 400;
     font-style: normal;
-}
-
+} */
 @font-face {
-    font-family: 'Rubik';
-    font-display: swap;
-    src: url("fonts/Rubik-Medium.eot");
-    src: local("☺"), 
-        url("fonts/Rubik-Medium.woff2") format("woff2"),
-        url("fonts/Rubik-Medium.woff") format("woff"),
-        url("fonts/Rubik-Medium.ttf") format("truetype"),
-        url("fonts/Rubik-Medium.svg") format("svg");
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Rubik";
+  font-display: swap;
+  src: url("fonts/Rubik-Light.eot");
+  src: local("☺"), url("fonts/Rubik-Light.woff2") format("woff2"), url("fonts/Rubik-Light.woff") format("woff"), url("fonts/Rubik-Light.ttf") format("truetype"), url("fonts/Rubik-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
 }
-
 @font-face {
-    font-family: 'Rubik';
-    font-display: swap;
-    src: url("fonts/Rubik-Bold.eot");
-    src: local("☺"),
-        url("fonts/Rubik-Bold.woff2") format("woff2"),
-        url("fonts/Rubik-Bold.woff") format("woff"),
-        url("fonts/Rubik-Bold.ttf") format("truetype"),
-        url("fonts/Rubik-Bold.svg") format("svg");
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Rubik";
+  font-display: swap;
+  src: url("fonts/Rubik-Regular.eot");
+  src: local("☺"), url("fonts/Rubik-Regular.woff2") format("woff2"), url("fonts/Rubik-Regular.woff") format("woff"), url("fonts/Rubik-Regular.ttf") format("truetype"), url("fonts/Rubik-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
 }
- */
+@font-face {
+  font-family: "Rubik";
+  font-display: swap;
+  src: url("fonts/Rubik-Medium.eot");
+  src: local("☺"), url("fonts/Rubik-Medium.woff2") format("woff2"), url("fonts/Rubik-Medium.woff") format("woff"), url("fonts/Rubik-Medium.ttf") format("truetype"), url("fonts/Rubik-Medium.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  font-display: swap;
+  src: url("fonts/Rubik-Bold.eot");
+  src: local("☺"), url("fonts/Rubik-Bold.woff2") format("woff2"), url("fonts/Rubik-Bold.woff") format("woff"), url("fonts/Rubik-Bold.ttf") format("truetype"), url("fonts/Rubik-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
 ::-webkit-input-placeholder {
   opacity: 1;
 }
@@ -83,7 +83,7 @@ font-family: 'EB Garamond', 'Times New Roman', serif;
 
 body {
   position: relative;
-  font-family: "Rubik", Arial, sans-serif;
+  font-family: "Rubik", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
@@ -191,7 +191,7 @@ img {
 
 .button {
   display: inline-block;
-  font-family: "Rubik", Arial, sans-serif;
+  font-family: "Rubik", "Arial", sans-serif;
   font-size: 19px;
   line-height: 1.6;
   font-weight: 500;
@@ -242,148 +242,6 @@ img {
 }
 .title-wrapper:before {
   color: red;
-}
-
-/* ================================= Styles ===================================== */
-header {
-  height: 90px;
-  background-color: #f6f7f8;
-}
-
-.attorney__subtitle {
-  color: #d8d8d8;
-  padding-left: 30px;
-}
-.attorney__title {
-  color: #f0efef;
-}
-.attorney__subtitle, .attorney__title {
-  padding-left: 20px;
-  position: relative;
-}
-.attorney__subtitle:before, .attorney__title:before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 2px;
-  background-color: #d8d8d8;
-  left: 0;
-  top: 0;
-}
-.attorney__wrapper {
-  padding-top: 30px;
-}
-.attorney__card {
-  width: 70%;
-}
-.attorney__image {
-  width: 30%;
-  background-color: #ffffff;
-}
-.attorney__spacer {
-  margin: 10px 0;
-}
-.attorney__columns {
-  box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
-}
-.attorney__image-wrapper {
-  margin-top: 30px;
-  padding: 0 20px;
-}
-.attorney__image-wrapper img {
-  box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
-}
-.attorney__more {
-  margin: 30px 0 60px;
-}
-
-.card__row {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 10px 20px 10px 15px;
-  border: 1px solid #ffffff;
-  background-color: #f6f7f8;
-  /*         &_dark {
-              background-color: #6c7884;
-          } */
-}
-.card__row_top-margin {
-  margin-top: 20px;
-}
-.card__row_white {
-  background-color: #ffffff;
-  padding: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.card__title {
-  flex: 0 0 30%;
-  font-weight: 500;
-  color: #535353;
-  /*         &_white {
-              color: #ffffff;
-          } */
-}
-.card__title_red {
-  color: #fe0000;
-}
-.card__text {
-  flex: 0 0 70%;
-  text-align: left;
-  padding-left: 15px;
-}
-.card__text_for-images {
-  display: flex;
-  justify-content: flex-start;
-}
-.card__text_for-images img {
-  margin-right: 10px;
-}
-.card__logo-container {
-  height: 100px;
-  width: auto;
-  margin: 0 0 15px 10px;
-}
-.card__logo-container img {
-  max-height: 100%;
-  width: auto;
-}
-.card__graph-container {
-  color: red;
-}
-
-.spacer {
-  background-color: #e2e9f1;
-  padding: 15px 0;
-  text-align: center;
-}
-.spacer__title {
-  color: #162b3e;
-  font-size: 19px;
-  text-transform: uppercase;
-}
-
-.more {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
-  text-align: center;
-}
-.more__text {
-  color: #44566c;
-}
-.more__link {
-  color: #162b3e;
-  border-bottom: 1px dashed #162b3e;
-}
-
-.footer {
-  background-color: #1b242d;
-  padding: 40px 0;
-  height: 90px;
 }
 
 /* ===================== Media ======================================================= */
