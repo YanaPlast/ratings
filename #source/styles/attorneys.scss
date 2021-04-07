@@ -196,10 +196,11 @@
             color: #162b3e;
         }
     }
-
     &__link {
         border-bottom: 1px dashed #162b3e;
-
+    }
+    &__button {
+        margin: 20px 0 0 0;
     }
 }
 

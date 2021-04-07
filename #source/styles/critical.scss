@@ -8,19 +8,7 @@
 font-family: 'Bitter', 'Times New Roman', serif;
 font-family: 'EB Garamond', 'Times New Roman', serif;
 */
-
-/* @font-face {
-    font-family: 'Roboto';
-    font-display: swap;
-    src: url('fonts/Roboto-Regular.eot');
-    src: local('☺'),
-        url('fonts/Roboto-Regular.woff2') format('woff2'),
-        url('fonts/Roboto-Regular.woff') format('woff'),
-        url('fonts/Roboto-Regular.ttf') format('truetype'),
-        url('fonts/Roboto-Regular.svg') format('svg');
-    font-weight: 400;
-    font-style: normal;
-} */
+@import url("font-awesome.min.css");
 
 @font-face {
     font-family: 'Rubik';
@@ -71,6 +59,20 @@ font-family: 'EB Garamond', 'Times New Roman', serif;
     font-weight: 700;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'fontawesome';
+    font-display: swap;
+    src: url('fontawesome-webfont.eot');
+    src: local('☺'),
+        url('fontawesome-webfont.woff2') format('woff2'),
+        url('fontawesome-webfont.woff') format('woff'),
+        url('fontawesome-webfont.ttf') format('truetype'),
+        url('fontawesome-webfont.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
 
 ::-webkit-input-placeholder {opacity:1;}
 ::-moz-placeholder          {opacity:1;}/* Firefox 19+ */
@@ -182,22 +184,54 @@ img{
 .nowrap {
     white-space: nowrap;
 }
+.button-container {
+    display: block;
+    width: 100%;
+}
 .button {
     display: inline-block;
     font-family: $mainFont;
-    font-size: 19px;
+    font-size: 17px;
     line-height: 1.6;
-    font-weight: 500;
+    font-weight: 300;
     color: #ffffff;
-    padding: 15px;
-    background: #313940;
+    padding: 10px 30px;
+    background: #6c7884;
     text-align: center;
     cursor: pointer;
     outline: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-decoration: none;
+    transition: all 0.3s ease;
     &:hover {
-        background: #1d2328;
+        background: #545b63;
+        transition: all 0.3s ease;
+    }
+}
+.button_red {
+        background: #ff0000;
+        color: #ffffff;
+        font-weight: 500;
+    &:hover {
+        background: #a80101;
+    }
+}
+.button_arrowed {
+    position: relative;
+    padding-right: 40px;
+    &:after {
+        content: '\f054';
+        font-family: fontawesome;
+        position: absolute;
+        top: center;
+        transform: translate(0,1px);
+        right: 18px;
+        color: currentColor;
+        transition: all 0.3s ease;
+    }
+    &:hover:after {
+        transform: translate(10px,1px);
+        transition: all 0.3s ease;
     }
 }
 .title {

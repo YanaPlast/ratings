@@ -163,3 +163,6 @@
 .more__link {
   border-bottom: 1px dashed #162b3e;
 }
+.more__button {
+  margin: 20px 0 0 0;
+}
