@@ -1,20 +1,22 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
 @import url("font-awesome.min.css");
 .footer {
-  background-color: #1b242d;
+  background-color: #000000;
   padding: 40px 0;
   height: 90px;
 }
 
 .header {
-  height: 90px;
-  background-color: #f6f7f8;
+  height: 20px;
+  background-color: #d13030;
 }
 
 /* font-family: 'EB Garamond', 'Times New Roman', serif;
 font-family: 'Bitter', 'Times New Roman', serif;
 font-family: 'EB Garamond', 'Times New Roman', serif;
+font-family: 'Montserrat', 'Arial', sans-serif;
+font-family: 'Raleway', 'Arial', sans-serif;
 */
 @font-face {
   font-family: "Rubik";
@@ -84,7 +86,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
-  color: #44566c;
+  color: #444444;
   max-width: 100%;
   height: auto;
   overflow-x: hidden;
@@ -99,7 +101,7 @@ p {
 }
 
 a {
-  color: #5b5b5b;
+  color: #3f3f3f;
   text-decoration: none;
   outline: none;
   border: none;
@@ -212,13 +214,22 @@ img {
   transition: all 0.3s ease;
 }
 
+.button_green {
+  background-color: #1d7d7d;
+  font-weight: 400;
+}
+.button_green:hover {
+  background-color: #123f3f;
+}
+
 .button_red {
-  background: #ff0000;
+  background: linear-gradient(#cb2d3e, #ef473a);
   color: #ffffff;
   font-weight: 500;
 }
 .button_red:hover {
-  background: #a80101;
+  background: linear-gradient(#8d232e, #8b2922);
+  transition: all 0.3s ease;
 }
 
 .button_arrowed {
@@ -244,7 +255,7 @@ img {
   display: inline-block;
   position: relative;
   width: 100%;
-  font-family: "EB Garamond", "Times New Roman", serif;
+  font-family: "Raleway", "Arial", sans-serif;
   font-size: 35px;
   line-height: 1.5;
   font-weight: 500;
@@ -261,19 +272,20 @@ img {
   line-height: 1.5;
   letter-spacing: 1px;
   font-weight: 400;
-  color: #162b3e;
+  color: #000000;
   text-align: left;
   margin: 0;
   padding: 0 0 0 0;
 }
 
 .title-wrapper {
-  background-color: #162b3e;
+  background-color: #000000;
   padding: 30px 0;
-  font-family: "EB Garamond", "Times New Roman", serif;
+  font-family: "Raleway", "Arial", sans-serif;
 }
-.title-wrapper:before {
-  color: red;
+
+.link {
+  color: #1d7d7d;
 }
 
 /* ===================== Media ======================================================= */
