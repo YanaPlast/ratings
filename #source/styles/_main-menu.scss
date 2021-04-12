@@ -1,0 +1,16 @@
+.main-menu {
+    height: 70px;
+    border-bottom: 10px solid $accentColor;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+   &__list {
+        display: flex;
+        justify-content: flex-end;
+   }
+   &__item {
+       margin-right: 20px;
+       font-weight: 300;
+   }
+
+}

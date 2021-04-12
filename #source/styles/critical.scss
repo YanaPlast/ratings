@@ -1,6 +1,6 @@
 @import 'variables';
 @import 'footer'; // файл footer.css не будет создан 
-@import 'header';
+@import 'main-menu';
 // @import url("font-awesome.min.css");
 //@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap'); - был акцидентным. Википедия и госуслуги получились
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
@@ -119,9 +119,13 @@ a {
 ul, ol{
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 p, a, ul li, ol li, div{
     -webkit-text-size-adjust: 100%;
+}
+input {
+    padding: 0;
 }
 img{
     display: block;
@@ -207,6 +211,7 @@ img{
     text-transform: capitalize;
     text-decoration: none;
     transition: all 0.3s ease;
+    border: none;
     &:hover {
         background: #545b63;
         transition: all 0.3s ease;
@@ -220,8 +225,7 @@ img{
     }
 }
 .button_red {
-        // background: #ff0000;
-        background: $btnGrad2;
+        background-color: $accentColor;
         color: #ffffff;
         font-weight: 500;
     &:hover {
@@ -273,6 +277,13 @@ img{
     margin: 0;
     padding: 0 0 0 0;
 }
+.section-title {
+    font-family: $accentFont;
+    line-height: 1.3;
+    font-weight: 600;
+    font-size: 32px;
+
+}
 .title-wrapper {
     background-color: $baseColor;
     // background-image: $gradBlue2;
@@ -316,3 +327,4 @@ img{
     }
     
 }
+
