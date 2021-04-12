@@ -164,27 +164,27 @@
             flex-direction: column;
             align-items: flex-start;
             position: relative;
-            &:after {
-                content: attr(data-reason);
-                display: inline-block;
-                position: absolute;
-                top: -13px;
-                left: 70px;
-                padding: 10px;
-                border: 1px solid #e2e9f1;
-                background-color: #ffffff;
-                border-radius: 10px;
-                -webkit-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
-                -moz-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
-                box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
-                opacity: 0;
-                max-width: 550px;
-                font-size: 14px;
-            }
-            &:hover:after {
-                opacity: 1;
-                transition: all 0.4s ease; 
-            }
+            // &:after {
+            //     content: attr(data-reason);
+            //     display: inline-block;
+            //     position: absolute;
+            //     top: -13px;
+            //     left: 70px;
+            //     padding: 10px;
+            //     border: 1px solid #e2e9f1;
+            //     background-color: #ffffff;
+            //     border-radius: 10px;
+            //     -webkit-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
+            //     -moz-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
+            //     box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
+            //     opacity: 0;
+            //     max-width: 550px;
+            //     font-size: 14px;
+            // }
+            // &:hover:after {
+            //     opacity: 1;
+            //     transition: all 0.4s ease; 
+            // }
 
             img {
                 margin-right: 10px;
@@ -218,12 +218,14 @@
 }
 .tooltip {
     position: relative;
+    cursor: pointer;
+    display: inline-block;
     &:after {
         content: attr(data-reason);
         display: inline-block;
         position: absolute;
-        bottom: -40px;
-        right: 0;
+        top: 20px;
+        left: 30px;
         padding: 10px;
         border: 1px solid #e2e9f1;
         background-color: #ffffff;
@@ -234,6 +236,7 @@
         opacity: 0;
         max-width: 550px;
         font-size: 14px;
+        z-index: 999;
     }
     &:hover:after {
         opacity: 1;
