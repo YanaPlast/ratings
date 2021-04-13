@@ -56,7 +56,7 @@
                             на основе данных из открытых источников: с официальных сайтов Роспатента и ФИПС.
                             </p>
                             <p class="header__text">В реестре перечислены все <a href="">патентные поверенные РФ</a> с 1996 г.</p>
-                            <p  class="header__text">Данные актуальны. Последнее обновление - {12.04.2021 г.}</p>
+                            <!-- <p  class="header__text">Данные актуальны. Последнее обновление - {12.04.2021 г.}</p> -->
                         </div>
                     </div>
                     <div class="header__block">
@@ -88,8 +88,41 @@
                             </div>
                             <form class="search__form form">
                                 <input class="form__input" type="text" placeholder="ФИО или номер">
-                                <p class="form__undertext">расширенный поиск</p> 
+<!-- 
+                                <div class="select-wrapper">
+                                    <select class="form__input form__select" type="text" name="select-sphere" id="sphere" placeholder="Специализация" size="1">
+                                        <option value="all" selected>Любая</option>
+                                        <option value="znaki">Товарные знаки и знаки обслуживания</option>
+                                        <option value="region">Наименования мест происхождения товара</option>
+                                        <option value="izobretenia">Изобретения и полезные модели</option>
+                                        <option value="obrazcy">Промышленные образцы</option>
+                                        <option value="prog">Программы для ЭВМ, базы данных, топология интегральных схем</option>
+                                    </select>
+                                </div> -->
+
+                                <div class="form__more-hidden">
+                                    <div class="form__label">Специализация</div>
+                                    <div class="form__group dropdown">
+                                        <button class="form__dropdown dropdown__button">Любая</button>
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__list-item" data-value="all">Любая</li>
+                                            <li class="dropdown__list-item" data-value="znaki">Товарные знаки и знаки обслуживания</li>
+                                            <li class="dropdown__list-item" data-value="region">Наименования мест происхождения товара</li>
+                                            <li class="dropdown__list-item" data-value="izobretenia">Изобретения и полезные модели</li>
+                                            <li class="dropdown__list-item" data-value="obrazcy">Промышленные образцы</li>
+                                            <li class="dropdown__list-item" data-value="prog">Программы для ЭВМ, базы данных, топология интегральных схем</li>
+                                        </ul>
+                                        <input class="dropdown__input-hidden" type="text" name="select-category" value="">
+                                    </div>
+    
+                                    <div class="form__label">Регион</div>
+                                    <input class="form__input" type="text" placeholder="Начните вводить регион">
+                                </div>
+
+                                <p class="form__undertext">расширенный поиск</p>
+
                                 <input class="form__submit button button_red" type="submit" value="Найти">
+
                             </form>
                         </div> 
                         
@@ -202,6 +235,7 @@
         <script src="scripts/jquery.min.js"></script>
         <script src="scripts/list.js"></script>
         <script src="scripts/custom.js"></script>
+        <script src="scripts/dropdown.js"></script>
 
     </body>
 

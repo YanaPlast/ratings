@@ -93,7 +93,10 @@
 
 .form {
     width: 100%;
-    &__input {
+    position: relative;
+
+    &__input,
+    &__dropdown {
         width: 100%;
         border: 2px solid $fontColor;
         line-height: 20px;
@@ -102,6 +105,13 @@
         position: relative;
         padding-left: 15px;
         margin-bottom: 5px;
+        outline: none;
+        &:focus {
+            outline: none;
+            -webkit-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+            -moz-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+            box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+        }
     }
     &__undertext {
         font-size: 12px;
@@ -109,6 +119,12 @@
         color: #9e3737;
         padding: 10px;
         background-color: #ffffff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: #f7e5e5;
+            transition: all 0.3s ease;
+        }
         
     }
     &__submit {
@@ -118,6 +134,124 @@
         margin-top: 20px;
 
     }
+    &__select {
+        padding-right: 30px;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+    }
+    &__select::-ms-expand {
+        display: none;
+    }
+    &__label {
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+    &__more-hidden {
+        display: none;
+        // transform: translateY(-400px);
+        &_visible {
+            display: block;
+            // transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+    }
+
+}
+.dropdown {
+    position: relative;
+    &__button {
+        text-align: left;
+        cursor: pointer;
+        padding-right: 30px;
+        line-height: 1.2;
+        font-family: $mainFont;
+        color: $fontColor;
+        font-size: 13px;
+        outline: none;
+        &:focus,
+        &_active {
+            outline: none;
+            -webkit-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+            -moz-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+            box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+        }
+        &:after {
+            content: "";   
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);        
+            display: block;       
+            /* Рисуем треугольник */
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10.4px 6px 0 6px;
+            border-color: $accentColor transparent transparent transparent;       
+            /* Снимаем клик с треугольника */
+            pointer-events: none;
+            z-index: 999; 
+        }
+    }
+    &__list {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 52px;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        background: #FFFFFF;
+        -webkit-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+        -moz-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+        box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+        overflow: hidden;
+        width: 100%;
+        z-index: 1;
+        &_visible {
+            display: block;
+        }
+    }
+    &__list-item {
+        margin: 0;
+        padding: 0;
+        border: 1px solid #7E9BBD;
+        border-bottom: 0px;
+        padding: 13px 20px;
+        cursor: pointer;
+        font-size: 13px;
+        line-height: 1.2;
+        &:hover {
+            background: rgba(176, 198, 225, 0.26);
+        }
+    }
+    &__input-hidden {
+        display: none;
+    }
+}
+.select-wrapper {
+    position: relative;
+            &:before {
+            content: "";   
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);        
+            display: block;       
+            /* Рисуем треугольник */
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10.4px 6px 0 6px;
+            border-color: $accentColor transparent transparent transparent;       
+            /* Снимаем клик с треугольника */
+            pointer-events: none;
+            z-index: 999;
+        }
 }
 .columns {
     align-items: flex-start;

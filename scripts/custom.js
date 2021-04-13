@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+    // фильтр по алфавиту
     var options = {
         valueNames: ['firstName', 'lastName']
     };
@@ -22,4 +24,19 @@ $(document).ready(function() {
             }
         });
     });
+
+    // кнопка расширенный поиск
+    $('.form__undertext').on('click', function(){
+        $('.form__more-hidden').toggleClass('form__more-hidden_visible');
+        var textMore = $('.form__undertext').text();
+        console.log(textMore);
+        if (textMore === 'расширенный поиск') {
+            $('.form__undertext').text('свернуть');
+        } else {
+            $('.form__undertext').text('расширенный поиск');
+        }
+        
+    })
+
+
 });

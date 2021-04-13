@@ -246,10 +246,7 @@ img {
   color: #ffffff;
   font-weight: 500; }
   .button_red:hover {
-    background: -webkit-gradient(linear, left top, left bottom, from(#8d232e), to(#8b2922));
-    background: -webkit-linear-gradient(#8d232e, #8b2922);
-    background: -o-linear-gradient(#8d232e, #8b2922);
-    background: linear-gradient(#8d232e, #8b2922);
+    background-color: #a80101;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
