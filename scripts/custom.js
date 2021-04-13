@@ -7,9 +7,10 @@ $(document).ready(function() {
 
     var userList = new List('users', options);
 
-    $('.filter').click(function(e) {
+    $('.pagination__link').click(function(e) {
         e.preventDefault();
-
+        $('.pagination__link').removeClass('pagination__link_active');
+        $(this).addClass('pagination__link_active');
         // Получаем букву из текста ссылки-фильтра
         var letter = $(this).html();
 

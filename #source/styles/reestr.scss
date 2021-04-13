@@ -56,11 +56,12 @@
 }
 
 .search {
-    padding: 40px 0;
+    padding: 40px 0 0;
     &__block {
         background-color: #f1f1f1;
         padding: 20px 20px 20px 30px;
         width: 30%;
+        border: 3px solid $accentColor;
     }   
     &__title {
         margin-bottom: 20px;
@@ -70,6 +71,12 @@
         color: $accentColor;
         font-weight: 700;
         text-align: center;
+        text-align: left;
+        padding-left: 55px;
+        background-image: url(../images/reestr-page/search-icon.png);
+        background-repeat: no-repeat;
+        background-size: 15%;
+        background-position: 0 3px;
     }
     // &__subtitle {
     //     max-width: 80%;
@@ -257,36 +264,81 @@
     align-items: flex-start;
 }
 // pagination
-
-.filter-list {
-    padding-left: 0;
-    list-style: none;
-      
-    li {
-      display: inline-block;
-      
-      a {
-        padding: 5px 10px;
+.pagination {
+    &__filter-list {
+        padding-left: 0;
+        list-style: none;
+    }
+    &__filter {
+        display: inline-block;
+        margin-right: 1px;
+    } 
+    &__link {
+        // padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        width: 30px;
+        height: 25px;
         color: #fff;
         background-color: #212121;
         text-decoration: none;
         font-family: $mainFont;
         font-size: 14px;
-      }
-    }
-  }
+        line-height: 25px;
+        transition: all 0.3s ease;
+        border-radius: 3px;
+        outline: none;
+        &:hover {
+            // padding: 7px 12px;
+            transform: scale(1.1);
+            background-color: #162b3e;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        &_active {
+            background-color: $accentColor;
+            transform: scale(1.2);
+            transition: all 0.3s ease;
+            outline: none;
+            &:hover {
+                background-color: $accentColor;
+                transform: scale(1.2);
+                transition: all 0.3s ease;
+            }
+            
+        }
+    } 
+ 
+}
+
   
-  .list {
+.list {
     font-family: $mainFont;
     font-size: 14px;
-    margin: 0;
-    padding: 20px 0 0;
-  }
-  .list > li {
-    display:block;
-    background-color: #eee;
-    padding:5px 0 5px 20px;
-    // box-shadow: inset 0 1px 0 #fff;
-  }
+    margin: 15px 0 0 0;
+    padding: 10px 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #eeeeee;;
+    &__item {
+        flex: 0 0 50%;
+        display:block;
+        padding:5px 0 5px 20px;
+        cursor: default;   
+        &:hover {
+            .firstName, .lastName {
+                color: #1d7d7d;
+                border-color: 1px dashed #1d7d7d;
+            }
+        }
+    }
+ }
+ 
+.firstName,
+.lastName {
+    cursor: pointer;
+    border-bottom: 1px dashed $fontColor;
+}
 
  
