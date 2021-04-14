@@ -23,8 +23,9 @@
         <link rel="preload" href="styles/fonts/Rubik-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
         <link rel="preload" href="styles/fonts/Rubik-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
         <link rel="preload" href="styles/fonts/Rubik-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="styles/font-awesome.min.css"> -->
-    
+        <link rel="stylesheet" href="styles/font-awesome.min.css">
+        <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="dns-prefetch" href="//yastatic.net/">
         <link rel="dns-prefetch" href="//google-analytics.com/">
     
@@ -39,12 +40,20 @@
         <header class="header">
             <div class="main-menu">
                 <div class="content-container">
-                    <ul class="main-menu__list">
-                        <li class="main-menu__item">Главная</li>
-                        <li class="main-menu__item">О нас</li>
-                        <li class="main-menu__item">Реестр</li>
-                        <li class="main-menu__item">Справка</li>
-                    </ul>
+                    <div class="main-menu__wrapper">
+                        <div class="main-menu__searching searching">
+                            <form class="searching__form">
+                                <input class="searching__input" type="text" placeholder="Искать по фамилии, номеру, специализации...">
+                                <button class="searching__btn" type="submit"></button>
+                              </form>
+                        </div>
+                        <ul class="main-menu__list">
+                            <li class="main-menu__item">Главная</li>
+                            <li class="main-menu__item">О нас</li>
+                            <li class="main-menu__item">Реестр</li>
+                            <li class="main-menu__item">Справка</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="content-container">
