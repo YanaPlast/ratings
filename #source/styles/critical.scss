@@ -216,6 +216,16 @@ img{
         background: #545b63;
         transition: all 0.3s ease;
     }
+    &_white {
+        background-color: #ffffff;
+        color: $accentColor;
+        font-weight: 600;
+    }
+    &_black {
+        background-color: #000000;
+        color: #ffffff;
+        font-weight: 600;  
+    }
 }
 .button_green {
     background-color: #1d7d7d;
@@ -234,6 +244,7 @@ img{
         transition: all 0.3s ease;
     }
 }
+
 .button_arrowed {
     position: relative;
     padding-right: 40px;

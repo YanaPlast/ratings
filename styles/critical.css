@@ -234,6 +234,14 @@ img {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
+  .button_white {
+    background-color: #ffffff;
+    color: #d13030;
+    font-weight: 600; }
+  .button_black {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 600; }
 
 .button_green {
   background-color: #1d7d7d;

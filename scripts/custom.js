@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     // фильтр по алфавиту
     var options = {
-        valueNames: ['firstName', 'lastName']
+        valueNames: ['lastName','firstName']
     };
 
     var userList = new List('users', options);
@@ -16,7 +16,7 @@ $(document).ready(function() {
 
         userList.filter(function(item) {
             // Получаем первую букву имени
-            var l = item.values().firstName.charAt(0);
+            var l = item.values().lastName.charAt(0);
 
             if (l === letter) {
                 return true;

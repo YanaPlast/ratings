@@ -106,14 +106,18 @@
 .search {
     padding: 40px 0 0;
     &__block {
-        background-color: #f9f9f9;
+        //background-color: #f9f9f9;
+        background-color: $accentColor;
         padding: 20px 20px 20px 30px;
         width: 30%;
-        border: 3px solid $accentColor;
+        // border: 3px solid $accentColor;
+        color: #ffffff;
     }   
     &__title {
         margin-bottom: 20px;
+        padding-bottom: 15px;
         font-size: 20px;
+        line-height: 1.5;
         font-family: $accentFont;
         text-transform: uppercase;
         color: $accentColor;
@@ -121,10 +125,12 @@
         text-align: center;
         text-align: left;
         padding-left: 55px;
-        background-image: url(../images/reestr-page/search-icon.png);
+        background-image: url(../images/reestr-page/search-icon-white.png);
         background-repeat: no-repeat;
         background-size: 15%;
         background-position: 0 3px;
+        color: #ffffff;
+        border-bottom: 2px solid #000000;
     }
     // &__subtitle {
     //     max-width: 80%;
@@ -153,7 +159,7 @@
     &__input,
     &__dropdown {
         width: 100%;
-        border: 2px solid $fontColor;
+        // border: 2px solid $fontColor;
         line-height: 20px;
         height: 50px;
         background-color: #ffffff;
@@ -161,6 +167,7 @@
         padding-left: 15px;
         margin-bottom: 5px;
         outline: none;
+        border: none;
         &:focus {
             outline: none;
             -webkit-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
@@ -169,22 +176,24 @@
         }
     }
     &__undertext {
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
-        color: #9e3737;
-        padding: 10px;
-        background-color: #ffffff;
+        // color: #9e3737;
+        // padding: 10px;
+        // background-color: #ffffff;
+        color: #ffffff;
+        font-weight: 300;
         cursor: pointer;
         transition: all 0.3s ease;
-        &:hover {
-            background-color: #f7e5e5;
-            transition: all 0.3s ease;
-        }
+        // &:hover {
+        //     background-color: #f7e5e5;
+        //     transition: all 0.3s ease;
+        // }
         
     }
     &__submit {
         width: 100%;
-        color: #ffffff;
+        // color: #ffffff;
         width: 100%;
         margin-top: 20px;
 
@@ -249,7 +258,7 @@
             border-color: $accentColor transparent transparent transparent;       
             /* Снимаем клик с треугольника */
             pointer-events: none;
-            z-index: 999; 
+            z-index: 10; 
         }
     }
     &__list {
@@ -266,7 +275,7 @@
         box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
         overflow: hidden;
         width: 100%;
-        z-index: 1;
+        z-index: 20;
         &_visible {
             display: block;
         }
@@ -280,6 +289,7 @@
         cursor: pointer;
         font-size: 13px;
         line-height: 1.2;
+        color: $fontColor;
         &:hover {
             background: rgba(176, 198, 225, 0.26);
         }
