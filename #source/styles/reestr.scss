@@ -107,7 +107,8 @@
     padding: 40px 0 0;
     &__block {
         //background-color: #f9f9f9;
-        background-color: $accentColor;
+        // background-color: $accentColor;
+        background-color: #ff5d5d;
         padding: 20px 20px 20px 30px;
         width: 30%;
         // border: 3px solid $accentColor;
@@ -130,7 +131,7 @@
         background-size: 15%;
         background-position: 0 3px;
         color: #ffffff;
-        border-bottom: 2px solid #000000;
+        border-bottom: 2px solid #3b3232;
     }
     // &__subtitle {
     //     max-width: 80%;
@@ -147,7 +148,6 @@
     }
     &__pagination {
         width: 67%;
-
     }
 }
 
@@ -179,16 +179,19 @@
         font-size: 14px;
         text-align: center;
         // color: #9e3737;
-        // padding: 10px;
+        padding: 10px;
         // background-color: #ffffff;
         color: #ffffff;
         font-weight: 300;
         cursor: pointer;
         transition: all 0.3s ease;
-        // &:hover {
-        //     background-color: #f7e5e5;
-        //     transition: all 0.3s ease;
-        // }
+        border: 1px solid #ffffff;
+        margin-top: 5px;
+        &:hover {
+            //  background-color: #fd7878;
+             transition: all 0.3s ease;
+             border: 1px solid rgba(255, 255, 255, 0.5);
+         }
         
     }
     &__submit {

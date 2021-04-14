@@ -242,6 +242,8 @@ img {
     background-color: #000000;
     color: #ffffff;
     font-weight: 600; }
+    .button_black:hover {
+      background-color: #3a3535; }
 
 .button_green {
   background-color: #1d7d7d;

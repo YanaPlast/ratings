@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     // фильтр по алфавиту
     var options = {
-        valueNames: ['lastName','firstName']
+        valueNames: ['firstName', 'lastName']
     };
 
     var userList = new List('users', options);

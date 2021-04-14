@@ -225,6 +225,9 @@ img{
         background-color: #000000;
         color: #ffffff;
         font-weight: 600;  
+        &:hover {
+            background-color: #3a3535;
+        }
     }
 }
 .button_green {
