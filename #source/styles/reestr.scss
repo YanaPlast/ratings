@@ -1,5 +1,4 @@
 @import 'variables';
-@import url("font-awesome.min.css");
 
 .header {
     background-image: url(../images/reestr-page/header-bg.jpg);
@@ -55,64 +54,28 @@
         }
     }
 }
-.main-menu {
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    } 
-}
-.searching {
-    flex: 0 0 70%;
-    text-align: right;
-    &__form {
-        position: relative;
-        width: 400px;
-        margin: 0 0 0 auto; 
-        display: flex;
-        align-items: center;  
-    }
-    &__input,
-    &__btn {
-        outline: none;
-        border: none;
-    }
-    &__input {
-        width: 100%;
-        height: 32px;
-        background: #ffffff;
-        padding-left: 15px;
-        border-radius: 10px;
-        border: 2px solid $accentColor;
-    }
-    &__btn {
-        height: 18px;
-        width: 30px;
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        background: transparent;
-        cursor: pointer;
-        background-image: url(../images/reestr-page/search-icon.png);
-        background-repeat: no-repeat;
-        background-size: 58%;
-        background-position: center;
-    }
-    ::-webkit-input-placeholder {opacity:1; color: #7c7b7b; font-family: $mainFont; font-weight: 400;}
-    ::-moz-placeholder          {opacity:1; color: $accentColor;}/* Firefox 19+ */
-    :-moz-placeholder           {opacity:1; color: $accentColor;}/* Firefox 18- */
-    :-ms-input-placeholder      {opacity:1; color: $accentColor;}
-}
+
 .search {
     padding: 40px 0 0;
     &__block {
         //background-color: #f9f9f9;
         // background-color: $accentColor;
-        background-color: #ff5d5d;
+        background-color: transparent;
         padding: 20px 20px 20px 30px;
         width: 30%;
         // border: 3px solid $accentColor;
         color: #ffffff;
+        position: relative;
+        &:before {
+            content: '';
+            z-index: -1;
+            background-color: rgba(209, 48, 48, 1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }   
     &__title {
         margin-bottom: 20px;
@@ -293,6 +256,7 @@
         font-size: 13px;
         line-height: 1.2;
         color: $fontColor;
+        position: relative;
         &:hover {
             background: rgba(176, 198, 225, 0.26);
         }
@@ -332,7 +296,9 @@
     }
     &__filter {
         display: inline-block;
-        margin-right: 1px;
+        margin-right: 3px;
+        width: 30px;
+        height: 25px;
     } 
     &__link {
         // padding: 5px 10px;
@@ -405,4 +371,67 @@
     border-bottom: 1px dashed $fontColor;
 }
 
- 
+ .slider {
+    padding-left: 35px;
+    width: 330px;
+	position: relative;
+	margin: 0 auto 0 0;
+    &__viewport {
+        width: 100%;
+        border: 1px solid #000000;
+        display: table;
+        position: relative;
+        overflow: hidden;	
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+     &__wrapper {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        width: calc(100%*4);
+        -webkit-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s;
+        -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+     }
+     &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        width: 30px;
+        height: 25px;
+        color: #fff;
+        background-color: #212121;
+        text-decoration: none;
+        font-family: $mainFont;
+        font-size: 14px;
+        line-height: 25px;
+        transition: all 0.3s ease;
+        border-radius: 3px;
+        outline: none;
+        position: absolute;
+        &_next {
+            top: 0;
+            right: -35px;
+        }
+        &_prev {
+            top: 0;
+            left: -35px;
+        }
+        &:hover {
+            // padding: 7px 12px;
+            transform: scale(1.1);
+            background-color: #162b3e;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+     }
+ }

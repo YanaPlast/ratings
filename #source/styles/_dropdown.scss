@@ -1,0 +1,87 @@
+@import 'variables';
+
+.dropdown {
+    position: relative;
+    &__button {
+        width: 100%;
+        // border: 2px solid $fontColor;
+        height: 50px;
+        background-color: #ffffff;
+        position: relative;
+        padding-left: 15px;
+        padding-right: 30px;
+        margin-bottom: 5px;
+        outline: none;
+        border: none;
+        text-align: left;
+        cursor: pointer;      
+        line-height: 1.2;
+        font-family: $mainFont;
+        color: $fontColor;
+        font-size: 13px;
+        &:focus,
+        &_active {
+            outline: none;
+            -webkit-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+            -moz-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+            box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+        }
+        &:after {
+            content: "";   
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);        
+            display: block;       
+            /* Рисуем треугольник */
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10.4px 6px 0 6px;
+            border-color: $accentColor transparent transparent transparent;       
+            /* Снимаем клик с треугольника */
+            pointer-events: none;
+            z-index: 10; 
+        }
+    }
+    &__list {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 52px;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        background: #FFFFFF;
+        -webkit-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+        -moz-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+        box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+        overflow: hidden;
+        width: 100%;
+        z-index: 20;
+        &_visible {
+            display: block;
+        }
+    }
+    &__list-item {
+        margin: 0;
+        padding: 0;
+        border: 1px solid #7E9BBD;
+        border-bottom: 0px;
+        padding: 13px 20px;
+        cursor: pointer;
+        font-size: 13px;
+        line-height: 1.2;
+        color: $fontColor;
+        position: relative;
+        &:hover {
+            background: rgba(176, 198, 225, 0.26);
+        }
+        &:last-child {
+            border-bottom: 1px solid #7E9BBD;
+        }
+    }
+    &__input-hidden {
+        display: none;
+    }
+}

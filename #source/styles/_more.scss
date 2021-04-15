@@ -1,0 +1,25 @@
+.more {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #ffffff;
+    &__text {
+        color: $fontColor;
+        font-family: $mainFont;
+        font-weight: 400;
+        text-transform: uppercase;
+        &_big {
+            font-size: 18px;
+            font-weight: 500;
+            color: #162b3e;
+        }
+    }
+    &__link {
+        border-bottom: 1px dashed #162b3e;
+    }
+    &__button {
+        margin: 20px 0 0 0;
+    }
+}

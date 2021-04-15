@@ -27,6 +27,76 @@
     margin-right: 20px;
     font-weight: 300; }
 
+.main-menu__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.searching {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
+  text-align: right;
+  /* Firefox 19+ */
+  /* Firefox 18- */ }
+  .searching__form {
+    position: relative;
+    width: 400px;
+    margin: 0 0 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .searching__input, .searching__btn {
+    outline: none;
+    border: none; }
+  .searching__input {
+    width: 100%;
+    height: 32px;
+    background: #ffffff;
+    padding-left: 15px;
+    border-radius: 10px;
+    border: 2px solid #d13030; }
+  .searching__btn {
+    height: 18px;
+    width: 30px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: transparent;
+    cursor: pointer;
+    position: relative; }
+    .searching__btn:after {
+      content: "\f002";
+      position: absolute;
+      right: 30px;
+      bottom: 5px;
+      font-size: 20px;
+      font-family: fontAwesome;
+      color: #d13030; }
+  .searching ::-webkit-input-placeholder {
+    opacity: 1;
+    color: #7c7b7b;
+    font-family: "Rubik", "Arial", sans-serif;
+    font-weight: 400; }
+  .searching ::-moz-placeholder {
+    opacity: 1;
+    color: #d13030; }
+  .searching :-moz-placeholder {
+    opacity: 1;
+    color: #d13030; }
+  .searching :-ms-input-placeholder {
+    opacity: 1;
+    color: #d13030; }
+
 /* font-family: 'EB Garamond', 'Times New Roman', serif;
 font-family: 'Bitter', 'Times New Roman', serif;
 font-family: 'EB Garamond', 'Times New Roman', serif;
@@ -323,6 +393,15 @@ img {
 
 .link {
   color: #1d7d7d; }
+
+.box-wrapper {
+  background-color: #ffffff;
+  padding: 20px 20px;
+  -webkit-box-shadow: 0 5px 10px -2px rgba(48, 71, 88, 0.25);
+  -moz-box-shadow: 0 5px 10px -2px rgba(48, 71, 88, 0.25);
+  box-shadow: 0 5px 10px -2px rgba(48, 71, 88, 0.25); }
+  .box-wrapper_top-margined {
+    margin-top: 10px; }
 
 /* ===================== Media ======================================================= */
 @media (max-width: 1279px) and (min-width: 980px) {

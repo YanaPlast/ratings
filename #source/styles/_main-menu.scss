@@ -14,3 +14,63 @@
    }
 
 }
+.main-menu {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } 
+}
+.searching {
+    flex: 0 0 70%;
+    text-align: right;
+    &__form {
+        position: relative;
+        width: 400px;
+        margin: 0 0 0 auto; 
+        display: flex;
+        align-items: center;  
+    }
+    &__input,
+    &__btn {
+        outline: none;
+        border: none;
+    }
+    &__input {
+        width: 100%;
+        height: 32px;
+        background: #ffffff;
+        padding-left: 15px;
+        border-radius: 10px;
+        border: 2px solid $accentColor;
+    }
+    &__btn {
+        height: 18px;
+        width: 30px;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: transparent;
+        cursor: pointer;
+        position: relative;
+        // background-image: url(../images/reestr-page/search-icon.png);
+        // background-repeat: no-repeat;
+        // background-size: 58%;
+        // background-position: center;
+        &:after {
+            content: "\f002";
+            position: absolute;
+            right: 30px;
+            bottom: 5px;
+            font-size: 20px;
+            font-family: fontAwesome;
+            color: $accentColor;
+
+        }
+    }
+
+    ::-webkit-input-placeholder {opacity:1; color: #7c7b7b; font-family: $mainFont; font-weight: 400;}
+    ::-moz-placeholder          {opacity:1; color: $accentColor;}/* Firefox 19+ */
+    :-moz-placeholder           {opacity:1; color: $accentColor;}/* Firefox 18- */
+    :-ms-input-placeholder      {opacity:1; color: $accentColor;}
+}
