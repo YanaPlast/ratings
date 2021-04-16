@@ -148,13 +148,38 @@ function prevSlide(){
 
     // Кнопка "Подробнее"
     $('.button-more span').on('click', function () {
-        console.log('Hello');
         $(this).closest('.feedback__text').find('.more-text').toggleClass('more-text_hidden');
         if ($(this).closest('.feedback__text').find('.more-text').hasClass('more-text_hidden')) {
             $(this).text('Подробнее...');
         } else {
             $(this).text('Свернуть');
         }
+    });
+
+    // скрытие формы отзыва
+
+    $('.leave-feedback-btn').on('click', function () {
+        console.log('hello');
+        var feedbackForm = $('.raitings__feedback-form');
+        feedbackForm.toggleClass('raitings__feedback-form_hidden');
+        if(feedbackForm.hasClass('raitings__feedback-form_hidden')){
+            $(this).text('Добавить Отзыв');
+        } else {
+            $(this).text('Написать позже');
+        }
+    });    
+
+    $('.b-readmore').readmore({
+        ellipsis: '[...]',
+        textOpen: 'Открыть',
+        textClose: 'Закрыть',
+        callback: function(self, state) {
+            state
+                ? self.css('background', '#e74c3c')
+                : self.css('background', '#3498db');
+        },
+        brief: 500,
+        addition: 100
     });
 
 });

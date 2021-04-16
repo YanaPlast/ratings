@@ -40,18 +40,18 @@
             <div class="main-menu">
                 <div class="content-container">
                     <div class="main-menu__wrapper">
-                        <div class="main-menu__searching searching">
-                            <form class="searching__form">
-                                <input class="searching__input" type="text" placeholder="Искать по фамилии, номеру, специализации...">
-                                <button class="searching__btn" type="submit"></button>
-                              </form>
-                        </div>
                         <ul class="main-menu__list">
                             <li class="main-menu__item">Главная</li>
                             <li class="main-menu__item">О нас</li>
                             <li class="main-menu__item">Реестр</li>
                             <li class="main-menu__item">Справка</li>
                         </ul>
+                        <div class="main-menu__searching searching">
+                            <form class="searching__form">
+                                <input class="searching__input" type="text" placeholder="Искать по фамилии, номеру, специализации...">
+                                <button class="searching__btn" type="submit"></button>
+                              </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                     <!-- <div class="otzyvy__top"> -->
                     <div class="otzyvy__columns columns">
                         <div class="otzyvy__info">
-                            <h1 class="title otzyvy__title">Отзывы о патентном поверенном<br><b>Ивановой Иванне Ивановне</b></h1>
+                            <h1 class="title otzyvy__title">Отзывы о патентном поверенном № 100500<br><b>Иванова Иванна Ивановна</b></h1>
 
                             <div class="otzyvy__raitings raitings columns">
 
@@ -85,11 +85,12 @@
                                             <div class="star"></div>
                                             <div class="star"></div>
                                         </div>
-                                        <p class="raitings__title">/ {N} отзывов</p>
+                                        <p class="raitings__title">/ {4.8} </p>
+                                        <p class="raitings__title">Рекомендуют {X}% клиентов</p>    
                                     </div>
-                                    <div class="box-wrapper box-wrapper_top-margined">
-                                        <p class="raitings__title">Рекомендуют {X}% клиентов</p>
-                                    </div>
+                                    <!-- <div class="raitings__button-container button-container">
+                                        <div class="button button__outline button__outline_red">Добавить отзыв</div>
+                                    </div> -->
                                 </div>
                                 
                                 <div class="raitings__graphs">
@@ -102,15 +103,78 @@
                                 </div>
 
                             </div>
+                            <div class="raitings__button-container button-container">
+                                <div class="button button__outline button__outline_black leave-feedback-btn">Добавить отзыв</div>
+                            </div>
                         </div>
 
                         <div class="otzyvy__more more box-wrapper">
-                            <p class="more__text">Ещё <span class="more__text_big">1539</span> патентных поверенных в независимом рейтинге ХХХ</p>
+                            <p class="more__text otzyvy__more_white">Ещё <span class="more__text_big otzyvy__more_white">1539</span> патентных поверенных в независимом рейтинге ХХХ</p>
                             <div class="button-container">
                                 <a class="button button_red button_arrowed more__button">Смотреть рейтинг</a>
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="raitings__feedback-form raitings__feedback-form_hidden feedback-form box-wrapper">
+                        <div class="feedback-form__head">Написать отзыв</div>
+
+                        <form action="#" id="feedbackForm" method="post">
+
+                            <div class="feedback-form__row">
+                                <label class="feedback-form__title" for="name-input">
+                                        <p>Имя *</p>
+                                </label>
+                                <div class="feedback-form__field">
+                                    <input class="feedback-form__input" id="name-input" name="name-input" type="text" required placeholder="Введите имя">
+                                </div>
+                            </div>
+
+                            <div class="feedback-form__row">
+                                <label class="feedback-form__title" for="feedback-textarea">
+                                    <p>Отзыв *</p>
+                                </label>
+                                <div class="feedback-form__field">
+                                    <textarea class="feedback-form__textarea" id="feedback-textarea" placeholder="Введите текст вашего отзыва" required name="feedback-textarea" rows="5"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="feedback-form__row">
+                                <label class="feedback-form__title" for="advant-input">
+                                    <p>Достоинства</p>
+                                </label>
+                                <div class="feedback-form__field">
+                                    <input class="feedback-form__input" id="advant-input" name="advant-input" type="text" required placeholder="Достоинства патентного поверенного">   
+                                </div>
+                            </div>
+
+                            <div class="feedback-form__row">
+                                <label class="feedback-form__title" for="disadv-input">Недостатки</label>
+                                <div class="feedback-form__field">
+                                    <input class="feedback-form__input" id="disadv-input" name="disadv-input" type="text" required placeholder="Недостатки патентного поверенного">   
+                                </div>
+                            </div>
+                            <div class="feedback-form__row feedback-form__row_margined">
+                                <div class="feedback-form__title">
+                                    <p>Оценка</p>
+                                </div>
+                                <div class="feedback-form__field">
+                                        <div class="star star_mini"></div>
+                                        <div class="star star_mini"></div>
+                                        <div class="star star_mini"></div>
+                                        <div class="star star_mini"></div>
+                                        <div class="star star_mini"></div>
+                                  </div>
+                            </div>
+                            <div class="feedback-form__button-container button-container">
+                                <div class="button button__outline button__outline_black">Отправить</div>
+                            </div>
+                        </form>
+                        
+                    </div>
+
+
                     <!-- </div> -->
 
                 </div> <!-- end of content-container -->
@@ -171,9 +235,10 @@
                                     </div>
                                     <div class="feedback__author">Труфакин Николай</div>
                                 </div>
-                                <div class="feedback__text">
-                                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Это великий вдали они на берегу обеспечивает сих раз, ручеек ее.</p>
-                                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты.</p>
+                                <div class="feedback__text clump">
+                                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Это великий вдали они на берегу обеспечивает сих раз, ручеек ее. Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Меня снова своих все ее собрал за, эта пустился, безорфографичный запятой точках взгляд там пояс образ. Всемогущая первую образ текста свое дороге, это ему! Решила маленький рот однажды запятой предупреждал!
+                                        Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Меня снова своих все ее собрал за, эта пустился, безорфографичный запятой точках взгляд там пояс образ. Всемогущая первую образ текста свое дороге, это ему! Решила маленький рот однажды запятой предупреждал!
+                                    </p>
                                 </div>     
                             </div>
 
@@ -267,14 +332,40 @@
                     </div> <!-- end of content-container -->
                 </div>             
             </div> 
+<!-- 
+
+            <div class="b-readmore" style="padding-bottom: 40px;">
+                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Имени назад моей переписали, лучше жаренные от всех предложения lorem, вдали ipsum своих до послушавшись! Свой за ручеек речью, запятой о живет предупредила рукопись наш ipsum путь. Вопрос ты решила, щеке образ они родного использовало даль имеет лучше живет снова своего букв реторический свое мир своих! Толку буквоград рыбного города своих, страну великий свой правилами языкового запятых. Безопасную переписали он продолжил языком? Это заманивший щеке алфавит семь ему текст злых грамматики назад от всех строчка. Щеке семантика запятой первую от всех всемогущая что рыбного наш свою. Предупреждал большого первую, встретил буквенных, парадигматическая языком маленькая живет несколько переписывается коварный свой раз, буквоград назад ведущими алфавит агентство послушавшись щеке толку рыбными. Большого над океана которое пустился имеет раз что семантика пунктуация не. Оксмокс грамматики он не сих парадигматическая большой себя, свой вопроса города речью меня, языкового океана о агентство толку. Предложения, моей переулка? Агентство рукопись коварный ipsum наш, мир но предупредила? Взгляд текстами скатился рекламных злых? Коварный взобравшись океана маленький безопасную его ему lorem сбить семь на берегу деревни обеспечивает гор ведущими пунктуация реторический, рукопись переписали города меня свой свое? Пунктуация, ты но путь живет большого напоивший речью предупредила раз коварных, образ свою lorem буквенных маленький?
+            </div> -->
+
+            <div class="others">
+                <div class="content-container">
+                    <div class="others__title">
+                        <p>Отзывы о других поверенных</p>
+                    </div>
+                    <div class="others__body">
+                        <ul class="others__list">
+                            <li class="others__item"><a class="others__link">Юридическая компания "Давыдов и Партнёры" (Россия, Москва)</a></li>
+                            <li class="others__item"><a class="others__link">Юридическая компания "Партнёр" (Россия, Москва)</a></li>
+                            <li class="others__item"><a class="others__link">Юридическая компания "Репутация" (Россия, Москва)</a></li>
+                            <li class="others__item"><a class="others__link">Юридическая компания "Многофункциональный правовой центр" (Россия, Москва)</a></li>
+                            <li class="others__item"><a class="others__link">Юридический холдинг "Архипов и партнёры" (Россия, Москва)</a></li>
+                            <li class="others__item"><a class="others__link">Юридическая компания "Закон и право" (Россия, Москва)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
         </main>
-        <footer class="footer"></footer>
+        <footer class="footer">
+
+        </footer>
 
         <script src="scripts/jquery.min.js"></script>
         <script src="scripts/list.js"></script>
         <script src="scripts/custom.js"></script>
         <script src="scripts/dropdown.js"></script>
+        <script src="scripts/readmore-symbols.js"></script>
        
     </body>
 
