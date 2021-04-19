@@ -64,20 +64,22 @@
     background: #ffffff;
     padding-left: 15px;
     border-radius: 10px;
-    border: 2px solid #d13030; }
+    border: 2px solid #d13030;
+    position: relative;
+    z-index: 5; }
   .searching__btn {
-    height: 18px;
+    height: 32px;
     width: 30px;
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 0;
+    right: 0;
     background: transparent;
     cursor: pointer;
-    position: relative; }
+    z-index: 10; }
     .searching__btn:after {
       content: "\f002";
       position: absolute;
-      right: 30px;
+      right: 8px;
       bottom: 5px;
       font-size: 20px;
       font-family: fontAwesome;

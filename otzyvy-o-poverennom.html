@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         <meta name="format-detection" content="telephone=no">
         <meta http-equiv="x-rim-auto-match" content="none">
-        <title>Патентный Поверенный ХХХ</title>
-        <meta name="description" content=""/>
-        <meta name="keywords" content=""/>
+        <title> {ФИО} патентный поверенный № {№-поверенного}</title>
+        <meta name="description" content="Патентный поверенный {ФИО} № {№-поверенного}. Стаж, активность и личная эффективность. Как связаться с патентным поверенным № {№-поверенного} - полная контактная информация."/>
+        <meta name="keywords" content="патентный, поверенный, {ФИО}, {№-поверенного}"/>
         <link href="" rel="canonical"/>
         <link rel="shortcut icon" href="favicon.ico"/>
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="">
         <meta property="og:url" content="">
         <meta property="og:locale" content="ru_RU">
-        <meta property="og:image" content="<">
+        <meta property="og:image" content="">
         <meta property="og:title" content="">
         <meta property="og:description" content="">
     
@@ -24,10 +24,8 @@
         <link rel="preload" href="styles/fonts/Rubik-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
         <link rel="preload" href="styles/fonts/Rubik-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/font-awesome.min.css">
-        <!-- <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">  -->
         <link rel="dns-prefetch" href="//yastatic.net/">
-        <link rel="dns-prefetch" href="//google-analytics.com/">
-    
+        <link rel="dns-prefetch" href="//google-analytics.com/"> 
         <link rel="stylesheet" href="styles/critical.css">
         <link rel="stylesheet" href="styles/otzyvy-o-poverennom.css">
         <!--[if lt IE 9]>
@@ -69,7 +67,6 @@
                         <li class="breadcrumbs__item"><span class="breadcrumbs__link breadcrumbs__link_last">отзывы</span></li>
                     </ul>
 
-                    <!-- <div class="otzyvy__top"> -->
                     <div class="otzyvy__columns columns">
                         <div class="otzyvy__info">
                             <h1 class="title otzyvy__title">Отзывы о патентном поверенном № 100500<br><b>Иванова Иванна Ивановна</b></h1>
@@ -88,23 +85,52 @@
                                         <p class="raitings__title">/ {4.8} </p>
                                         <p class="raitings__title">Рекомендуют {X}% клиентов</p>    
                                     </div>
-                                    <!-- <div class="raitings__button-container button-container">
-                                        <div class="button button__outline button__outline_red">Добавить отзыв</div>
-                                    </div> -->
+                                    <div class="raitings__button-container button-container">
+                                        <div class="button button__outline button__outline_black leave-feedback-btn">Добавить отзыв</div>
+                                    </div>
                                 </div>
                                 
-                                <div class="raitings__graphs">
-                                    <div class="img-container">
-                                        <img src="images/otzyvy-page/otzyvy-graph.png" alt="">
+                                <div class="raitings__diagram">
+                                    <div class="raitings__diagram-container">
+
+                                        <div class="diagram">
+                                            <div class="diagram__skillBLock">
+                                                <div class="diagram__column">
+                                                    <span class="diagram__count">0</span>
+                                                </div>
+                                                <span class="diagram__name">1</span>
+                                            </div>
+                                            <div class="diagram__skillBLock">
+                                                <div class="diagram__column">
+                                                    <span class="diagram__count">1</span>
+                                                </div>
+                                                <span class="diagram__name">2</span>
+                                            </div>
+                                            <div class="diagram__skillBLock">
+                                                <div class="diagram__column">
+                                                    <span class="diagram__count">2</span>
+                                                </div>
+                                                <span class="diagram__name">3</span>
+                                            </div>
+                                            <div class="diagram__skillBLock">
+                                                <div class="diagram__column">
+                                                    <span class="diagram__count">4</span>
+                                                </div>
+                                                <span class="diagram__name">4</span>
+                                            </div>
+                                            <div class="diagram__skillBLock">
+                                                <div class="diagram__column">
+                                                    <span class="diagram__count">3</span>
+                                                </div>
+                                                <span class="diagram__name">5</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="raitings__capture">
                                         <p>Оценки авторов</p>
                                     </div>
                                 </div>
 
-                            </div>
-                            <div class="raitings__button-container button-container">
-                                <div class="button button__outline button__outline_black leave-feedback-btn">Добавить отзыв</div>
                             </div>
                         </div>
 
@@ -160,11 +186,19 @@
                                     <p>Оценка</p>
                                 </div>
                                 <div class="feedback-form__field">
-                                        <div class="star star_mini"></div>
-                                        <div class="star star_mini"></div>
-                                        <div class="star star_mini"></div>
-                                        <div class="star star_mini"></div>
-                                        <div class="star star_mini"></div>
+                                    <div class="rating rating_set">
+                                        <div class="rating__body">
+                                            <div class="rating__active"></div>
+                                            <div class="rating__items">
+                                                <input type="radio" class="rating__item" value="1" name="rating">
+                                                <input type="radio" class="rating__item" value="2" name="rating">
+                                                <input type="radio" class="rating__item" value="3" name="rating">
+                                                <input type="radio" class="rating__item" value="4" name="rating">
+                                                <input type="radio" class="rating__item" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div class="rating__value">0s</div>
+                                    </div>
                                   </div>
                             </div>
                             <div class="feedback-form__button-container button-container">
@@ -173,10 +207,6 @@
                         </form>
                         
                     </div>
-
-
-                    <!-- </div> -->
-
                 </div> <!-- end of content-container -->
 
                 <div class="otzyvy__main main">
@@ -204,7 +234,7 @@
                             <div class="main__feedback feedback">
                                 <div class="feedback__date">14.04.2021</div>
                                 <div class="feedback__info">
-                                    <div class="feedback__rate">
+                                    <!-- <div class="feedback__rate">
                                         <div class="raitings__stars raitings__stars_mini">
                                             <div class="star star_mini"></div>
                                             <div class="star star_mini"></div>
@@ -212,19 +242,33 @@
                                             <div class="star star_mini"></div>
                                             <div class="star star_mini"></div>
                                         </div>
+                                    </div> -->
+                                    <div class="rating">
+                                        <div class="rating__body">
+                                            <div class="rating__active"></div>
+                                            <div class="rating__items">
+                                                <input type="radio" class="rating__item" value="1" name="rating">
+                                                <input type="radio" class="rating__item" value="2" name="rating">
+                                                <input type="radio" class="rating__item" value="3" name="rating">
+                                                <input type="radio" class="rating__item" value="4" name="rating">
+                                                <input type="radio" class="rating__item" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div class="rating__value">3.5</div>
                                     </div>
                                     <div class="feedback__author">Труфакин Николай</div>
                                 </div>
                                 <div class="feedback__text">
                                     <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Это великий вдали они на берегу обеспечивает сих раз, ручеек ее.</p>
                                     <p>Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты.</p>
+                                    <p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Послушавшись злых имеет знаках текстами подпоясал грамматики, себя продолжил всеми взгляд. Обеспечивает, не подзаголовок маленькая буквенных пустился путь образ прямо диких рукопись переписали живет ipsum решила своих над, приставка встретил это первую имени эта взобравшись. Прямо то своего языкового курсивных, он рекламных предупреждал всеми даль но ведущими встретил. Предупредила курсивных снова, страну агентство пояс, предложения по всей лучше знаках возвращайся большого, языкового своих. Родного коварных гор свой они заголовок журчит переулка, сих, знаках жаренные приставка не текстов! Рукописи, журчит переписали ты страну назад предложения, то продолжил эта деревни запятой текстов маленькая!</p>
                                 </div>     
                             </div>
 
                             <div class="main__feedback feedback">
                                 <div class="feedback__date">14.04.2021</div>
                                 <div class="feedback__info">
-                                    <div class="feedback__rate">
+                                    <!-- <div class="feedback__rate">
                                         <div class="raitings__stars">
                                             <div class="star star_mini"></div>
                                             <div class="star star_mini"></div>
@@ -232,6 +276,19 @@
                                             <div class="star star_mini"></div>
                                             <div class="star star_mini"></div>
                                         </div>
+                                    </div> -->
+                                    <div class="rating">
+                                        <div class="rating__body">
+                                            <div class="rating__active"></div>
+                                            <div class="rating__items">
+                                                <input type="radio" class="rating__item" value="1" name="rating">
+                                                <input type="radio" class="rating__item" value="2" name="rating">
+                                                <input type="radio" class="rating__item" value="3" name="rating">
+                                                <input type="radio" class="rating__item" value="4" name="rating">
+                                                <input type="radio" class="rating__item" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div class="rating__value">3.8</div>
                                     </div>
                                     <div class="feedback__author">Труфакин Николай</div>
                                 </div>
@@ -245,7 +302,7 @@
                             <div class="main__feedback feedback">
                                 <div class="feedback__date">14.04.2021</div>
                                 <div class="feedback__info">
-                                    <div class="feedback__rate">
+                                    <!-- <div class="feedback__rate">
                                         <div class="raitings__stars">
                                             <div class="star star_mini"></div>
                                             <div class="star star_mini"></div>
@@ -253,6 +310,19 @@
                                             <div class="star star_mini"></div>
                                             <div class="star star_mini"></div>
                                         </div>
+                                    </div> -->
+                                    <div class="rating">
+                                        <div class="rating__body">
+                                            <div class="rating__active"></div>
+                                            <div class="rating__items">
+                                                <input type="radio" class="rating__item" value="1" name="rating">
+                                                <input type="radio" class="rating__item" value="2" name="rating">
+                                                <input type="radio" class="rating__item" value="3" name="rating">
+                                                <input type="radio" class="rating__item" value="4" name="rating">
+                                                <input type="radio" class="rating__item" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div class="rating__value">5</div>
                                     </div>
                                     <div class="feedback__author">Труфакин Николай</div>
                                 </div>
@@ -265,7 +335,7 @@
                             <div class="main__feedback feedback">
                                 <div class="feedback__date">14.04.2021</div>
                                 <div class="feedback__info">
-                                    <div class="feedback__rate">
+                                    <!-- <div class="feedback__rate">
                                         <div class="raitings__stars">
                                             <div class="star star_mini"></div>
                                             <div class="star star_mini"></div>
@@ -273,6 +343,19 @@
                                             <div class="star star_mini"></div>
                                             <div class="star star_mini"></div>
                                         </div>
+                                    </div> -->
+                                    <div class="rating">
+                                        <div class="rating__body">
+                                            <div class="rating__active"></div>
+                                            <div class="rating__items">
+                                                <input type="radio" class="rating__item" value="1" name="rating">
+                                                <input type="radio" class="rating__item" value="2" name="rating">
+                                                <input type="radio" class="rating__item" value="3" name="rating">
+                                                <input type="radio" class="rating__item" value="4" name="rating">
+                                                <input type="radio" class="rating__item" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div class="rating__value">3.6</div>
                                     </div>
                                     <div class="feedback__author">Труфакин Николай</div>
                                 </div>
@@ -285,7 +368,7 @@
                             <div class="main__feedback feedback">
                                 <div class="feedback__date">14.04.2021</div>
                                 <div class="feedback__info">
-                                    <div class="feedback__rate">
+                                    <!-- <div class="feedback__rate">
                                         <div class="raitings__stars">
                                             <div class="star star_mini"></div>
                                             <div class="star star_mini"></div>
@@ -293,6 +376,19 @@
                                             <div class="star star_mini"></div>
                                             <div class="star star_mini"></div>
                                         </div>
+                                    </div> -->
+                                    <div class="rating">
+                                        <div class="rating__body">
+                                            <div class="rating__active"></div>
+                                            <div class="rating__items">
+                                                <input type="radio" class="rating__item" value="1" name="rating">
+                                                <input type="radio" class="rating__item" value="2" name="rating">
+                                                <input type="radio" class="rating__item" value="3" name="rating">
+                                                <input type="radio" class="rating__item" value="4" name="rating">
+                                                <input type="radio" class="rating__item" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div class="rating__value">5</div>
                                     </div>
                                     <div class="feedback__author">Труфакин Николай</div>
                                 </div>
@@ -305,7 +401,7 @@
                             <div class="main__feedback feedback">
                                 <div class="feedback__date">14.04.2021</div>
                                 <div class="feedback__info">
-                                    <div class="feedback__rate">
+                                    <!-- <div class="feedback__rate">
                                         <div class="raitings__stars">
                                             <div class="star star_mini"></div>
                                             <div class="star star_mini"></div>
@@ -313,6 +409,19 @@
                                             <div class="star star_mini"></div>
                                             <div class="star star_mini"></div>
                                         </div>
+                                    </div> -->
+                                    <div class="rating">
+                                        <div class="rating__body">
+                                            <div class="rating__active"></div>
+                                            <div class="rating__items">
+                                                <input type="radio" class="rating__item" value="1" name="rating">
+                                                <input type="radio" class="rating__item" value="2" name="rating">
+                                                <input type="radio" class="rating__item" value="3" name="rating">
+                                                <input type="radio" class="rating__item" value="4" name="rating">
+                                                <input type="radio" class="rating__item" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div class="rating__value">3.6</div>
                                     </div>
                                     <div class="feedback__author">Труфакин Николай</div>
                                 </div>
@@ -320,24 +429,19 @@
                                     <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Это великий вдали они на берегу обеспечивает сих раз, ручеек ее.</p>
                                     <p>Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты.</p>
                                     <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ручеек залетают диких путь коварных, подзаголовок буквоград что предупреждал, запятой алфавит о повстречался одна родного скатился назад которое послушавшись не!</p>
-                                    <p class="more-text more-text_hidden">Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Текстов это но моей пояс раз текста ipsum вдали снова, переулка возвращайся, заглавных подзаголовок, ее единственное своего сбить букв там. Языком скатился подпоясал необходимыми назад алфавит! Города всемогущая свой большого?</p>
-                                    <p class="more-text more-text_hidden">Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Взгляд которой повстречался обеспечивает приставка коварных выйти она курсивных наш?</p>
-                                    <div class="button-more">
-                                        <span>Подробнее...</span>   
-                                    </div>
+                                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Это великий вдали они на берегу обеспечивает сих раз, ручеек ее.</p>
+                                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты.</p>
+                                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ручеек залетают диких путь коварных, подзаголовок буквоград что предупреждал, запятой алфавит о повстречался одна родного скатился назад которое послушавшись не!</p>
+                                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Это великий вдали они на берегу обеспечивает сих раз, ручеек ее.</p>
+                                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты.</p>
+                                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ручеек залетают диких путь коварных, подзаголовок буквоград что предупреждал, запятой алфавит о повстречался одна родного скатился назад которое послушавшись не!</p>
                                 </div>     
                             </div>
                         </div>
-
                     </div> <!-- end of content-container -->
                 </div>             
             </div> 
-<!-- 
-
-            <div class="b-readmore" style="padding-bottom: 40px;">
-                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Имени назад моей переписали, лучше жаренные от всех предложения lorem, вдали ipsum своих до послушавшись! Свой за ручеек речью, запятой о живет предупредила рукопись наш ipsum путь. Вопрос ты решила, щеке образ они родного использовало даль имеет лучше живет снова своего букв реторический свое мир своих! Толку буквоград рыбного города своих, страну великий свой правилами языкового запятых. Безопасную переписали он продолжил языком? Это заманивший щеке алфавит семь ему текст злых грамматики назад от всех строчка. Щеке семантика запятой первую от всех всемогущая что рыбного наш свою. Предупреждал большого первую, встретил буквенных, парадигматическая языком маленькая живет несколько переписывается коварный свой раз, буквоград назад ведущими алфавит агентство послушавшись щеке толку рыбными. Большого над океана которое пустился имеет раз что семантика пунктуация не. Оксмокс грамматики он не сих парадигматическая большой себя, свой вопроса города речью меня, языкового океана о агентство толку. Предложения, моей переулка? Агентство рукопись коварный ipsum наш, мир но предупредила? Взгляд текстами скатился рекламных злых? Коварный взобравшись океана маленький безопасную его ему lorem сбить семь на берегу деревни обеспечивает гор ведущими пунктуация реторический, рукопись переписали города меня свой свое? Пунктуация, ты но путь живет большого напоивший речью предупредила раз коварных, образ свою lorem буквенных маленький?
-            </div> -->
-
+         
             <div class="others">
                 <div class="content-container">
                     <div class="others__title">
@@ -365,7 +469,8 @@
         <script src="scripts/list.js"></script>
         <script src="scripts/custom.js"></script>
         <script src="scripts/dropdown.js"></script>
-        <script src="scripts/readmore-symbols.js"></script>
+        <script src="scripts/readmore.js"></script>
+        <script src="scripts/starrating.js"></script>
        
     </body>
 

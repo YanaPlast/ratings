@@ -43,24 +43,22 @@
         padding-left: 15px;
         border-radius: 10px;
         border: 2px solid $accentColor;
+        position: relative;
+        z-index: 5;
     }
     &__btn {
-        height: 18px;
+        height: 32px;
         width: 30px;
         position: absolute;
-        top: 8px;
-        right: 8px;
+        top: 0;
+        right: 0;
         background: transparent;
         cursor: pointer;
-        position: relative;
-        // background-image: url(../images/reestr-page/search-icon.png);
-        // background-repeat: no-repeat;
-        // background-size: 58%;
-        // background-position: center;
+        z-index: 10;
         &:after {
             content: "\f002";
             position: absolute;
-            right: 30px;
+            right: 8px;
             bottom: 5px;
             font-size: 20px;
             font-family: fontAwesome;

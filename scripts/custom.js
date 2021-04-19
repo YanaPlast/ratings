@@ -169,17 +169,11 @@ function prevSlide(){
         }
     });    
 
-    $('.b-readmore').readmore({
-        ellipsis: '[...]',
-        textOpen: 'Открыть',
-        textClose: 'Закрыть',
-        callback: function(self, state) {
-            state
-                ? self.css('background', '#e74c3c')
-                : self.css('background', '#3498db');
-        },
-        brief: 500,
-        addition: 100
+    $('.feedback__text').readmore({
+        maxHeight: 110,
+        moreLink: '<a href="#">Подробнее</a>',
+        lessLink: '<a href="#">Свернуть</a>',
+        heightMargin: 16
     });
 
 });
