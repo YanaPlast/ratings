@@ -377,6 +377,7 @@
   color: #444444;
 }
 .feedback-2__btn:hover {
+  color: #000000;
+  border-color: #ffffff;
   background-color: #ffffff;
-  color: #444444;
 }

@@ -446,8 +446,9 @@
         font-weight: 400;
         color: $fontColor;
         &:hover {
+            color: #000000;
+            border-color: #ffffff;
             background-color: #ffffff;
-            color: $fontColor;
         }
     }
 }
