@@ -4,6 +4,14 @@
 
 .otzyvy {
     background-color: #ffffff;
+    
+    &__top {
+        background-image: url(../images/otzyvy-page/otzyvy-bg.jpg);
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 40px 0;
+    }
     &__breadcrumbs {
         margin: 40px 0 30px;
     }
@@ -12,6 +20,7 @@
         line-height: 1.2;
         padding-left: 20px;
         position: relative;
+        margin-bottom: 30px;
         &:before {
             content: '';
             position: absolute;
@@ -109,7 +118,6 @@
         margin: 20px auto 40px 0;
     }
     &__feedback-form {
-        margin-bottom: 40px;
         &_hidden {
             display: none;
         }
@@ -136,6 +144,7 @@
     padding-left: 30px;
     padding-right: 30px; 
     padding-bottom: 30px;
+    margin-top: 30px;
     &__head {
         font-size: 18px;
         font-weight: 500;
@@ -190,9 +199,34 @@
 }
 .main {
     background-color: #f9f9f9;
+    background-image: url(../images/otzyvy-page/feedback-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
     padding-top: 10px;
     padding-bottom: 60px;
-    border-bottom: 2px solid $accentColor;
+    border-bottom: 4px solid $accentColor;
+    position: relative;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+    }
+    &:after {
+        top: 150px;
+        right: 50px;
+        width: 235px;
+        height: 182px;
+        background-image: url(../images/otzyvy-page/feedback-bg-icon-1.png);
+    }
+    &:before {
+        top: 350px;
+        left: 50px;
+        width: 190px;
+        height: 190px;
+        background-image: url(../images/otzyvy-page/feedback-bg-icon-2.png);
+    }
     &__title {
         font-weight: 500;
         color: $accentColor;
@@ -371,7 +405,7 @@
         justify-content: flex-end;
         align-items: center;
         flex-direction: column;
-        // border: 1px solid #b6b6b6;
+        border: 1px solid #b6b6b6;
         position: relative;
         flex: 0 0 18%;
         -webkit-box-shadow: 0px 0px 0px 1px rgba(34, 60, 80, 0.2);
@@ -410,6 +444,7 @@
         width: 100%;
         background: rgb(255,185,5);
         background: linear-gradient(90deg, rgba(255,185,5,1) 0%, rgba(255,185,5,1) 35%, rgba(255,159,5,1) 100%);
+        overflow: hidden;
     }
     &__count {
         color: #fff;

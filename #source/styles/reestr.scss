@@ -58,12 +58,10 @@
 .search {
     padding: 40px 0 0;
     &__block {
-        //background-color: #f9f9f9;
-        // background-color: $accentColor;
         background-color: transparent;
-        padding: 20px 20px 20px 30px;
+        // padding: 20px 20px 20px 30px;
         width: 30%;
-        // border: 3px solid $accentColor;
+        border: 3px solid $accentColor;
         color: #ffffff;
         position: relative;
         &:before {
@@ -77,9 +75,15 @@
             height: 100%;
         }
     }   
+    &__block-body {
+        background-color: #ffffff;
+        padding: 30px 20px 20px 30px;
+    }
     &__title {
-        margin-bottom: 20px;
-        padding-bottom: 15px;
+        padding: 20px 20px 20px 75px;
+        // margin-bottom: 20px;
+        // padding-bottom: 15px;
+        margin: 0;
         font-size: 20px;
         line-height: 1.5;
         font-family: $accentFont;
@@ -88,13 +92,16 @@
         font-weight: 700;
         text-align: center;
         text-align: left;
-        padding-left: 55px;
+        // padding-left: 55px;
         background-image: url(../images/reestr-page/search-icon-white.png);
         background-repeat: no-repeat;
         background-size: 15%;
-        background-position: 0 3px;
+        background-position: 10px 25px;
         color: #ffffff;
-        border-bottom: 2px solid #3b3232;
+        // border-bottom: 2px solid #3b3232;
+    }
+    &__item {
+        color: $fontColor;
     }
     // &__subtitle {
     //     max-width: 80%;
@@ -102,6 +109,7 @@
     // }
     &__text {
         font-weight: 500;
+        color: $fontColor;
     }
     &__list {
         list-style-type: disc;
@@ -130,7 +138,7 @@
         padding-left: 15px;
         margin-bottom: 5px;
         outline: none;
-        border: none;
+        border: 2px solid #000000;
         &:focus {
             outline: none;
             -webkit-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
@@ -143,17 +151,21 @@
         text-align: center;
         // color: #9e3737;
         padding: 10px;
-        // background-color: #ffffff;
-        color: #ffffff;
+        // color: #ffffff;
         font-weight: 300;
         cursor: pointer;
         transition: all 0.3s ease;
-        border: 1px solid #ffffff;
+        // border: 1px solid #ffffff;
+        border: 1px solid #444444;
         margin-top: 5px;
+        color: #222222;
         &:hover {
-            //  background-color: #fd7878;
-             transition: all 0.3s ease;
-             border: 1px solid rgba(255, 255, 255, 0.5);
+            // transition: all 0.3s ease;
+            // border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+            background-color: #e0e0e0;
+            color: #000000;
          }
         
     }
@@ -179,6 +191,7 @@
         font-size: 14px;
         margin-bottom: 5px;
         margin-top: 10px;
+        color: #444444;
     }
     &__more-hidden {
         display: none;
@@ -312,20 +325,21 @@
         text-decoration: none;
         font-family: $mainFont;
         font-size: 14px;
-        line-height: 25px;
+        // line-height: 25px;
         transition: all 0.3s ease;
         border-radius: 3px;
         outline: none;
+        border: none;
         &:hover {
             // padding: 7px 12px;
-            transform: scale(1.1);
+            // transform: scale(1.1);
             background-color: #162b3e;
             transition: all 0.3s ease;
             outline: none;
         }
         &_active {
             background-color: $accentColor;
-            transform: scale(1.2);
+            // transform: scale(1.2);
             transition: all 0.3s ease;
             outline: none;
             &:hover {
@@ -372,13 +386,17 @@
 }
 
  .slider {
-    padding-left: 35px;
-    width: 330px;
+    padding-left: 65px;
+    width: 100%;
 	position: relative;
 	margin: 0 auto 0 0;
+    height: 25px;
+    // display: flex;
+    // align-items: center;
     &__viewport {
-        width: 100%;
-        border: 1px solid #000000;
+        width: 330px;
+        height: 100%;
+        // border: 1px solid #000000;
         display: table;
         position: relative;
         overflow: hidden;	
@@ -394,10 +412,10 @@
         top: 0;
         margin: 0;
         padding: 0;
-        width: calc(100%*4);
-        -webkit-transition: 0.6s;
-        -o-transition: 0.6s;
-        transition: 0.6s;
+        width: calc(100%*3);
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
         -webkit-transition-timing-function: ease-in-out;
         -o-transition-timing-function: ease-in-out;
         transition-timing-function: ease-in-out;
@@ -406,10 +424,11 @@
         display: flex;
         align-items: center;
         justify-content: center;  
-        width: 30px;
+        width: 27px;
         height: 25px;
-        color: #fff;
-        background-color: #212121;
+        color: #000000;
+        // background-color: #26445a;
+        background-color: transparent;
         text-decoration: none;
         font-family: $mainFont;
         font-size: 14px;
@@ -418,20 +437,37 @@
         border-radius: 3px;
         outline: none;
         position: absolute;
+        border: 2px solid #000000;
+        font-size: 25px;
         &_next {
-            top: 0;
-            right: -35px;
+            top: 1px;
+            right: -28px;
         }
         &_prev {
-            top: 0;
-            left: -35px;
+            top: 1px;
+            left: -30px;
+        }
+        &_start, 
+        &_end {
+            font-size: 18px;
+            line-height: 18px;
+        }
+        &_start {
+            top: 1px;
+            left: -61px;
+        }
+        &_end {
+            top: 1px;
+            right: -59px;
         }
         &:hover {
             // padding: 7px 12px;
-            transform: scale(1.1);
-            background-color: #162b3e;
+            // transform: scale(1.1);
+            background-color: $accentColor;
+            border-color: $accentColor;
             transition: all 0.3s ease;
             outline: none;
+            color: #ffffff;
         }
      }
  }
