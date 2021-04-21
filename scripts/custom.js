@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
-    // фильтр по алфавиту
+    // фильтр по алфавиту на странице реестра
     var options = {
         valueNames: ['firstName', 'lastName']
     };
 
-    var userList = new List('users', options);
+    var userList = new List('names', options);
 
     $('.pagination__link').click(function(e) {
         e.preventDefault();
@@ -113,15 +113,15 @@ function startSlide () {
 
  function endSlide () {
      $('.slider__wrapper').css({
-        'transform': 'translate(-660px,0)',
-        '-o-transform': 'translate(-660px,0)',
-        '-webkit-transform': 'translate(-660px,0)'
+        'transform': 'translate(-825px,0)',
+        '-o-transform': 'translate(-825px,0)',
+        '-webkit-transform': 'translate(-825px,0)'
     });
     slideNow = slideCount-8;
  }
 
 function nextSlide(){
-    if(slideNow == 21 || slideNow <= 0 || slideNow > 21) {
+    if(slideNow == 26 || slideNow <= 0 || slideNow > 26) {
         $('.slider__wrapper').css({
             'transform': 'translate(0,0)',
             '-o-transform': 'translate(0,0)',
@@ -141,7 +141,7 @@ function nextSlide(){
 
 function prevSlide(){
     if(slideNow == 1 || slideNow <= 0 || slideNow > slideCount) {
-        var translateWidth = (-33*(20));
+        var translateWidth = (-33*(25));
         $('.slider__wrapper').css({
             'transform': 'translate('+translateWidth+'px,0)',
             '-o-transform': 'translate('+translateWidth+'px,0)',

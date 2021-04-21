@@ -1,9 +1,6 @@
 @import 'variables';
 @import 'footer'; // файл footer.css не будет создан 
 @import 'main-menu';
-// @import url("font-awesome.min.css");
-//@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap'); - был акцидентным. Википедия и госуслуги получились
-// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 
 /* font-family: 'EB Garamond', 'Times New Roman', serif;
@@ -359,6 +356,7 @@ img{
 @media (max-width: 767px){
     .content-container{
         width: 100%;
+        padding: 0 30px;
     }
 }
 @media (max-width: 767px) and (min-width: 480px){
@@ -369,14 +367,11 @@ img{
     body{
         overflow-x: auto;
     } 
-    .content-container{
+    .content-container {
         min-width: 290px;
+        padding: 0 15px;
     }
-    h2, h3, p.title, #content h1{
-        text-transform: none;
-        padding: 0 0 0 20px;
-    }
-    
+  
 }
 
 
