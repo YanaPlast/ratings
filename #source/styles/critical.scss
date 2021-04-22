@@ -1,17 +1,96 @@
-@import 'variables';
+@import 'variables'; // файл variables.css не будет создан 
 @import 'footer'; // файл footer.css не будет создан 
-@import 'main-menu';
+@import 'main-menu'; // файл не будет создан 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
-
-/* font-family: 'EB Garamond', 'Times New Roman', serif;
-font-family: 'Bitter', 'Times New Roman', serif;
-font-family: 'EB Garamond', 'Times New Roman', serif;
-font-family: 'Montserrat', 'Arial', sans-serif;
-font-family: 'Raleway', 'Arial', sans-serif;
-*/
 @import url("font-awesome.min.css");
 
+// версия с помощью инструмента для google fonts из статьи
+
+/* rubik-300 - cyrillic */
 @font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/rubik-v12-cyrillic-300.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('fonts/rubik-v12-cyrillic-300.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/rubik-v12-cyrillic-300.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/rubik-v12-cyrillic-300.woff') format('woff'),
+        /* Modern Browsers */
+        url('fonts/rubik-v12-cyrillic-300.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('fonts/rubik-v12-cyrillic-300.svg#Rubik') format('svg');
+    /* Legacy iOS */
+}
+
+/* rubik-regular - cyrillic */
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/rubik-v12-cyrillic-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('fonts/rubik-v12-cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/rubik-v12-cyrillic-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/rubik-v12-cyrillic-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('fonts/rubik-v12-cyrillic-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('fonts/rubik-v12-cyrillic-regular.svg#Rubik') format('svg');
+    /* Legacy iOS */
+}
+
+/* rubik-500 - cyrillic */
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/rubik-v12-cyrillic-500.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('fonts/rubik-v12-cyrillic-500.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/rubik-v12-cyrillic-500.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/rubik-v12-cyrillic-500.woff') format('woff'),
+        /* Modern Browsers */
+        url('fonts/rubik-v12-cyrillic-500.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('fonts/rubik-v12-cyrillic-500.svg#Rubik') format('svg');
+    /* Legacy iOS */
+}
+
+/* rubik-700 - cyrillic */
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/rubik-v12-cyrillic-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('fonts/rubik-v12-cyrillic-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/rubik-v12-cyrillic-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/rubik-v12-cyrillic-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('fonts/rubik-v12-cyrillic-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('fonts/rubik-v12-cyrillic-700.svg#Rubik') format('svg');
+    /* Legacy iOS */
+}
+
+
+
+// стандартная рабочая версия  -чтобы папку отключить -  добавила к имени _
+
+/* @font-face {
     font-family: 'Rubik';
     font-display: swap;
     src: url('fonts/Rubik-Light.eot');
@@ -59,20 +138,20 @@ font-family: 'Raleway', 'Arial', sans-serif;
         url('fonts/Rubik-Bold.svg') format('svg');
     font-weight: 700;
     font-style: normal;
-}
+} */
 
-@font-face {
-    font-family: 'fontawesome';
-    font-display: swap;
-    src: url('fontawesome-webfont.eot');
-    src: local('☺'),
-        url('fontawesome-webfont.woff2') format('woff2'),
-        url('fontawesome-webfont.woff') format('woff'),
-        url('fontawesome-webfont.ttf') format('truetype'),
-        url('fontawesome-webfont.svg') format('svg');
-    font-weight: 700;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'fontawesome';
+//     font-display: swap;
+//     src: url('fontawesome-webfont.eot');
+//     src: local('☺'),
+//         url('fontawesome-webfont.woff2') format('woff2'),
+//         url('fontawesome-webfont.woff') format('woff'),
+//         url('fontawesome-webfont.ttf') format('truetype'),
+//         url('fontawesome-webfont.svg') format('svg');
+//     font-weight: 700;
+//     font-style: normal;
+// }
 
 
 ::-webkit-input-placeholder {opacity:1;}
