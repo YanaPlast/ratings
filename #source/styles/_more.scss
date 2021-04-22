@@ -1,24 +1,33 @@
+@import 'variables';
+
 .more {
-    padding: 20px;
+    padding: 30px 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: #ffffff;
+    background-color: #0e3a5d;
+    -webkit-box-shadow: 0 5px 10px -2px rgba(48, 71, 88, .25);
+    -moz-box-shadow: 0 5px 10px -2px rgba(48, 71, 88, .25);
+    box-shadow: 0 5px 10px -2px rgba(48, 71, 88, .25);
+
     &__text {
-        color: $fontColor;
+        color: #ffffff;
         font-family: $mainFont;
         font-weight: 400;
         text-transform: uppercase;
+
         &_big {
             font-size: 18px;
-            font-weight: 500;
-            color: #162b3e;
+            font-weight: 700;
+            color: #ffffff;
         }
     }
+
     &__link {
         border-bottom: 1px dashed #162b3e;
     }
+
     &__button {
         margin: 20px 0 0 0;
     }

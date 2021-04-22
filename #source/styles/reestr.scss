@@ -95,6 +95,7 @@
     &__subtitle {
         font-weight: 500;
         color: $fontColor;
+        line-height: 1.1;
     }
 
     &__list {
@@ -169,18 +170,15 @@
     &__undertext {
         font-size: 14px;
         text-align: center;
-        padding: 10px;
-        font-weight: 300;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border: 1px solid #444444;
+        font-weight: 400;
         margin-top: 5px;
+        text-decoration: underline;
+        cursor: pointer;
         color: #222222;
+        transition: all 0.3s ease;
         &:hover {
             transition: all 0.3s ease;
-            border: 1px solid #e0e0e0;
-            background-color: #e0e0e0;
-            color: #000000;
+            color: #1d7d7d;
         }      
     }
     &__submit {
@@ -301,6 +299,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
     &__viewport {
         width: 165px;
         height: 100%;
@@ -353,19 +352,19 @@
         }
         &_next {
             top: 1px;
-            right: -28px;
+            left: 230px;
         }
         &_prev {
             top: 1px;
-            left: -30px;
+            left: 35px;
         }
         &_start {
             top: 1px;
-            left: -61px;
+            left: 5px;
         }
         &_end {
             top: 1px;
-            right: -59px;
+            left: 260px;
         }
     }
 }

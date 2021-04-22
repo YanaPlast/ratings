@@ -1,14 +1,17 @@
 @import 'variables';
+@import 'more';
+@import 'raiting';
 
 .attorney {
     &__wrapper {
-        background-color: #f1f1f1;
+        padding-top: 30px;
         padding-bottom: 60px;
+        background-color: #f9f9f9;
     }
     &__title {
         padding-left: 20px;
         position: relative;
-        color: #f0efef;
+        margin-bottom: 20px;
         &:before {
             content: '';
             position: absolute;
@@ -24,14 +27,9 @@
         font-family: $mainFont;
         font-size: 16px;
         font-weight: 400;
-        color: #d8d8d8;
+        color: $fontColor;
         letter-spacing: 1px;
     }
-
-    &__wrapper {
-        padding-top: 30px;
-    }
-
     &__left {
         width: 70%;
         display: flex;
@@ -66,10 +64,6 @@
             box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
         }
     }
-
-    &__more {
-        margin: 0;
-    }
     &__region {
         padding-top: 10px;
         border-top: 2px solid #e2e9f1;
@@ -78,6 +72,10 @@
         font-size: 15px;
         font-weight: 300;
         letter-spacing: 0.5px;
+    }
+    &__rating {
+        margin-top: 15px;
+        margin-bottom: 10px;
     }
 }
 
@@ -208,8 +206,8 @@
     &_border_red {
         border: 2px solid $accentColor;
     }
-    &_border_green {
-        border: 3px solid #1d7d7d;
+    &_border_blue {
+        border: 3px solid #0e3a5d;
     }
     &_margined {
         margin-top: 25px;
@@ -274,36 +272,6 @@
     }
 }
 
-.more {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-color: #ffffff;
-    // border: 2px solid #224e81;
-/*     box-shadow:0px 0px 15px 1px rgba(22, 43, 62, 0.55)inset;
-    -webkit-box-shadow:0px 0px 15px 1px rgba(22, 43, 62, 0.55)inset;
-    -moz-box-shadow:0px 0px 15px 1px rgba(22, 43, 62, 0.55)inset; */
-
-    &__text {
-        color: $fontColor;
-        font-family: $mainFont;
-        font-weight: 400;
-        text-transform: uppercase;
-        &_big {
-            font-size: 18px;
-            font-weight: 500;
-            color: #162b3e;
-        }
-    }
-    &__link {
-        border-bottom: 1px dashed #162b3e;
-    }
-    &__button {
-        margin: 20px 0 0 0;
-    }
-}
 .star {
     display: inline-block;
     width: 25px;
@@ -340,9 +308,25 @@
     &__rate {
         font-family: $accentFont !important;
         font-weight: 700;
-        margin-bottom: 20px;
         color: $accentColor;
         font-size: 16px;
+        margin-bottom: 20px;
+        &_pictured {
+            display: inline-block;
+            padding-left: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            &:before {
+                content: '\f201';
+                position: absolute;
+                font-family: fontAwesome;
+                font-size: 24px;
+                color: $accentColor;
+                bottom: -7px;
+                left: -20px;
+            }
+        }
     }
     &__note {
         font-size: 14px;
@@ -370,7 +354,7 @@
 .question {
     background-color: #ffffff;
     &__title {
-        color: #1d7d7d;
+        color: #0e3a5d;
     }
     &__button-container {
         margin-top: 20px;
@@ -410,7 +394,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1d7d7d;
+    background-color: #0e3a5d;
     border: none;
     box-shadow: 0 5px 10px -2px rgba(48, 71, 88, 0.25);
     &__title {
@@ -423,32 +407,7 @@
         font-weight: 400;
         &:hover {
             background-color: #ffffff;
-            color: #1d7d7d;
-        }
-    }
-}
-
-.feedback-2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #d4d4d4;
-    border: none;
-    border-top: 5px solid #000000;
-
-    &__title {
-        color: #000000;
-    }
-
-    &__btn {
-        background-color:#ffffff;
-        border: 2px solid $fontColor;
-        font-weight: 400;
-        color: $fontColor;
-        &:hover {
-            color: #000000;
-            border-color: #ffffff;
-            background-color: #ffffff;
+            color: #0e3a5d;
         }
     }
 }

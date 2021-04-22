@@ -91,6 +91,7 @@
 .search__subtitle {
   font-weight: 500;
   color: #444444;
+  line-height: 1.1;
 }
 .search__list {
   list-style-type: disc;
@@ -154,19 +155,16 @@
 .form__undertext {
   font-size: 14px;
   text-align: center;
-  padding: 10px;
-  font-weight: 300;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 1px solid #444444;
+  font-weight: 400;
   margin-top: 5px;
+  text-decoration: underline;
+  cursor: pointer;
   color: #222222;
+  transition: all 0.3s ease;
 }
 .form__undertext:hover {
   transition: all 0.3s ease;
-  border: 1px solid #e0e0e0;
-  background-color: #e0e0e0;
-  color: #000000;
+  color: #1d7d7d;
 }
 .form__submit {
   width: 100%;
@@ -278,6 +276,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
 }
 .slider__viewport {
   width: 165px;
@@ -326,19 +325,19 @@
 }
 .slider__btn_next {
   top: 1px;
-  right: -28px;
+  left: 230px;
 }
 .slider__btn_prev {
   top: 1px;
-  left: -30px;
+  left: 35px;
 }
 .slider__btn_start {
   top: 1px;
-  left: -61px;
+  left: 5px;
 }
 .slider__btn_end {
   top: 1px;
-  right: -59px;
+  left: 260px;
 }
 
 .pagination__filter-list {

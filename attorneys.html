@@ -18,15 +18,13 @@
     <meta property="og:title" content="">
     <meta property="og:description" content="">
 
-    <link rel="preload" href="styles/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="styles/fonts/Rubik-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="styles/fonts/Rubik-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="styles/fonts/Rubik-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/font-awesome.min.css">
-
+    <link rel="preload" href="styles/fonts/rubik-v12-cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="styles/fonts/rubik-v12-cyrillic-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="styles/fonts/rubik-v12-cyrillic-300.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="styles/fonts/rubik-v12-cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/font-awesome.css">
     <link rel="dns-prefetch" href="//yastatic.net/">
     <link rel="dns-prefetch" href="//google-analytics.com/">
-
     <link rel="stylesheet" href="styles/critical.css">
     <link rel="stylesheet" href="styles/attorneys.css">
     <!--[if lt IE 9]>
@@ -59,18 +57,15 @@
     <main id="attorney">
 
         <div class="attorney">
-            
-            <div class="title-wrapper">
-                <div class="content-container">
-                    <h1 class="title attorney__title">
-                        <span class="attorney__subtitle">патентный поверенный № XXX</span>
-                        Иванова Иванна Ивановна
-                    </h1>
-                </div>
-            </div>
 
             <div class="attorney__wrapper">
+
                 <div class="content-container">
+
+                    <h1 class="title attorney__title">
+                        <span class="attorney__subtitle">патентный поверенный № XXX</span>
+                            Иванова Иванна Ивановна
+                    </h1>
                     <div class="attorney__columns columns">
 
                         <div class="attorney__left">
@@ -87,8 +82,8 @@
                                 <div class="card__row">
                                     <div class="card__title">Регион</div>
                                     <div class="card__text card__text_for-images card__text_shadowed">
-                                        <img src="images/attorney-page/flag_ekb.jpg" alt="" height="150px">
-                                        <p>Екатеринбург, Свердловская область</p>                               
+                                        <p>Екатеринбург, Свердловская область</p>  
+                                        <img src="images/attorney-page/flag_ekb.jpg" alt="" height="100px">                           
                                     </div> 
                                     
                                 </div>
@@ -150,21 +145,38 @@
                             </div>
 
                             <div class="attorney__card card_bordered card_margined feedback"> 
-                                <div class="block-title feedback__title">Отзывы о ПП №{-номер ПП}</div>
-                                <a href="" class="button button_white feedback__btn">Посмотреть</a>
-                             </div> 
 
-                            <div class="attorney__card card_bordered card_margined feedback-2"> 
-                                <div class="block-title feedback-2__title">Отзывы о ПП №{-номер ПП}</div>
-                                <a href="" class="button button_white feedback-2__btn">Посмотреть</a>
-                             </div> 
+                                <div class="feedback__left">
+                                    <div class="block-title feedback__title">Отзывы о ПП №{-номер ПП}</div>
+                                    <div class="rating attorney__rating">
+                                        <div class="rating__body">
+                                            <div class="rating__active"></div>
+                                            <div class="rating__items">
+                                                <input type="radio" class="rating__item" value="1" name="rating">
+                                                <input type="radio" class="rating__item" value="2" name="rating">
+                                                <input type="radio" class="rating__item" value="3" name="rating">
+                                                <input type="radio" class="rating__item" value="4" name="rating">
+                                                <input type="radio" class="rating__item" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div class="rating__value">4.3</div>
+                                        <p class="rating__explain rating__explain_white">на основе 34 отзывов</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="feedback__right">
+                                    <a href="" class="button button_white feedback__btn">Посмотреть</a>
+                                </div>                           
+                            </div> 
+                               
+                             
 
-                            <div class="attorney__card card_bordered card_margined card_border_green"> 
+                            <div class="attorney__card card_bordered card_margined card_border_blue"> 
                                 <div class="question">
                                     <div class="block-title question__title">Это вы?</div>
                                     <div class="question__text">Зарегистрируйтесь и получите возможность управлять отображением информации о патентном поверенном</div>
                                     <div class="button-container question__button-container">
-                                        <a href="" class="button button_green">Внести изменения</a>
+                                        <a href="" class="button button_blue">Внести изменения</a>
                                     </div>
                                 </div>
                             </div> 
@@ -174,26 +186,39 @@
 
                         <div class="attorney__right">
 
-                            <div class="attorney__card card">
+ 
                                 <div class="attorney__more more">
                                     <p class="more__text">Ещё <span class="more__text_big">1539</span> патентных поверенных в независимом рейтинге ХХХ</p>
                                     <div class="button-container">
                                         <a class="button button_red button_arrowed more__button">Смотреть рейтинг</a>
                                     </div>
                                 </div>
-                            </div>
+
 
                             <div class="attorney__card card card_bordered card_border_red card_margined">
                                 <div class="attorney__perform perform">
                                     <div class="perform__title">Личная эффективность <span>*</span></div>
-                                    <div class="perform__stars">
+<!--                                     <div class="perform__stars">
                                         <div class="star"></div>
                                         <div class="star"></div>
                                         <div class="star"></div>
                                         <div class="star"></div>
                                         <div class="star"></div>
-                                    </div>
-                                    <div class="perform__status perform__rate">0.6 - низкая</div>
+                                    </div> -->
+                                    <!-- <div class="rating rating_big">
+                                        <div class="rating__body">
+                                            <div class="rating__active"></div>
+                                            <div class="rating__items">
+                                                <input type="radio" class="rating__item" value="1" name="rating">
+                                                <input type="radio" class="rating__item" value="2" name="rating">
+                                                <input type="radio" class="rating__item" value="3" name="rating">
+                                                <input type="radio" class="rating__item" value="4" name="rating">
+                                                <input type="radio" class="rating__item" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div class="rating__value">4.3</div>
+                                    </div> -->
+                                    <div class="perform__status perform__rate perform__rate_pictured">0.6 - средняя</div>
                                     <div class="perfom__text">
                                         <p class="perform__row">За {стаж} лет работы патентный поверенный зарегистрировал {X} знаков</p>
                                         <p class="perform__row">{ФИО} регистрирует в среднем {X} знаков в год</p>
@@ -290,12 +315,6 @@
                                 </div>                              
                             </div>
 
-                            <!-- <div class="attorney__image-wrapper">
-                                <img src="images/attorney-page/flag_ekb.jpg" alt="">
-                            </div>
-                            <p class="attorney__region">
-                                Свердловская обл., г. Екатеринбург
-                            </p> -->
                         </div>
                     </div>
 
@@ -322,6 +341,7 @@
 
     <script src="scripts/jquery.min.js"></script>
     <link rel="stylesheet" href="styles/fancybox.min.css">
+    <script src="scripts/starrating.js"></script>
     <script src="scripts/fancybox.min.js"></script>
    
 

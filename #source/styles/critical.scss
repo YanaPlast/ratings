@@ -280,9 +280,9 @@ img{
     font-family: $mainFont;
     font-size: 17px;
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 400;
     color: #ffffff;
-    padding: 10px 30px;
+    padding: 15px 30px;
     background: #6c7884;
     text-align: center;
     cursor: pointer;
@@ -308,68 +308,75 @@ img{
             background-color: #3a3535;
         }
     }
-}
-.button_green {
-    background-color: #1d7d7d;
-    font-weight: 400;
-    &:hover {
-       background-color: #123f3f;
+    &_blue {
+        background-color: #0e3a5d;
+        color: #ffffff;
+        &:hover {
+            background-color: #0e293f;
+        }
     }
-}
-.button_red {
+    &_red {
         background-color: $accentColor;
         color: #ffffff;
         font-weight: 500;
         padding-top: 15px;
         padding-bottom: 15px;
-    &:hover {
-        //background: linear-gradient(#8d232e, #8b2922);
-        background-color: #a80101;
-        transition: all 0.3s ease;
-    }
-}
-.button_arrowed {
-    position: relative;
-    padding-right: 40px;
-    &:after {
-        content: '\f054';
-        font-family: fontawesome;
-        position: absolute;
-        top: center;
-        transform: translate(0,1px);
-        right: 18px;
-        color: currentColor;
-        transition: all 0.3s ease;
-    }
-    &:hover:after {
-        transform: translate(10px,1px);
-        transition: all 0.3s ease;
-    }
-}
-.button__outline {
-    background-color: transparent;
-    border: 2px solid $accentColor;
-    color: $accentColor;
-    font-weight: 500;
-    transition: all 0.3 ease-in-out;
-    min-width: 210px;
-    &_black {
-        color: $fontColor;
-        border-color: $fontColor;
-    }
-    &:hover {
-        border: 2px solid #26445a;
-        background-color: #26445a;
-        color: #ffffff;
-        transition: all 0.2 ease-in-out;
-    }
 
+        &:hover {
+            //background: linear-gradient(#8d232e, #8b2922);
+            background-color: #a80101;
+            transition: all 0.3s ease;
+        }
+    }
+    &_arrowed {
+        position: relative;
+        padding-right: 40px;
+
+        &:after {
+            content: '\f054';
+            font-family: fontawesome;
+            position: absolute;
+            top: center;
+            transform: translate(0, 1px);
+            right: 18px;
+            color: currentColor;
+            transition: all 0.3s ease;
+        }
+
+        &:hover:after {
+            transform: translate(10px, 1px);
+            transition: all 0.3s ease;
+        }
+    }
+    &__outline {
+        background-color: transparent;
+        border: 2px solid $accentColor;
+        color: $accentColor;
+        font-weight: 500;
+        transition: all 0.3 ease-in-out;
+        min-width: 210px;
+
+        &_black {
+            color: $fontColor;
+            border-color: $fontColor;
+        }
+
+        &:hover {
+            border: 2px solid #26445a;
+            background-color: #26445a;
+            color: #ffffff;
+            transition: all 0.2 ease-in-out;
+        }
+
+    }
 }
+
 .title {
     display: inline-block;
     position: relative;
     width: 100%;
     font-family: $accentFont;
+    color: $fontColor;
     font-size: 35px;
     line-height: 1.5;
     font-weight: 500;
@@ -401,12 +408,6 @@ img{
     color: $fontColor;
     font-family: "Raleway", "Arial", sans-serif;
     font-weight: 600;
-}
-.title-wrapper {
-    background-color: $baseColor;
-    // background-image: $gradBlue2;
-    padding: 30px 0;
-    font-family: $accentFont;
 }
 .link {
     color:#1d7d7d;
