@@ -176,9 +176,9 @@ function prevSlide(){
 
     $('.leave-feedback-btn').on('click', function () {
         console.log('hello');
-        var feedbackForm = $('.raitings__feedback-form');
-        feedbackForm.toggleClass('raitings__feedback-form_hidden');
-        if(feedbackForm.hasClass('raitings__feedback-form_hidden')){
+        var feedbackForm = $('.feedback-form');
+        feedbackForm.toggleClass('feedback-form_hidden');
+        if(feedbackForm.hasClass('feedback-form_hidden')){
             $(this).text('Добавить Отзыв');
         } else {
             $(this).text('Написать позже');

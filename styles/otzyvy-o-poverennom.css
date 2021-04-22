@@ -182,48 +182,6 @@
   cursor: pointer;
 }
 
-.otzyvy {
-  background-color: #ffffff;
-}
-.otzyvy__top {
-  background-image: url(../images/otzyvy-page/otzyvy-bg.jpg);
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 40px 0;
-}
-.otzyvy__breadcrumbs {
-  margin: 40px 0 30px;
-}
-.otzyvy__title {
-  font-size: 30px;
-  line-height: 1.2;
-  padding-left: 20px;
-  position: relative;
-  margin-bottom: 30px;
-}
-.otzyvy__title:before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 2px;
-  background-color: #d13030;
-  left: 0;
-  top: 0;
-}
-.otzyvy__info {
-  width: 66%;
-}
-.otzyvy__more {
-  width: 30%;
-}
-.otzyvy__raitings {
-  margin: 30px 0 0;
-}
-.otzyvy__columns {
-  align-items: flex-start;
-}
-
 .breadcrumbs {
   display: flex;
   justify-content: flex-start;
@@ -249,6 +207,48 @@
 }
 .breadcrumbs__link_last:hover {
   text-decoration: none;
+}
+
+.otzyvy {
+  position: relative;
+}
+.otzyvy__breadcrumbs {
+  padding: 30px 0;
+}
+.otzyvy__top {
+  background-image: url(../images/otzyvy-page/otzyvy-bg.jpg);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 0 40px;
+}
+.otzyvy__title {
+  font-size: 30px;
+  line-height: 1.2;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.otzyvy__title:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: #d13030;
+  left: 0;
+  top: 0;
+}
+.otzyvy__info {
+  width: 66%;
+}
+.otzyvy__more {
+  width: 30%;
+}
+.otzyvy__raitings {
+  margin: 20px 0 0;
+}
+.otzyvy__columns {
+  align-items: flex-start;
 }
 
 .raitings__total {
@@ -280,26 +280,7 @@
 .raitings__button-container {
   margin: 20px auto 20px 0;
 }
-.raitings__feedback-form_hidden {
-  display: none;
-}
 
-/* .star {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    margin: 0 5px 0 0;
-    background-color: transparent;
-    background-image: url(../images/attorney-page/star.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    &_mini {
-        background-image: url(../images/otzyvy-page/star-mini.png);
-        width: 15px;
-        height: 15px;
-        margin-right: 2px;
-    }
-} */
 .feedback-form {
   padding-left: 30px;
   padding-right: 30px;
@@ -307,6 +288,9 @@
   margin-top: 30px;
   /* Firefox 19+ */
   /* Firefox 18- */
+}
+.feedback-form_hidden {
+  display: none;
 }
 .feedback-form__head {
   font-size: 18px;
@@ -557,7 +541,7 @@
   width: 100%;
   height: 120px;
 }
-.diagram__skillBLock {
+.diagram__scoreBLock {
   height: 100%;
   display: flex;
   justify-content: flex-end;
@@ -568,23 +552,23 @@
   flex: 0 0 18%;
   box-shadow: 0px 0px 0px 1px rgba(34, 60, 80, 0.2);
 }
-.diagram__skillBLock:first-child .diagram__column {
+.diagram__scoreBLock:first-child .diagram__column {
   height: calc(120px / 100 * 0);
   /*0%*/
 }
-.diagram__skillBLock:nth-child(2) .diagram__column {
+.diagram__scoreBLock:nth-child(2) .diagram__column {
   height: calc(120px / 100 * 10);
   /*10%*/
 }
-.diagram__skillBLock:nth-child(3) .diagram__column {
+.diagram__scoreBLock:nth-child(3) .diagram__column {
   height: calc(120px / 100 * 20);
   /*20%*/
 }
-.diagram__skillBLock:nth-child(4) .diagram__column {
+.diagram__scoreBLock:nth-child(4) .diagram__column {
   height: calc(120px / 100 * 40);
   /*40%*/
 }
-.diagram__skillBLock:last-child .diagram__column {
+.diagram__scoreBLock:last-child .diagram__column {
   height: calc(120px / 100 * 30);
   /*30%*/
 }
