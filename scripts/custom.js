@@ -175,7 +175,7 @@ function prevSlide(){
     // скрытие формы отзыва
 
     $('.leave-feedback-btn').on('click', function () {
-        console.log('hello');
+
         var feedbackForm = $('.feedback-form');
         feedbackForm.toggleClass('feedback-form_hidden');
         if(feedbackForm.hasClass('feedback-form_hidden')){
@@ -186,10 +186,41 @@ function prevSlide(){
     });    
 
     $('.feedback__text').readmore({
-        maxHeight: 110,
+        maxHeight: 113,
         moreLink: '<a href="#">Подробнее</a>',
         lessLink: '<a href="#">Свернуть</a>',
-        heightMargin: 16
+        heightMargin: 20
     });
+
+
+// инициализация слайдера с отзывами
+
+/*     if (document.documentElement.clientWidth < 980) {
+        $('.main__body').slick({
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+
+        });
+    }
+
+  $(window).resize(function () {
+
+    if (document.documentElement.clientWidth < 980) {
+        $('.main__body').slick({
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        adaptiveHeight: true,
+        dots: true,
+        });
+    }    else {
+        $('.main__body').slick('unslick');
+    }
+
+  } )  */
 
 });

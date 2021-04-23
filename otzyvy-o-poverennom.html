@@ -28,6 +28,8 @@
         <link rel="dns-prefetch" href="//google-analytics.com/"> 
         <link rel="stylesheet" href="styles/critical.css">
         <link rel="stylesheet" href="styles/otzyvy-o-poverennom.css">
+        <link rel="stylesheet" href="slick-slide/slick.css">
+        <link rel="stylesheet" href="slick-slide/slick-theme.css">
         <!--[if lt IE 9]>
         <script src="scripts/html5.js"></script> <![endif]-->
     
@@ -67,7 +69,7 @@
                             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">поверенный {N}</a></li>
                             <li class="breadcrumbs__item"><span class="breadcrumbs__link breadcrumbs__link_last">отзывы</span></li>
                         </ul>
-                        <h1 class="title otzyvy__title">Отзывы о патентном поверенном № 100500<br><b>Иванова Иванна Ивановна</b></h1>
+                        <h1 class="title otzyvy__title">Отзывы о патентном поверенном <span class="nowrap">№ 100500</span><br><b>Иванова Иванна Ивановна</b></h1>
                         <div class="otzyvy__columns columns">
                             <div class="otzyvy__info box-wrapper">
                                 <div class="otzyvy__raitings raitings columns">
@@ -167,13 +169,13 @@
                                         <p>Достоинства</p>
                                     </label>
                                     <div class="feedback-form__field">
-                                        <input class="feedback-form__input" id="advant-input" name="advant-input" type="text" required placeholder="Достоинства патентного поверенного">   
+                                        <textarea class="feedback-form__textarea" id="advant-area" name="advant-area" required placeholder="Достоинства патентного поверенного" rows="2"></textarea>   
                                     </div>
                                 </div>
                                 <div class="feedback-form__row">
                                     <label class="feedback-form__title" for="disadv-input">Недостатки</label>
                                     <div class="feedback-form__field">
-                                        <input class="feedback-form__input" id="disadv-input" name="disadv-input" type="text" required placeholder="Недостатки патентного поверенного">   
+                                        <textarea class="feedback-form__textarea" id="disadv-area" name="disadv-area" required placeholder="Недостатки патентного поверенного" rows="2"></textarea>   
                                     </div>
                                 </div>
                                 <div class="feedback-form__row feedback-form__row_margined">
@@ -406,10 +408,13 @@
 
         <script src="scripts/jquery.min.js"></script>
         <script src="scripts/list.js"></script>
+        <script src="slick-slide/slick.min.js"></script>
         <script src="scripts/custom.js"></script>
         <script src="scripts/dropdown.js"></script>
         <script src="scripts/readmore.js"></script>
         <script src="scripts/starrating.js"></script>
+        <script src="scripts/replace.js"></script>
+
        
     </body>
 
