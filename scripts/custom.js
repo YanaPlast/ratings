@@ -172,15 +172,17 @@ function prevSlide(){
         }
     });    
 
-    $('.feedback__text').readmore({
-        maxHeight: 113,
-        moreLink: '<a href="#">Подробнее</a>',
-        lessLink: '<a href="#">Свернуть</a>',
-        heightMargin: 20
-    });
+
+// Сворачиваем тексты отзывов в кнопку Подробнее
+$('.feedback__text').readmore({
+    maxHeight: 113,
+    moreLink: '<a href="#">Подробнее</a>',
+    lessLink: '<a href="#">Свернуть</a>',
+    heightMargin: 20
+});
 
 
-// overlay on .feedback__text
+/* !!! overlay on .feedback__text
 
 var feedbackBlocks = $('.feedback');
 
@@ -196,10 +198,8 @@ var togglers = $('.readmore-js-toggle');
     $(this).on('click', function(){
         $(this).siblings('.feedback__text').find('.feedback__overlay').removeClass('feedback__overlay_visible');
     });
-    
-
 }); 
-
+ */
        
 // инициализация слайдера с отзывами
 
