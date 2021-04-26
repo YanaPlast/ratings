@@ -521,14 +521,23 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  .attorney__spacer, .attorney__more {
+    margin-top: 15px;
+  }
 
   .rating__explain {
     margin-top: 10px;
   }
 
+  .card {
+    padding: 15px;
+  }
+  .card_margined {
+    margin-top: 15px;
+  }
   .card__row {
     flex-direction: column;
-    padding-bottom: 0;
+    padding: 0;
   }
   .card__title {
     text-align: center;

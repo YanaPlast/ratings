@@ -493,6 +493,10 @@
             flex-wrap: wrap;
             justify-content: center;
         }
+        &__spacer,
+        &__more {
+            margin-top: 15px;
+        }
     }
     .rating {
         &__explain {
@@ -500,9 +504,13 @@
         }
     }
     .card {
+        padding: 15px;
+        &_margined {
+            margin-top: 15px;
+        }
         &__row {
             flex-direction: column;
-            padding-bottom: 0;
+            padding: 0;
         }
         &__title {
             text-align: center;

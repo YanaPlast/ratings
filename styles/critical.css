@@ -536,6 +536,7 @@ img {
 @media (max-width: 767px) and (min-width: 480px) {
   .button {
     font-size: 15px;
+    padding: 10px 20px;
   }
   .button_red {
     padding: 10px 40px 10px 30px;
@@ -549,5 +550,12 @@ img {
   .content-container {
     min-width: 290px;
     padding: 0 15px;
+  }
+
+  .button {
+    font-size: 14px;
+  }
+  .button_red {
+    padding: 10px 40px 10px 30px;
   }
 }
