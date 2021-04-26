@@ -6,9 +6,6 @@
 
 .otzyvy {
     position: relative;
-    &__breadcrumbs {
-        padding: 30px 0;
-    }
     &__top {
         background-image: url(../images/otzyvy-page/otzyvy-bg.jpg);
         background-position: center right;
@@ -456,17 +453,24 @@
             flex-direction: column-reverse;
             align-items: center;
         }
+        &__title {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        &__top {
+            padding-bottom: 20px;
+        }
     }
     .raitings {
         text-align: center;
-        &__total,
-        &__diagram {
+        &__total  {
             width: 70%;
-            margin-left: 0;
-            margin-right: 0;
-        }
-        &__total {
+            margin-left: auto;
+            margin-right: auto;
             margin-top: 20px;
+        }
+        &__diagram {
+            width: 50%;
         }
     }
     .feedback-form {
@@ -503,6 +507,7 @@
     .main {
         &__header {
             flex-direction: column;
+            margin-top: 10px;
         }
         &__title {
             margin-bottom: 15px;
@@ -524,12 +529,21 @@
             padding-left: 25px;
         }
     }
+    .box-wrapper {
+        padding: 10px;
+    }
 }
 
 @media (max-width: 479px) {
     .raitings {
         &__total {
             width: 100%;
+        }
+        &__diagram {
+            width: 70%;
+        }
+        &__title {
+            font-size: 15px;
         }
     }
     .main {
@@ -555,6 +569,9 @@
         &__overlay {
             bottom: 35px;
         }
+        &__author {
+            font-size: 16px;
+        }
     }
     .feedback-form {
         ::-webkit-input-placeholder {
@@ -578,6 +595,16 @@
                 opacity: 0.3;
                 font-size: 14px;
             }
+    }
+    .others {
+        padding: 20px 0 20px 0;
+        &__title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        &__item {
+            font-size: 15px;
+        }
     }
 }
 

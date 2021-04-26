@@ -383,6 +383,7 @@ img {
   text-decoration: none;
   transition: all 0.3s ease;
   border: none;
+  min-width: 250px;
 }
 .button:hover {
   background: #545b63;
@@ -503,8 +504,8 @@ img {
   text-decoration: underline;
   -webkit-text-decoration-color: currentColor;
           text-decoration-color: currentColor;
-  -webkit-text-decoration-style: dashed;
-          text-decoration-style: dashed;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
 }
 
 .box-wrapper {
@@ -533,7 +534,7 @@ img {
     padding: 0 30px;
   }
 }
-@media (max-width: 767px) and (min-width: 480px) {
+@media (max-width: 767px) {
   .button {
     font-size: 15px;
     padding: 10px 20px;

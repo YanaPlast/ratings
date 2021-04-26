@@ -127,7 +127,7 @@
           $this.options.afterToggle(trigger, element, expanded);
 
           $(trigger).replaceWith($($this.options[newLink]).on('click', function(event) { $this.toggleSlider(this, element, event) }).addClass('readmore-js-toggle'));
-
+          
           $(this).removeClass($this.options.collapsedClass + ' ' + $this.options.expandedClass).addClass(sectionClass);
         }
       });

@@ -529,6 +529,7 @@
 }
 @media (max-width: 650px) {
     .all-search {
+        padding-top: 15px;
         &__pagination,
         &__search-block {
             width: 100%;
@@ -536,6 +537,18 @@
 
     }
     .header {
+        &__title {
+            font-size: 25px;
+            line-height: 1.1;
+        }
+        &__subtitle {
+            font-size: 22px;
+            line-height: 1.1;
+            margin-top: 25px;
+        }
+        &__article {
+            padding: 15px 15px 15px 15px;
+        }
         &__main {
             background-size: 140%;
             background-position: bottom -10px right -10px;
@@ -548,9 +561,17 @@
         &__main {
             background-image: none;
         }
-        &__article {
+        &__article {      
             &_last {
                 width: 100%;
+            }
+            &_first {
+                &:before {
+                    background-image: url(../images/reestr-page/reestr-header.jpg);
+                    background-repeat: no-repeat;
+                    background-position: right bottom;
+                    background-size: 50% auto;
+                }
             }
         }
     }
@@ -563,6 +584,14 @@
     .list {
         &__item {
             flex: 0 0 100%;
+        }
+    }
+}
+@media (max-width: 479px) {
+    .header {
+        &__text {
+            font-size: 15px;
+            line-height: 1.5;
         }
     }
 }

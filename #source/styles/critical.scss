@@ -291,6 +291,7 @@ img{
     text-decoration: none;
     transition: all 0.3s ease;
     border: none;
+    min-width: 250px;
     &:hover {
         background: #545b63;
         transition: all 0.3s ease;
@@ -413,7 +414,7 @@ img{
     color:#1d7d7d;
     text-decoration: underline;
     text-decoration-color: currentColor;
-    text-decoration-style: dashed;
+    text-decoration-style: dotted;
 }
 .box-wrapper {
     background-color: #ffffff;
@@ -445,7 +446,7 @@ img{
         padding: 0 30px;
     }
 }
-@media (max-width: 767px) and (min-width: 480px){
+@media (max-width: 767px) {
     .button {   
         font-size: 15px;
         padding: 10px 20px;

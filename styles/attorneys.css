@@ -414,8 +414,8 @@
   display: block;
   color: #1d7d7d;
   text-decoration: underline;
-  -webkit-text-decoration-style: dashed;
-          text-decoration-style: dashed;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
   -webkit-text-decoration-color: currentColor;
           text-decoration-color: currentColor;
 }
@@ -514,6 +514,10 @@
 
   .rating__explain_white {
     color: #0e3a5d;
+  }
+
+  .button {
+    min-width: 220px;
   }
 }
 @media (max-width: 450px) {

@@ -158,23 +158,6 @@ function prevSlide(){
         slideNow --;
     }
 } 
-/* 
-// Кнопка "Подробнее"
-    $('.button-more span').on('click', function () {
-        $(this).closest('.feedback__text').find('.more-text').toggleClass('more-text_hidden');
-        if ($(this).closest('.feedback__text').find('.more-text').hasClass('more-text_hidden')) {
-            $(this).text('Подробнее...');
-        } else {
-            $(this).text('Свернуть');
-        }
-    });
- */
-
-/* feedbackBlocks.each(function(){
-    if ($(this).children('.readmore-js-toggle').length > 0){
-        $('.feedback__overlay').addClass('feedback__overlay_visible');
-    };
-}); */
 
 // скрытие формы отзыва
 
@@ -199,7 +182,7 @@ function prevSlide(){
 
 // overlay on .feedback__text
 
-const feedbackBlocks = $('.feedback');
+var feedbackBlocks = $('.feedback');
 
  feedbackBlocks.each(function(){
     if ($(this).children('.readmore-js-toggle').length > 0){
@@ -207,9 +190,17 @@ const feedbackBlocks = $('.feedback');
     };
 });    
 
-$('.readmore-js-toggle').on('click', function () {
-    $(this).siblings('.feedback__text').find('.feedback__overlay').toggleClass('feedback__overlay_visible');
-});
+var togglers = $('.readmore-js-toggle');
+
+ $.each(togglers, function (){
+    $(this).on('click', function(){
+        $(this).siblings('.feedback__text').find('.feedback__overlay').removeClass('feedback__overlay_visible');
+        var togglerCollapse = $('.readmore-js-toggle');
+        togglerCollapse.on('click', function(){
+            $(this).siblings('.feedback__text').find('.feedback__overlay').removeClass('feedback__overlay_visible');
+        })
+    })
+}); 
 
         
 // инициализация слайдера с отзывами

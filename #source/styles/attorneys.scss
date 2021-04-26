@@ -374,7 +374,7 @@
         display: block;
         color: #1d7d7d;
         text-decoration: underline;
-        text-decoration-style: dashed;
+        text-decoration-style: dotted;
         text-decoration-color: currentColor;
         &:hover {
             color: $fontColor;
@@ -485,6 +485,9 @@
         &__explain_white {
             color: #0e3a5d;
         }
+    }
+    .button {
+        min-width: 220px;
     }
 }
 @media (max-width: 450px) {

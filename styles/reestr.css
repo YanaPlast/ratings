@@ -481,10 +481,25 @@
   }
 }
 @media (max-width: 650px) {
+  .all-search {
+    padding-top: 15px;
+  }
   .all-search__pagination, .all-search__search-block {
     width: 100%;
   }
 
+  .header__title {
+    font-size: 25px;
+    line-height: 1.1;
+  }
+  .header__subtitle {
+    font-size: 22px;
+    line-height: 1.1;
+    margin-top: 25px;
+  }
+  .header__article {
+    padding: 15px 15px 15px 15px;
+  }
   .header__main {
     background-size: 140%;
     background-position: bottom -10px right -10px;
@@ -497,6 +512,12 @@
   .header__article_last {
     width: 100%;
   }
+  .header__article_first:before {
+    background-image: url(../images/reestr-page/reestr-header.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 50% auto;
+  }
 
   .all-search__pagination, .all-search__search-block {
     width: 100%;
@@ -504,5 +525,11 @@
 
   .list__item {
     flex: 0 0 100%;
+  }
+}
+@media (max-width: 479px) {
+  .header__text {
+    font-size: 15px;
+    line-height: 1.5;
   }
 }
