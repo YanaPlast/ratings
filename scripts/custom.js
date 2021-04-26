@@ -195,14 +195,12 @@ var togglers = $('.readmore-js-toggle');
  $.each(togglers, function (){
     $(this).on('click', function(){
         $(this).siblings('.feedback__text').find('.feedback__overlay').removeClass('feedback__overlay_visible');
-        var togglerCollapse = $('.readmore-js-toggle');
-        togglerCollapse.on('click', function(){
-            $(this).siblings('.feedback__text').find('.feedback__overlay').removeClass('feedback__overlay_visible');
-        })
-    })
+    });
+    
+
 }); 
 
-        
+       
 // инициализация слайдера с отзывами
 
 /*     if (document.documentElement.clientWidth < 980) {

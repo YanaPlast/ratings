@@ -549,6 +549,20 @@
   color: #80929f;
 }
 
+.readmore-js-collapsed {
+  position: relative;
+}
+.readmore-js-collapsed:before {
+  content: "";
+  position: absolute;
+  height: 40px;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff 65%);
+  z-index: 20;
+}
+
 .diagram {
   display: flex;
   justify-content: space-between;
