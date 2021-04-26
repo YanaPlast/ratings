@@ -102,7 +102,7 @@
   cursor: pointer;
 }
 
-.attorney__wrapper {
+.attorney {
   padding-top: 30px;
   padding-bottom: 60px;
   background-color: #f9f9f9;
@@ -413,15 +413,6 @@
   position: relative;
   display: inline-block;
   color: #1d7d7d;
-  /*        &:after {
-             content: '\f054';
-             position: absolute;
-             top: 4px;
-             right: -15px;
-             color: #1d7d7d;
-             font-family: fontawesome;
-             font-size: 13px;
-         } */
 }
 .other__name:hover {
   color: #444444;

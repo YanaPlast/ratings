@@ -3,11 +3,9 @@
 @import 'raiting';
 
 .attorney {
-    &__wrapper {
-        padding-top: 30px;
-        padding-bottom: 60px;
-        background-color: #f9f9f9;
-    }
+    padding-top: 30px;
+    padding-bottom: 60px;
+    background-color: #f9f9f9;
     &__title {
         padding-left: 20px;
         position: relative;
@@ -378,15 +376,6 @@
         &:hover {
             color: $fontColor;
         }
- /*        &:after {
-            content: '\f054';
-            position: absolute;
-            top: 4px;
-            right: -15px;
-            color: #1d7d7d;
-            font-family: fontawesome;
-            font-size: 13px;
-        } */
     }
 }
 
@@ -410,4 +399,9 @@
             color: #0e3a5d;
         }
     }
+}
+// ===================  Media ==================
+
+@media (max-width: 979px) {
+    
 }

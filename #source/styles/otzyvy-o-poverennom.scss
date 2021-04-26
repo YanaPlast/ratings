@@ -466,7 +466,8 @@
     }
     .raitings {
         text-align: center;
-        & > div {
+        &__total,
+        &__diagram {
             width: 70%;
             margin-left: 0;
             margin-right: 0;
@@ -534,7 +535,7 @@
 
 @media (max-width: 479px) {
     .raitings {
-        & > div {
+        &__total {
             width: 100%;
         }
     }
@@ -553,6 +554,11 @@
         &__dropdown {
             margin-left: 0;
         }
+    }
+    .feedback {
+        padding: 15px 15px 15px 20px;
+        font-size: 15px;
+        line-height: 1.5;
     }
     .feedback-form {
         ::-webkit-input-placeholder {

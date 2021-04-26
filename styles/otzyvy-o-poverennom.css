@@ -651,7 +651,7 @@
   .raitings {
     text-align: center;
   }
-  .raitings > div {
+  .raitings__total, .raitings__diagram {
     width: 70%;
     margin-left: 0;
     margin-right: 0;
@@ -713,7 +713,7 @@
   }
 }
 @media (max-width: 479px) {
-  .raitings > div {
+  .raitings__total {
     width: 100%;
   }
 
@@ -730,6 +730,12 @@
   }
   .main__dropdown {
     margin-left: 0;
+  }
+
+  .feedback {
+    padding: 15px 15px 15px 20px;
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   .feedback-form {
