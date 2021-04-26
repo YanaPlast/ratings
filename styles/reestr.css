@@ -167,6 +167,7 @@
   color: #1d7d7d;
 }
 .form__submit {
+  min-width: auto;
   width: 100%;
   margin-top: 20px;
 }

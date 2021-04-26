@@ -257,7 +257,7 @@
   background-color: #ffffff;
 }
 .card_border_red {
-  border: 2px solid #d13030;
+  border: 3px solid #d13030;
 }
 .card_border_blue {
   border: 3px solid #0e3a5d;
@@ -414,8 +414,8 @@
   display: block;
   color: #1d7d7d;
   text-decoration: underline;
-  -webkit-text-decoration-style: dotted;
-          text-decoration-style: dotted;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
   -webkit-text-decoration-color: currentColor;
           text-decoration-color: currentColor;
 }
@@ -500,15 +500,16 @@
   .feedback__title {
     text-align: center;
     color: #0e3a5d;
+    line-height: 1.2;
   }
   .feedback__btn {
     padding: 10px 30px;
     margin-top: 20px;
-    border-color: #0e3a5d;
-    color: #0e3a5d;
+    background-color: #0e3a5d;
+    color: #ffffff;
   }
   .feedback__btn:hover {
-    background-color: #0e3a5d;
+    background-color: #0d2e49;
     color: #ffffff;
   }
 
