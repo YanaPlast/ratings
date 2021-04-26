@@ -367,26 +367,6 @@
   padding-bottom: 60px;
   border-bottom: 4px solid #d13030;
   position: relative;
-  /* &:before,
-  &:after {
-      content: '';
-      position: absolute;
-      background-repeat: no-repeat;
-  }
-  &:after {
-      top: 150px;
-      right: 50px;
-      width: 235px;
-      height: 182px;
-      background-image: url(../images/otzyvy-page/feedback-bg-icon-1.png);
-  }
-  &:before {
-      top: 350px;
-      left: 50px;
-      width: 190px;
-      height: 190px;
-      background-image: url(../images/otzyvy-page/feedback-bg-icon-2.png);
-  } */
 }
 .main__title {
   font-weight: 500;
@@ -426,9 +406,7 @@
   padding: 20px 30px 30px;
   background-color: #ffffff;
   box-shadow: 0 5px 10px -2px rgba(48, 71, 88, 0.25);
-}
-.feedback p {
-  margin: 10px 0;
+  position: relative;
 }
 .feedback__date {
   font-size: 14px;
@@ -447,6 +425,20 @@
   font-weight: 500;
   margin-left: 10px;
   line-height: 1;
+}
+.feedback__overlay {
+  display: none;
+  position: absolute;
+  height: 50px;
+  bottom: 65px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff 65%);
+  z-index: 20;
+}
+.feedback__overlay_visible {
+  display: block;
 }
 
 .button-more {
@@ -518,6 +510,7 @@
   padding: 15px 20px 0 0;
   position: relative;
   font-weight: 500;
+  position: relative;
 }
 .readmore-js-toggle:hover {
   color: #d13030;
@@ -736,6 +729,9 @@
     padding: 15px 15px 15px 20px;
     font-size: 15px;
     line-height: 1.5;
+  }
+  .feedback__overlay {
+    bottom: 35px;
   }
 
   .feedback-form {

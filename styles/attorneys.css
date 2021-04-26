@@ -165,6 +165,7 @@
 .attorney__rating {
   margin-top: 15px;
   margin-bottom: 10px;
+  align-items: center;
 }
 
 .card {
@@ -410,9 +411,13 @@
   display: block;
 }
 .other__name {
-  position: relative;
-  display: inline-block;
+  display: block;
   color: #1d7d7d;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+  -webkit-text-decoration-color: currentColor;
+          text-decoration-color: currentColor;
 }
 .other__name:hover {
   color: #444444;
@@ -438,4 +443,122 @@
 .feedback__btn:hover {
   background-color: #ffffff;
   color: #0e3a5d;
+}
+
+@media (max-width: 1279px) {
+  .attorney__left {
+    width: 63%;
+  }
+  .attorney__right {
+    width: 35%;
+  }
+}
+@media (max-width: 979px) {
+  .attorney__columns {
+    flex-direction: column;
+  }
+  .attorney__left {
+    width: 100%;
+  }
+  .attorney__right {
+    width: 100%;
+    padding-left: 0;
+  }
+  .attorney__more {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .attorney__title {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .card__graph {
+    flex-direction: column;
+  }
+  .card__title {
+    font-size: 15px;
+    line-height: 1.1;
+    flex: 0 0 40%;
+  }
+  .card__text {
+    flex: 60%;
+  }
+
+  .question__title, .question__text, .question__button-container {
+    text-align: center;
+  }
+
+  .feedback {
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 3px solid #0e3a5d;
+  }
+  .feedback__title {
+    text-align: center;
+    color: #0e3a5d;
+  }
+  .feedback__btn {
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-color: #0e3a5d;
+    color: #0e3a5d;
+  }
+  .feedback__btn:hover {
+    background-color: #0e3a5d;
+    color: #ffffff;
+  }
+
+  .rating__explain_white {
+    color: #0e3a5d;
+  }
+}
+@media (max-width: 450px) {
+  .attorney__rating {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .rating__explain {
+    margin-top: 10px;
+  }
+
+  .card__row {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+  .card__title {
+    text-align: center;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 5px 10px 5px 0;
+    margin-bottom: 5px;
+  }
+  .card__text {
+    width: 100%;
+    border-left: 0;
+    padding-left: 0;
+    text-align: center;
+    font-size: 14px;
+  }
+  .card__text_shadowed {
+    align-items: center;
+  }
+  .card__text_shadowed img {
+    margin: 10px auto 10px;
+  }
+  .card__text_for-images {
+    align-items: center;
+  }
+  .card__text_for-images img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .other__name {
+    font-size: 14px;
+  }
 }

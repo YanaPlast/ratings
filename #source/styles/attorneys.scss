@@ -74,6 +74,7 @@
     &__rating {
         margin-top: 15px;
         margin-bottom: 10px;
+        align-items: center;
     }
 }
 
@@ -370,9 +371,11 @@
        display: block;
     }
     &__name {
-        position: relative;
-        display: inline-block;
+        display: block;
         color: #1d7d7d;
+        text-decoration: underline;
+        text-decoration-style: dashed;
+        text-decoration-color: currentColor;
         &:hover {
             color: $fontColor;
         }
@@ -402,6 +405,137 @@
 }
 // ===================  Media ==================
 
+@media (max-width: 1279px) {
+    .attorney {
+        &__left {
+            width: 63%;
+        } 
+        &__right {
+            width: 35%;
+        }
+    }
+}
+
 @media (max-width: 979px) {
-    
+    .attorney {
+        &__columns {
+            flex-direction: column;
+        }
+        &__left {
+            width: 100%;
+        } 
+        &__right {
+            width: 100%;
+            padding-left: 0;
+        }
+        &__more {
+            width: 100%;
+            margin-top: 25px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .attorney {
+        &__title {
+            font-size: 30px;
+            line-height: 1.2;
+        }
+    }
+    .card {
+        &__graph {
+            flex-direction: column;
+        }
+        &__title {
+            font-size: 15px;
+            line-height: 1.1;
+            flex: 0 0 40%;
+        }
+        &__text {
+            flex: 60%;
+        }
+    }
+    .question {
+        &__title,
+        &__text,
+        &__button-container {
+            text-align: center;
+        }
+    }
+    .feedback {
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        border: 3px solid #0e3a5d;
+        &__title {
+            text-align: center;
+            color: #0e3a5d;
+        }
+        &__btn {
+            padding: 10px 30px;
+            margin-top: 20px;
+            border-color: #0e3a5d;
+            color: #0e3a5d;
+            &:hover {
+                background-color: #0e3a5d;
+                color: #ffffff;
+            }
+        }
+    }
+    .rating {
+        &__explain_white {
+            color: #0e3a5d;
+        }
+    }
+}
+@media (max-width: 450px) {
+    .attorney {
+        &__rating {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .rating {
+        &__explain {
+            margin-top: 10px;
+        }
+    }
+    .card {
+        &__row {
+            flex-direction: column;
+            padding-bottom: 0;
+        }
+        &__title {
+            text-align: center;
+            width: 100%;
+            background-color: #f9f9f9;
+            padding: 5px 10px 5px 0;
+            margin-bottom: 5px;
+        }
+        &__text {
+            width: 100%;
+            border-left: 0;
+            padding-left: 0;
+            text-align: center;
+            font-size: 14px;
+            &_shadowed {
+                align-items: center;
+                img {
+                    margin: 10px auto 10px;
+                }
+            }
+            &_for-images {
+                align-items: center;
+                img {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        } 
+
+    }
+    .other {
+        &__name {
+            font-size: 14px;
+        }
+    }
 }

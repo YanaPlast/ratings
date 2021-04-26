@@ -411,6 +411,9 @@ img{
 }
 .link {
     color:#1d7d7d;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-decoration-style: dashed;
 }
 .box-wrapper {
     background-color: #ffffff;
@@ -443,7 +446,12 @@ img{
     }
 }
 @media (max-width: 767px) and (min-width: 480px){
-    
+    .button {   
+        font-size: 15px;
+        &_red {
+            padding: 10px 40px 10px 30px;
+        }
+    }
 }
 
 @media (max-width: 479px) {

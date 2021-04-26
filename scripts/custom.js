@@ -158,10 +158,7 @@ function prevSlide(){
         slideNow --;
     }
 } 
-
-
-
-
+/* 
 // Кнопка "Подробнее"
     $('.button-more span').on('click', function () {
         $(this).closest('.feedback__text').find('.more-text').toggleClass('more-text_hidden');
@@ -171,8 +168,15 @@ function prevSlide(){
             $(this).text('Свернуть');
         }
     });
+ */
 
-    // скрытие формы отзыва
+/* feedbackBlocks.each(function(){
+    if ($(this).children('.readmore-js-toggle').length > 0){
+        $('.feedback__overlay').addClass('feedback__overlay_visible');
+    };
+}); */
+
+// скрытие формы отзыва
 
     $('.leave-feedback-btn').on('click', function () {
 
@@ -193,6 +197,21 @@ function prevSlide(){
     });
 
 
+// overlay on .feedback__text
+
+const feedbackBlocks = $('.feedback');
+
+ feedbackBlocks.each(function(){
+    if ($(this).children('.readmore-js-toggle').length > 0){
+        $(this).find('.feedback__overlay').addClass('feedback__overlay_visible');
+    };
+});    
+
+$('.readmore-js-toggle').on('click', function () {
+    $(this).siblings('.feedback__text').find('.feedback__overlay').toggleClass('feedback__overlay_visible');
+});
+
+        
 // инициализация слайдера с отзывами
 
 /*     if (document.documentElement.clientWidth < 980) {

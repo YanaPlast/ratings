@@ -500,6 +500,11 @@ img {
 
 .link {
   color: #1d7d7d;
+  text-decoration: underline;
+  -webkit-text-decoration-color: currentColor;
+          text-decoration-color: currentColor;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
 }
 
 .box-wrapper {
@@ -526,6 +531,14 @@ img {
   .content-container {
     width: 100%;
     padding: 0 30px;
+  }
+}
+@media (max-width: 767px) and (min-width: 480px) {
+  .button {
+    font-size: 15px;
+  }
+  .button_red {
+    padding: 10px 40px 10px 30px;
   }
 }
 @media (max-width: 479px) {
