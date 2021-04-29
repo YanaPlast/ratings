@@ -1,38 +1,3 @@
-// document.querySelector('.dropdown__button').addEventListener('click', function(evt){
-//     evt.preventDefault();
-//     document.querySelector('.dropdown__list').classList.toggle('dropdown__list_visible');
-//     this.classList.add('dropdown__button_active');
-// });
-
-// // выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
-// document.querySelectorAll('.dropdown__list-item').forEach(function(listItem){
-//     listItem.addEventListener('click', function(e){
-//         e.stopPropagation();
-//         document.querySelector('.dropdown__button').innerText = this.innerText;
-//         document.querySelector('.dropdown__button').focus();
-//         document.querySelector('.dropdown__input-hidden').value = this.dataset.value;
-//         document.querySelector('.dropdown__list').classList.remove('dropdown__list_visible');
-//     })
-// })
-
-// // клик снаружи дропдауна закрывает его
-// document.addEventListener('click', function(e){
-//     console.log('Document Click');
-//     if (e.target !== document.querySelector('.dropdown__button')) {
-//         document.querySelector('.dropdown__list').classList.remove('dropdown__list_visible');
-//         document.querySelector('.dropdown__button').classList.remove('dropdown__button_active');
-//     }
-// })
-
-// //нажатие на таб или escape сворачивает список
-// document.addEventListener('keydown', function(e){
-//     if(e.key === 'Tab' || e.key === 'Escape') {
-//         document.querySelector('.dropdown__list').classList.remove('dropdown__list_visible');
-//         document.querySelector('.dropdown__button').classList.remove('dropdown__button_active');
-//     }
-// })
-// - работающтй код без переменных
-
 // Полифилл для метода forEach для NodeList
 if (window.NodeList && !NodeList.prototype.forEach) {
 	NodeList.prototype.forEach = function (callback, thisArg) {
@@ -55,7 +20,14 @@ document.querySelectorAll('.dropdown').forEach(function(dropDownWrapper){
     dropDownBtn.addEventListener('click', function(evt){
         evt.preventDefault();
         dropDownList.classList.toggle('dropdown__list_visible');
-    this.classList.add('dropdown__button_active');
+    this.classList.add('dropdown__button_active'); 
+});
+
+    // если в инпут начать вводить значение откроется список вариантов
+    dropDownBtn.addEventListener('keyup', function(evt){
+        evt.preventDefault();
+        dropDownList.classList.add('dropdown__list_visible');
+    this.classList.add('dropdown__button_active'); 
 });
 
 // выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
@@ -63,6 +35,7 @@ dropDownListItems.forEach(function(listItem){
     listItem.addEventListener('click', function(e){
         e.stopPropagation();
         dropDownBtn.innerText = this.innerText;
+        dropDownBtn.value = this.innerText;
         dropDownBtn.focus();
         dropDownInput.value = this.dataset.value;
         dropDownList.classList.remove('dropdown__list_visible');
@@ -86,4 +59,30 @@ document.addEventListener('keydown', function(e){
 })
 
 });
+
+
+// фильтрация списка регионов по первым буквам при вводе в инпут
+
+var regionInput = document.getElementById("regionInput");
+
+function regionFilter() {
+    var filter, ul, li, a, i, txtValue;
+    filter = regionInput.value.toUpperCase();
+    ul = document.getElementById("regionList");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().startsWith(filter)) {
+            li[i].style.display = "";
+            } else {
+            li[i].style.display = "none";
+            }
+    }
+}
+
+regionInput.onkeyup = regionFilter;
+
+
+
 

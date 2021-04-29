@@ -39,6 +39,14 @@
             <div class="main-menu">
                 <div class="content-container">
                     <div class="main-menu__wrapper">
+                        <div class="main-menu__logo logo">
+                            <div class="logo__picture">
+                                <img src="images/logo_160x50.jpg" alt="">
+                            </div>
+                            <div class="logo__text">
+                                <p>Независимый рейтинг патентных поверенных и бюро</p>
+                            </div>
+                        </div>
                         <ul class="main-menu__list">
                             <li class="main-menu__item">Главная</li>
                             <li class="main-menu__item">О нас</li>
@@ -47,9 +55,12 @@
                         </ul>
                         <div class="main-menu__searching searching">
                             <form class="searching__form" action="#" method="post">
-                                <input class="searching__input" type="text" placeholder="Искать по фамилии, номеру, специализации...">
+                                <input class="searching__input" type="text" placeholder="Что будем искать?">
                                 <button class="searching__btn" type="submit"></button>
                             </form>
+                        </div>
+                        <div class="main-menu__burger">
+                            <span></span>
                         </div>
                     </div>
                 </div> <!--end of content-container inside main-menu -->
@@ -116,14 +127,19 @@
                                         </div>
                                         <div class="form__label">Регион</div>
                                         <div class="form__group dropdown">
-                                            <button class="form__dropdown dropdown__button">Любой</button>
-                                            <ul class="dropdown__list">
-                                                <li class="dropdown__list-item" data-value="Mosc">г. Москва</li>
-                                                <li class="dropdown__list-item" data-value="MoscReg">Московская область</li>
-                                                <li class="dropdown__list-item" data-value="StPet">г. Санкт-Петербург</li>
-                                                <li class="dropdown__list-item" data-value="LeninReg">Ленинградская обл.</li>
-                                                <li class="dropdown__list-item" data-value="KomiResp">Коми респ.</li>
-                                                <li class="dropdown__list-item" data-value="SverdReg">Сврдловская обл.</li>
+                                            <!-- <button class="form__dropdown dropdown__button">Любой</button> -->
+                                            <input id="regionInput" class="form__dropdown dropdown__button" type="text" value="" placeholder="Начните вводить"></input>
+                                            <button class="arrow-down"></button>
+                                            <ul id="regionList" class="dropdown__list">
+                                                <li class="dropdown__list-item" data-value="Mosc"><a>г. Москва</a></li>
+                                                <li class="dropdown__list-item" data-value="MoscReg"><a>Московская область</a></li>
+                                                <li class="dropdown__list-item" data-value="StPet"><a>г. Санкт-Петербург</a></li>
+                                                <li class="dropdown__list-item" data-value="LeninReg"><a>Ленинградская обл.</a></li>
+                                                <li class="dropdown__list-item" data-value="KomiResp"><a>Коми респ.</a></li>
+                                                <li class="dropdown__list-item" data-value="SverdReg"><a>Свердловская обл.</a></li>
+                                                <li class="dropdown__list-item" data-value="RostovReg"><a>Ростовская обл.</a></li>
+                                                <li class="dropdown__list-item" data-value="Kamchat"><a>Камчатский край</a></li>
+                                                <li class="dropdown__list-item" data-value="Krasnod"><a>Краснодарский край</a></li>
                                             </ul>
                                             <input class="dropdown__input-hidden" type="text" name="select-category" value="">
                                         </div>
@@ -150,70 +166,36 @@
 
                             <div id="names">
                                 <div class="list pagination__list">
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Александров</span>
-                                        <span class="firstName">Роман</span>
-                                    </a>
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Алексеев</span>
-                                        <span class="firstName">Алексей</span>
-                                    </a>
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Авдеев</span>                                        
-                                        <span class="firstName">Алексей</span>
-                                    </a>
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Агафонов</span>
-                                        <span class="firstName">Дмитрий</span>
-                                    </a>
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Борисов</span>
-                                        <span class="firstName">Борис</span>                                        
-                                    </a>
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Бирюков</span>
-                                        <span class="firstName">Валерий</span>                                        
-                                    </a>
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Бражин</span>
-                                        <span class="firstName">Виктор</span>                                        
-                                    </a>
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Бодрых</span>
-                                        <span class="firstName">Богдан</span>                                        
-                                    </a>
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Бродячих</span>   
-                                        <span class="firstName">Горислав</span>                                                                         
-                                    </a>
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Домов</span>
-                                        <span class="firstName">Алексей</span>
-                                    </a>
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Громов</span>
-                                        <span class="firstName">Алексей</span>
-                                    </a>
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Иванов</span>
-                                        <span class="firstName">Алексей</span>
-                                    </a>
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Искандеров</span>
-                                        <span class="firstName">Константин</span>
-                                    </a>
-                                    <a href="#" class="list__item">
-                                        <span class="lastName">Васильев</span>
-                                        <span class="firstName">Алексей</span>
-                                    </a>
-                                    <a href="#" class="list__item">
+                                    <a href="#" class="list__name"><span class="listFullName">Александров Роман Иванович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Алексеев Алексей Иванович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Авдеев Евгений Александрович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Агафонов Дмитрий Тванович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Борисов Борис Иванович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Бирюков Валерий Рванович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Бражин Виктор Иванович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Бодрых Богдан Иванович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Бодрячих Горгий Евгеньевич</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Домов Илья Леонидович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Громов Леонид Ильич</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Иванов Алексей Львович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Искандеров Константин Иванович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Васильев Алексей Иванович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Малексеев Алексей Иванович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Палексеев Алексей Иванович</span></a>
+                                    <a href="#" class="list__name"><span class="listFullName">Ролексеев Иван Иванович</span></a>
+
+
+
+<!--                                <a href="#" class="list__item">
                                         <span class="lastName">Желтухов</span>
                                         <span class="firstName">Иван</span> 
                                     </a>
                                     <a href="#" class="list__item">
                                         <span class="lastName">Игнатенко</span>
                                         <span class="firstName">Алексей</span>
-                                    </a>             
+                                    </a>  -->   
+
+
                                 </div> <!--end of pagination__list -->                                                         
                             </div>  <!--end of users -->
                             <!-- <div class="debug"></div> -->
@@ -226,10 +208,11 @@
         <footer class="footer"></footer>
 
         <script src="scripts/jquery.min.js"></script>
-        <script src="scripts/list.js"></script>
+        <script src="scripts/list.js"></script> 
          <script src="scripts/readmore.js"></script>
         <script src="scripts/custom.js"></script> 
         <script src="scripts/dropdown.js"></script>
+        <script src="scripts/dynamicAdapt_dev.js"></script>
 
     </body>
 

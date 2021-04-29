@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
-    // фильтр по алфавиту на странице реестра
-    var options = {
+// фильтр по алфавиту на странице reestr
+
+/*     var options = {
         valueNames: ['firstName', 'lastName']
     };
 
@@ -24,13 +25,65 @@ $(document).ready(function() {
                 return false;
             }
         });
+    }); */
+
+
+var options = {
+        valueNames: ['listFullName']
+    };
+
+    var userList = new List('names', options);
+
+    $('.pagination__link').click(function(e) {
+        e.preventDefault();
+        $('.pagination__link').removeClass('pagination__link_active');
+        $(this).addClass('pagination__link_active');
+        // Получаем букву из текста ссылки-фильтра
+        var letter = $(this).html();
+
+        userList.filter(function(item) {
+            // Получаем первую букву имени
+            var l = item.values().listFullName.charAt(0);
+
+            if (l === letter) {
+                return true;
+            } else {
+                return false;
+            }
+        });
     });
 
-    // кнопка расширенный поиск
+/* 	$(document).mouseup(function (e){ 
+		var block = $('.all-search__pagination'); 
+		if (!block.is(e.target) // если клик был не по блоку фильтра
+		    && block.has(e.target).length === 0) { // и не по его дочерним элементам
+			console.log('Ola!'); 
+
+        }
+ 
+	}); */
+
+//фильтр для регионов по первым вводимым буквам
+
+
+//   $("#demoInput").on("keyup", function() {  //2
+//     var value = $(this).val().toLowerCase();  //3
+//     $("#demoList li").filter(function() {  //4
+//         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)  //5
+//     });
+//   });  - поиск получается по всем буквам, а не по начальным
+
+
+
+
+
+
+
+
+ // кнопка расширенный поиск
     $('.form__undertext').on('click', function(){
         $('.form__more-hidden').toggleClass('form__more-hidden_visible');
         var textMore = $('.form__undertext').text();
-        console.log(textMore);
         if (textMore === 'расширенный поиск') {
             $('.form__undertext').text('свернуть');
         } else {
@@ -94,7 +147,6 @@ var slideNow = 1;
 var slideCount = $('.slider__wrapper').children().length;
 var slideTime = 1000;
 
-//setInterval(nextSlide, slideTime);
 
 $('.slider__btn_next').click(nextSlide);
 $('.slider__btn_prev').click(prevSlide);
@@ -182,6 +234,11 @@ $('.feedback__text').readmore({
 });
 
 
+
+// переброска блоков в мобильной версии
+const da = new DynamicAdapt("max"); 
+da.init();
+
 /* !!! overlay on .feedback__text
 
 var feedbackBlocks = $('.feedback');
@@ -230,5 +287,26 @@ var togglers = $('.readmore-js-toggle');
     }
 
   } )  */
+
+
+// адаптивное меню
+
+$('.main-menu__burger').click(function(event){
+    $(this).toggleClass('main-menu__burger_active');
+    $('.main-menu__list').toggleClass('main-menu__list_active');
+})
+
+/* $(document).mouseup(function (e){ 
+		var menuAdapt = $('.main-menu__list'); 
+        var burger = $('.main-menu__burger');
+		if (!menuAdapt.is(e.target) // если клик был не по списку меню
+		    && menuAdapt.has(e.target).length === 0)
+            && (!burger).is(e.target) { // и не по его дочерним элементам
+			console.log('Ola!'); 
+            menuAdapt.removeClass('main-menu__list_active');
+            burger.removeClass('main-menu__burger_active');
+        }
+ 
+	}); */
 
 });

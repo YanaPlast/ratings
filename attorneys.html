@@ -37,6 +37,14 @@
             <div class="main-menu">
                 <div class="content-container">
                     <div class="main-menu__wrapper">
+                        <div class="main-menu__logo logo">
+                            <div class="logo__picture">
+                                <img src="images/logo_160x50.jpg" alt="">
+                            </div>
+                            <div class="logo__text">
+                                <p>Независимый рейтинг патентных поверенных и бюро</p>
+                            </div>
+                        </div>
                         <ul class="main-menu__list">
                             <li class="main-menu__item">Главная</li>
                             <li class="main-menu__item">О нас</li>
@@ -45,13 +53,16 @@
                         </ul>
                         <div class="main-menu__searching searching">
                             <form class="searching__form" action="#" method="post">
-                                <input class="searching__input" type="text" placeholder="Искать по фамилии, номеру, специализации...">
+                                <input class="searching__input" type="text" placeholder="Что будем искать?">
                                 <button class="searching__btn" type="submit"></button>
                             </form>
                         </div>
+                        <div class="main-menu__burger">
+                            <span></span>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div> <!--end of content-container inside main-menu -->
+            </div> <!--end of main-menu-->
     </header>
 
     <main id="attorney">
@@ -98,7 +109,15 @@
                             </div>
                             <div class="card__row">
                                 <div class="card__title">Специализация</div>
-                                <div class="card__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. На берегу текстами даль грустный первую, заглавных ее продолжил решила переулка большого гор. Назад букв текстов своего использовало. Вдали, свой жизни. От всех речью моей скатился дороге, дорогу домах себя? За, злых.</div> 
+                                <div class="card__text">
+                                    <div class="card__list">
+                                        <div class="card__item">Товарные знаки и знаки обслуживания</div>
+                                        <div class="card__item">Наименования мест происхождения товара</div>
+                                        <div class="card__item">Изобретения и полезные модели</div>
+                                        <div class="card__item">Промышленные образцы</div>
+                                        <div class="card__item">Программы для ЭВМ, базы данных, топология интегральных схем</div>
+                                    </div>
+                                </div> 
                             </div>
                         </div>   
 
@@ -140,7 +159,7 @@
                             </div>
                         </div>
 
-                        <div class="attorney__card card_bordered card_margined feedback"> 
+                        <div data-da=".attorney__right,979,1"  data-da=".attorney__left,980,last" class="attorney__card card_bordered card_margined feedback"> 
                             <div class="feedback__left">
                                 <div class="block-title feedback__title">Отзывы о ПП <span class="nowrap">№{-номер ПП}</span></div>
                                 <div class="rating attorney__rating">
@@ -166,7 +185,7 @@
                                
                              
 
-                        <div class="card_bordered card_margined card_border_blue"> 
+                        <div data-da=".attorney__right,979,7" class="card_bordered card_margined card_border_blue"> 
                             <div class="question">
                                 <div class="block-title question__title">Это вы?</div>
                                 <div class="question__text">Зарегистрируйтесь и получите возможность управлять отображением информации о патентном поверенном</div>
@@ -179,14 +198,14 @@
                     </div>
 
                     <div class="attorney__right">
-                        <div class="attorney__more more">
+                        <div data-da=".attorney__left,979,3" class="attorney__more more">
                             <p class="more__text">Ещё <span class="more__text_big">1539</span> патентных поверенных в независимом рейтинге ХХХ</p>
                             <div class="button-container">
                                 <a class="button button_red button_arrowed more__button">Смотреть рейтинг</a>
                             </div>
                         </div>
 
-                        <div class="card card_bordered card_border_red card_margined">
+                        <div data-da=".attorney__left,979,4" class="card card_bordered card_border_red card_margined">
                             <div class="attorney__perform perform">
                                 <div class="perform__title">Личная эффективность <span>*</span></div>
                                 <div class="perform__status perform__rate perform__rate_pictured">0.6 - средняя</div>
@@ -203,7 +222,7 @@
                             </div>                              
                         </div>
 
-                        <div class="card card_margined">
+                        <div class="card card_margined"  data-da=".attorney__right,980,2">
                             <div class="attorney__perform perform">
                                 <div class="perform__title">Примеры поданых знаков:</div>
                                 <div class="perform__wrapper">
@@ -231,21 +250,21 @@
                         </div>
 
                         <div class="attorney__card card">
-                            <div class="card__row">
-                                <div class="card__title card__title_equival">Телефон</div>
-                                <div class="card__text card__text_equival">8-800-231-45-78</div> 
+                            <div class="card__row card__row_linewise">
+                                <div class="card__title card__title_linewise card__title_equival">Телефон</div>
+                                <div class="card__text card__text_linewise card__text_equival">8-800-231-45-78</div> 
                             </div>
-                            <div class="card__row">
-                                <div class="card__title card__title_equival">E-mail</div>
-                                <div class="card__text card__text_equival">attorney@mail.ru</div> 
+                            <div class="card__row card__row_linewise">
+                                <div class="card__title card__title_linewise card__title_equival">E-mail</div>
+                                <div class="card__text card__text_linewise card__text_equival">attorney@mail.ru</div> 
                             </div>
-                            <div class="card__row">
-                                <div class="card__title card__title_equival">Адрес для переписки</div>
-                                <div class="card__text card__text_equival">610020 г. Москва, Ружейный пер., стр 6, оф.5</div> 
+                            <div class="card__row card__row_linewise">
+                                <div class="card__title card__title_linewise card__title_equival">Адрес для переписки</div>
+                                <div class="card__text card__text_linewise card__text_equival">610020 г. Москва, Ружейный пер., стр 6, оф.5</div> 
                              </div>
-                            <div class="card__row">
-                                <div class="card__title card__title_equival">Сайт</div>
-                                <div class="card__text card__text_equival">www.attorney.ru</div> 
+                            <div class="card__row card__row_linewise">
+                                <div class="card__title card__title_linewise card__title_equival">Сайт</div>
+                                <div class="card__text card__text_linewise card__text_equival">www.attorney.ru</div> 
                             </div>            
                         </div>
 
@@ -254,36 +273,39 @@
                         </div>
                             
                         <div class="attorney__card card">
-                            <div class="card__row">
-                                <div class="card__title card__title_equival">Общественная организация</div>
-                                <div class="card__text card__text_equival">Обеспечивает там путь составитель</div> 
+                            <div class="card__row  card__row_linewise">
+                                <div class="card__title card__title_linewise card__title_equival">Общественная организация</div>
+                                <div class="card__text card__text_linewise card__text_equival">Обеспечивает там путь составитель</div> 
                             </div>
-                            <div class="card__row">
-                                <div class="card__title card__title_equival">Компания</div>
-                                <div class="card__text card__text_equival">За злых</div> 
+                            <div class="card__row card__row_linewise">
+                                <div class="card__title card__title_linewise card__title_equival">Компания</div>
+                                <div class="card__text card__text_linewise card__text_equival">За злых</div> 
                             </div>
-                            <div class="card__row">
-                                <div class="card__title card__title_equival">Языки</div>
-                                <div class="card__text card__text_equival">русский, немецкий, английский</div> 
+                            <div class="card__row card__row_linewise">
+                                <div class="card__title card__title_linewise card__title_equival">Языки</div>
+                                <div class="card__text card__text_linewise card__text_equival">русский, немецкий, английский</div> 
                             </div>
-                            <div class="card__row">
-                                <div class="card__title card__title_equival">ИП</div>
-                                <div class="card__text card__text_equival">нет</div> 
+                            <div class="card__row card__row_linewise">
+                                <div class="card__title  card__title_linewise card__title_equival">ИП</div>
+                                <div class="card__text card__text_linewise card__text_equival">нет</div> 
                             </div>
                         </div>
 
 
                         <div class="attorney__card card card_bordered card_margined">
                             <div class="attorney__other other">
-                                <a class="other__title">Другие патентные поверенные</a>
-                                <a class="other__name">Черных Маргарита Иннокентьевна</a>
-                                <a class="other__name">Белых Игорь Миронович</a>
-                                <a class="other__name">Седых Инесса Леопольдовна</a>
-                                <a class="other__name">Черных Маргарита Иннокентьевна</a>
-                                <a class="other__name">Белых Игорь Миронович</a>
-                                <a class="other__name">Седых Инесса Леопольдовна</a>
-                            </div>                              
-                        </div>
+                                <div class="other__title">Другие патентные поверенные</div>
+                                <ul class="other__list">
+                                    <li class="other__item"><a class="other__name">Черных Маргарита Иннокентьевна</a></li>
+                                    <li class="other__item"><a class="other__name">Белых Игорь Миронович</a></li>
+                                    <li class="other__item"><a class="other__name">Седых Инесса Леопольдовна</a></li>
+                                    <li class="other__item"><a class="other__name">Черных Маргарита Иннокентьевна</a></li>
+                                    <li class="other__item"><a class="other__name">Белых Игорь Миронович</a></li>
+                                    <li class="other__item"><a class="other__name">Седых Инесса Леопольдовна</a></li>
+                                </ul>                                   
+                            </div>                                                                           
+                        </div>                              
+                    </div>
 
                     </div>
                     
@@ -302,6 +324,7 @@
     <link rel="stylesheet" href="styles/fancybox.min.css">
     <script src="scripts/starrating.js"></script>
     <script src="scripts/fancybox.min.js"></script>
+    <script src="scripts/dynamicAdapt.js"></script>
    
 
 </body>

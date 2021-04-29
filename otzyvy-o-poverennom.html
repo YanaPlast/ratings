@@ -29,46 +29,7 @@
         <link rel="stylesheet" href="styles/critical.css">
         <link rel="stylesheet" href="styles/font-awesome.css">
         <link rel="stylesheet" href="styles/otzyvy-o-poverennom.css">
-
-<!--         <script type="application/ld+json">      { 
-            "@context": "http://schema.org", 
-            "@type": "Review", 
-            "datePublished":"2021-04-16", 
-            "author": { 
-                    "@type": "Person",
-                    "name": "Татьяна Алексеевна" 
-                },
-            "name": "Хорошее качество обслуживания", 
-            "image": "https://r-znak.ru/...", 
-            "url": "https://www.r-znak.ru/otzyvy",
-            "itemReviewed":   {
-                "@type": "Organization",
-                "name": "Иванова Иванна Ивановна",
-                "image": "https://r-znak.ru/...", 
-                "url": "https://r-znak.ru/otzyvy/otzyvy-o-poverennom...", 
-                "description": "Иванова Иванна Ивановна. №0000. Специализация. Регион",
-                "aggregateRating": {
-                    "@type": "AggregateRating", 
-                    "ratingValue": "3.4", 
-                     "reviewCount": "58", 
-                    "ratingCount": "58", 
-                    "bestRating": "5", 
-                    "worstRating": "1"
-                    } 
-            }, 
-            "reviewBody": "Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой процесс внедрения
-                    и модернизации дальнейших направлений развития. Повседневная практика показывает, что постоянное информационно-пропагандистское 
-                    обеспечение нашей деятельности играет важную роль в формировании существенных финансовых и административных условий.", 
-            "reviewRating": { 
-                    "@type": "Rating",
-                    "ratingValue": "4", 
-                    "bestRating": "5", 
-                    "worstRating": "1"
-                }
-            }              
-        </script> -->
-
-        <!--[if lt IE 9]>
+       <!--[if lt IE 9]>
         <script src="scripts/html5.js"></script> <![endif]-->  
     </head>
     
@@ -77,6 +38,14 @@
             <div class="main-menu">
                 <div class="content-container">
                     <div class="main-menu__wrapper">
+                        <div class="main-menu__logo logo">
+                            <div class="logo__picture">
+                                <img src="images/logo_160x50.jpg" alt="">
+                            </div>
+                            <div class="logo__text">
+                                <p>Независимый рейтинг патентных поверенных и бюро</p>
+                            </div>
+                        </div>
                         <ul class="main-menu__list">
                             <li class="main-menu__item">Главная</li>
                             <li class="main-menu__item">О нас</li>
@@ -85,13 +54,16 @@
                         </ul>
                         <div class="main-menu__searching searching">
                             <form class="searching__form" action="#" method="post">
-                                <input class="searching__input" type="text" placeholder="Искать по фамилии, номеру, специализации...">
+                                <input class="searching__input" type="text" placeholder="Что будем искать?">
                                 <button class="searching__btn" type="submit"></button>
                             </form>
                         </div>
+                        <div class="main-menu__burger">
+                            <span></span>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div> <!--end of content-container inside main-menu -->
+            </div> <!--end of main-menu-->
         </header>
     
         <main id="otzyvy">
@@ -106,7 +78,7 @@
                             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">поверенный {N}</a></li>
                             <li class="breadcrumbs__item"><span class="breadcrumbs__link breadcrumbs__link_last">отзывы</span></li>
                         </ul>
-                        <h1 class="title otzyvy__title">Отзывы о патентном поверенном <span class="nowrap">№ 100500</span><br><b>Иванова Иванна Ивановна</b></h1>
+                        <h1 class="title otzyvy__title">Отзывы о патентном поверенном <span class="nowrap">№ 100500</span><br><b>Иванова Иванна ИвановнаГарсияМаркесЛопес</b></h1>
                         <div class="otzyvy__columns columns">
                             <div class="otzyvy__info box-wrapper">
                                 <div class="otzyvy__raitings raitings columns">
@@ -132,7 +104,7 @@
                                         </div>
                                     </div>
                                 
-                                    <div class="raitings__diagram">
+                                    <div class="raitings__diagram" data-da=".raitings__total,767,1">
                                         <div class="diagram">
                                             <div class="diagram__scoreBLock">
                                                 <div class="diagram__column">
@@ -173,7 +145,7 @@
                                 </div>
                             </div>
 
-                            <div class="otzyvy__more more">
+                            <div data-da=".main__content-container,979,1" class="otzyvy__more more">
                                 <p class="more__text">Ещё <span class="more__text_big">1539</span> патентных поверенных в независимом рейтинге ХХХ</p>
                                 <div class="button-container">
                                     <a class="button button_red button_arrowed more__button">Смотреть рейтинг</a>
@@ -181,6 +153,11 @@
                             </div>
                         </div>
 
+                    </div> <!-- end of content-container -->
+                </div> <!-- end of otzyvy-top -->
+
+                <div class="otzyvy__main main">
+                    <div class="content-container main__content-container"> 
 
                         <div class="feedback-form feedback-form_hidden box-wrapper">
                             <div class="feedback-form__head">Написать отзыв</div>
@@ -235,11 +212,6 @@
                             </form>
                         </div>
 
-                    </div> <!-- end of content-container -->
-                </div> <!-- end of otzyvy-top -->
-
-                <div class="otzyvy__main main">
-                    <div class="content-container"> 
                         <div class="main__header">
                             <div class="main__title">{N} покупателей оставили отзыв</div>
                             <div class="main__filter">
@@ -449,9 +421,11 @@
         <script src="scripts/dropdown.js"></script>
         <script src="scripts/readmore.js"></script>
         <script src="scripts/starrating.js"></script>
-        <script src="scripts/replace.js"></script>      
+        <!-- <script src="scripts/replace.js"></script>       -->
+        <script src="scripts/dynamicAdapt_dev.js"></script>
     
-        <script type="application/ld+json">      { 
+       <script type="application/ld+json">     
+           { 
             "@context": "http://schema.org", 
             "@type": "Review", 
             "datePublished":"2021-04-16", 
@@ -459,19 +433,15 @@
                     "@type": "Person",
                     "name": "Татьяна Алексеевна" 
                 },
-            "name": "Хорошее качество обслуживания", 
-            "image": "https://r-znak.ru/...", 
-            "url": "https://www.r-znak.ru/otzyvy",
+            "name": "Высокое качество услуг", 
             "itemReviewed":   {
                 "@type": "Organization",
-                "name": "Иванова Иванна Ивановна",
-                "image": "https://r-znak.ru/...", 
-                "url": "https://r-znak.ru/otzyvy/otzyvy-o-poverennom...", 
+                "name": "Патентный поверенный Иванова Иванна Ивановна",
                 "description": "Иванова Иванна Ивановна. №0000. Специализация. Регион",
                 "aggregateRating": {
                     "@type": "AggregateRating", 
                     "ratingValue": "3.4", 
-                     "reviewCount": "58", 
+                    "reviewCount": "58", 
                     "ratingCount": "58", 
                     "bestRating": "5", 
                     "worstRating": "1"
@@ -487,7 +457,29 @@
                     "worstRating": "1"
                 }
             }              
-        </script>
+        </script> 
+<!-- 
+или отзыв в структуре organization - их гугл "поддерживает"
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org", 
+    "@type": "Organization",
+    "name": "Патентный поверенный Иванова Иванна Ивановна",
+    "description": "специализация, регион, сколько работает",
+    "aggregateRating":   {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "35",
+        "ratingCount": "35",
+        "bestRating": "5",
+        "worstRating": "1" 
+    },
+    "image": ["https://i.otzyvru.com/2018/06/07/advokat-matveeva-olga-borisovna.jpg"] 
+}
+
+</script> -->
 
     </body>
 
