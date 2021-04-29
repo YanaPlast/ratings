@@ -544,9 +544,11 @@
         &__title,
         &__subtitle {
             padding-left: 30px;
-            text-shadow: -0 -1px 1px #FFFFFF, 0 -1px 1px #FFFFFF, -0 1px 1px #FFFFFF, 0 1px 1px #FFFFFF, -1px -0 1px #FFFFFF, 1px -0 1px #FFFFFF,
-            -1px 0 1px #FFFFFF, 1px 0 1px #FFFFFF, -1px -1px 1px #FFFFFF, 1px -1px 1px #FFFFFF, -1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF,
-            -1px -1px 1px #FFFFFF, 1px -1px 1px #FFFFFF, -1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF;
+        }
+        &__subtitle {
+            text-shadow: -0 -1px 1px #FFFFFF, 0 -1px 1px #FFFFFF,  -0 1px 1px #FFFFFF,  0 1px 1px #FFFFFF,  -1px -0 1px #FFFFFF,
+                1px -0 1px #FFFFFF, -1px 0 1px #FFFFFF, 1px 0 1px #FFFFFF, -1px -1px 1px #FFFFFF, 1px -1px 1px #FFFFFF,
+                -1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF, -1px -1px 1px #FFFFFF, 1px -1px 1px #FFFFFF, -1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF;
         }
     }
     .all-search {

@@ -496,6 +496,8 @@
   }
   .header__title, .header__subtitle {
     padding-left: 30px;
+  }
+  .header__subtitle {
     text-shadow: 0 -1px 1px #FFFFFF, 0 -1px 1px #FFFFFF, 0 1px 1px #FFFFFF, 0 1px 1px #FFFFFF, -1px 0 1px #FFFFFF, 1px 0 1px #FFFFFF, -1px 0 1px #FFFFFF, 1px 0 1px #FFFFFF, -1px -1px 1px #FFFFFF, 1px -1px 1px #FFFFFF, -1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF, -1px -1px 1px #FFFFFF, 1px -1px 1px #FFFFFF, -1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF;
   }
 
