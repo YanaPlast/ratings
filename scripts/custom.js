@@ -1,38 +1,11 @@
 $(document).ready(function() {
 
-// фильтр по алфавиту на странице reestr
-
-/*     var options = {
-        valueNames: ['firstName', 'lastName']
-    };
-
-    var userList = new List('names', options);
-
-    $('.pagination__link').click(function(e) {
-        e.preventDefault();
-        $('.pagination__link').removeClass('pagination__link_active');
-        $(this).addClass('pagination__link_active');
-        // Получаем букву из текста ссылки-фильтра
-        var letter = $(this).html();
-
-        userList.filter(function(item) {
-            // Получаем первую букву имени
-            var l = item.values().lastName.charAt(0);
-
-            if (l === letter) {
-                return true;
-            } else {
-                return false;
-            }
-        });
-    }); */
-
-
 var options = {
         valueNames: ['listFullName']
     };
 
     var userList = new List('names', options);
+    var resetBtn = $('.reset__btn');
 
     $('.pagination__link').click(function(e) {
         e.preventDefault();
@@ -46,22 +19,28 @@ var options = {
             var l = item.values().listFullName.charAt(0);
 
             if (l === letter) {
+                resetBtn.removeClass('reset__btn_hidden');
                 return true;
             } else {
+                resetBtn.removeClass('reset__btn_hidden');
                 return false;
+              
             }
         });
+        if($('.list').children().length == 0){
+            console.log('Oh no');
+            $('.list').html('<p style="padding-left: 15px;">Совпадений не найдено</p>');
+        }
     });
 
-/* 	$(document).mouseup(function (e){ 
-		var block = $('.all-search__pagination'); 
-		if (!block.is(e.target) // если клик был не по блоку фильтра
-		    && block.has(e.target).length === 0) { // и не по его дочерним элементам
-			console.log('Ola!'); 
-
-        }
- 
-	}); */
+// вернуть весь список фамилий
+resetBtn.on('click', function(){
+    userList.filter(function(){
+        resetBtn.addClass('reset__btn_hidden');
+        $('.pagination__link').removeClass('pagination__link_active');
+        return true;
+    })
+});
 
 //фильтр для регионов по первым вводимым буквам
 
@@ -74,13 +53,7 @@ var options = {
 //   });  - поиск получается по всем буквам, а не по начальным
 
 
-
-
-
-
-
-
- // кнопка расширенный поиск
+// кнопка расширенный поиск
     $('.form__undertext').on('click', function(){
         $('.form__more-hidden').toggleClass('form__more-hidden_visible');
         var textMore = $('.form__undertext').text();
@@ -92,56 +65,7 @@ var options = {
         
     })
 
-
-/* var slideNow = 1;
-var slideCount = $('.slider__wrapper').children().length;
-var slideTime = 1000;
-
-//setInterval(nextSlide, slideTime);
-
-$('.slider__btn_next').click(nextSlide);
-$('.slider__btn_prev').click(prevSlide);
-
-function nextSlide(){
-    if(slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
-        $('.slider__wrapper').css({
-            'transform': 'translate(0,0)',
-            '-o-transform': 'translate(0,0)',
-            '-webkit-transform': 'translate(0,0)'
-        });
-        slideNow = 1;
-    } else {
-        var translateWidth = (-$('.pagination__filter').width()*(slideNow) - 5);
-        $('.slider__wrapper').css({
-            'transform': 'translate('+translateWidth+'px,0)',
-            '-o-transform': 'translate('+translateWidth+'px,0)',
-            '-webkit-transform': 'translate('+translateWidth+'px,0)'
-        });
-        slideNow ++;
-    }
-}
-
-function prevSlide(){
-    if(slideNow == 1 || slideNow <= 0 || slideNow > slideCount) {
-        var translateWidth = (-$('.pagination__filter').width()*(slideCount - 1) - 5);
-        $('.slider__wrapper').css({
-            'transform': 'translate('+translateWidth+'px,0)',
-            '-o-transform': 'translate('+translateWidth+'px,0)',
-            '-webkit-transform': 'translate('+translateWidth+'px,0)'
-        });
-        slideNow = slideCount;
-    } else {
-        var translateWidth = (-$('.pagination__filter').width()*(slideNow - 2) - 5);
-        $('.slider__wrapper').css({
-            'transform': 'translate('+translateWidth+'px,0)',
-            '-o-transform': 'translate('+translateWidth+'px,0)',
-            '-webkit-transform': 'translate('+translateWidth+'px,0)'
-        });
-        slideNow --;
-    }
-} */
-
-
+// алфавитный слайдер на странице реестра
 
 var slideNow = 1;
 var slideCount = $('.slider__wrapper').children().length;
@@ -211,10 +135,8 @@ function prevSlide(){
     }
 } 
 
-// скрытие формы отзыва
-
+// скрытие формы отзыва на странице отзывов о патентном поверенном
     $('.leave-feedback-btn').on('click', function () {
-
         var feedbackForm = $('.feedback-form');
         feedbackForm.toggleClass('feedback-form_hidden');
         if(feedbackForm.hasClass('feedback-form_hidden')){
@@ -225,7 +147,7 @@ function prevSlide(){
     });    
 
 
-// Сворачиваем тексты отзывов в кнопку Подробнее
+// Сворачиваем тексты отзывов в кнопку Подробнее на странице отзывов о поверенном
 $('.feedback__text').readmore({
     maxHeight: 113,
     moreLink: '<a href="#">Подробнее</a>',
@@ -233,62 +155,19 @@ $('.feedback__text').readmore({
     heightMargin: 20
 });
 
+// Сворачиваем тексты отзывов в кнопку Подробнее на странице патентного поверенного
+$('.feedback-block__content').readmore({
+    maxHeight: 90,
+    moreLink: '<a href="#">Подробнее</a>',
+    lessLink: '<a href="#">Свернуть</a>',
+    heightMargin: 20
+});
 
 
-// переброска блоков в мобильной версии
+// переброска блоков для мобильной версии
 const da = new DynamicAdapt("max"); 
 da.init();
-
-/* !!! overlay on .feedback__text
-
-var feedbackBlocks = $('.feedback');
-
- feedbackBlocks.each(function(){
-    if ($(this).children('.readmore-js-toggle').length > 0){
-        $(this).find('.feedback__overlay').addClass('feedback__overlay_visible');
-    };
-});    
-
-var togglers = $('.readmore-js-toggle');
-
- $.each(togglers, function (){
-    $(this).on('click', function(){
-        $(this).siblings('.feedback__text').find('.feedback__overlay').removeClass('feedback__overlay_visible');
-    });
-}); 
- */
-       
-// инициализация слайдера с отзывами
-
-/*     if (document.documentElement.clientWidth < 980) {
-        $('.main__body').slick({
-        arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-
-        });
-    }
-
-  $(window).resize(function () {
-
-    if (document.documentElement.clientWidth < 980) {
-        $('.main__body').slick({
-        arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        adaptiveHeight: true,
-        dots: true,
-        });
-    }    else {
-        $('.main__body').slick('unslick');
-    }
-
-  } )  */
-
-
+   
 // адаптивное меню
 
 $('.main-menu__burger').click(function(event){
@@ -296,17 +175,7 @@ $('.main-menu__burger').click(function(event){
     $('.main-menu__list').toggleClass('main-menu__list_active');
 })
 
-/* $(document).mouseup(function (e){ 
-		var menuAdapt = $('.main-menu__list'); 
-        var burger = $('.main-menu__burger');
-		if (!menuAdapt.is(e.target) // если клик был не по списку меню
-		    && menuAdapt.has(e.target).length === 0)
-            && (!burger).is(e.target) { // и не по его дочерним элементам
-			console.log('Ola!'); 
-            menuAdapt.removeClass('main-menu__list_active');
-            burger.removeClass('main-menu__burger_active');
-        }
- 
-	}); */
+// больше отзывов на странице отзывов о патентном поверенном, пагинация
+
 
 });

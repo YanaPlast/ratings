@@ -620,7 +620,27 @@
     }
 }
 
-// .slick-slider {
-//     width: 95%;
-//     margin: 0 auto;
-// }
+.paginator {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 25px;
+    span {
+        height: 100%;
+        width: 25px;
+        // padding: 5px 10px;
+        text-align: center;
+        line-height: 25px;
+        margin-right: 5px;
+        font-size: 14px;
+        font-family: $mainFont;
+        background-color: #ffffff;
+    }
+}
+ .num {
+     display: none;
+}
+.paginator span.paginator_active {
+    background-color: $accentColor;
+    color: #ffffff;
+}

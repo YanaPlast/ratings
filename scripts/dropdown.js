@@ -84,5 +84,3 @@ function regionFilter() {
 regionInput.onkeyup = regionFilter;
 
 
-
-

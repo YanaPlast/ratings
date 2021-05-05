@@ -206,7 +206,7 @@
   }
   .main-menu__list {
     position: absolute;
-    min-width: 200px;
+    min-width: 300px;
     height: auto;
     background-color: #888888;
     color: #ffffff;
