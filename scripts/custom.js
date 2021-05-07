@@ -45,14 +45,6 @@ resetBtn.on('click', function(){
 //фильтр для регионов по первым вводимым буквам
 
 
-//   $("#demoInput").on("keyup", function() {  //2
-//     var value = $(this).val().toLowerCase();  //3
-//     $("#demoList li").filter(function() {  //4
-//         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)  //5
-//     });
-//   });  - поиск получается по всем буквам, а не по начальным
-
-
 // кнопка расширенный поиск
     $('.form__undertext').on('click', function(){
         $('.form__more-hidden').toggleClass('form__more-hidden_visible');
@@ -69,7 +61,6 @@ resetBtn.on('click', function(){
 
 var slideNow = 1;
 var slideCount = $('.slider__wrapper').children().length;
-var slideTime = 1000;
 
 
 $('.slider__btn_next').click(nextSlide);
@@ -175,7 +166,21 @@ $('.main-menu__burger').click(function(event){
     $('.main-menu__list').toggleClass('main-menu__list_active');
 })
 
-// больше отзывов на странице отзывов о патентном поверенном, пагинация
+// больше отзывов на странице отзывов о патентном поверенном - пагинация
+
+$(function(){
+    $('#feedback-pagination').buzinaPagination({
+    itemsOnPage: 4,
+    prevnext: false,
+    });
+});
+
+$('.main__content-container').on('click', ('#feedback-pagination--pager .page-link'), function(){
+    $('#feedback-pagination--pager .page-link').removeClass('page-link__active');
+    $(this).addClass('page-link__active');
+
+})
+
 
 
 });
