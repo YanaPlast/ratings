@@ -166,21 +166,25 @@ $('.main-menu__burger').click(function(event){
     $('.main-menu__list').toggleClass('main-menu__list_active');
 })
 
-// больше отзывов на странице отзывов о патентном поверенном - пагинация
+// пагинация отзывов на странице отзывов о патентном поверенном
 
 $(function(){
     $('#feedback-pagination').buzinaPagination({
     itemsOnPage: 4,
     prevnext: false,
     });
+    $('.pagination .page-item:first-child .page-link').addClass('page-link__active');
 });
+
 
 $('.main__content-container').on('click', ('#feedback-pagination--pager .page-link'), function(){
     $('#feedback-pagination--pager .page-link').removeClass('page-link__active');
     $(this).addClass('page-link__active');
 
+    $('html, body').animate({
+        scrollTop: $('.main__header').offset().top
+    }, 600);
 })
-
 
 
 });
