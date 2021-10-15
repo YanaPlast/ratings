@@ -89,7 +89,7 @@
                             <div class="card__row">
                                 <div class="card__title">Регион</div>
                                 <div class="card__text card__text_for-images card__text_shadowed">
-                                    <p>Екатеринбург, Свердловская область</p>  
+                                    <a><span class="link">Екатеринбург,</span> <span class="link nowrap">Свердловская область</span></a>  
                                     <img src="images/attorney-page/flag_ekb.jpg" alt="" height="100">                           
                                 </div>                                   
                             </div>
@@ -183,6 +183,16 @@
                             </div>                           
                         </div> 
                                
+                        <div data-da=".attorney__right,979,0"  data-da=".attorney__left,980,last" class="attorney__card card_bordered card_margined feedback"> 
+                            <div class="feedback__left">
+                                <div class="block-title feedback__title">О ПП <span class="nowrap">№{-номер ПП}</span> нет отзывов</div>
+                                <div class="feedback__propose">вы можете написать первый отзыв об этом поверенном</div>                                    
+                            </div>
+                            <div class="feedback__right">
+                                <a href="" class="button button_white feedback__btn">Посмотреть</a>
+                            </div>                           
+                        </div> 
+
                         <div class="spacer attorney__spacer">
                             <div class="spacer__title">Отзывы о патентном поверенном <span class="nowrap">№ {XXXX}</span></div>
                         </div>
@@ -388,7 +398,30 @@
 
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+         <div class="content-container">
+            <div class="footer__wrapper">
+
+                <div class="footer__logo logo">
+                    <div class="logo__picture">
+                        <img src="images/logo_160x50.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="footer__info">
+                    <p class="footer__title">Рейтинг ПП - независимый сервис оценки и сравнения</p>
+                    <p class="footer__privacy">Находясь на сайте, вы принимаете <a class="link link_privacy">политику конфиденциальности.</a></p>
+                    <p class="footer__privacy">© Рейтинг ПП, 2021.</p>
+                </div>
+
+                <div class="footer__contacts contacts">
+                    <p class="contacts__text">Ваши вопросы и предложения пишите на</p>
+                    <a href="" class="contacts__mail">mail@mail.ru</a>
+                </div>
+
+            </div>
+         </div>
+    </footer>
 
 
     <script src="scripts/jquery.min.js"></script>
@@ -398,7 +431,7 @@
     <script src="scripts/starrating.js"></script>
     <script src="scripts/fancybox.min.js"></script>
     <script src="scripts/dynamicAdapt_dev.js"></script>
-    <script src="scripts/custom.js"></script>
+    <script src="scripts/attorneys.js"></script>
     
    
 

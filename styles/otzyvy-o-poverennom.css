@@ -713,6 +713,9 @@
   .otzyvy__top {
     padding-bottom: 20px;
   }
+  .otzyvy__info_align-center {
+    text-align: center;
+  }
 
   .raitings {
     text-align: center;

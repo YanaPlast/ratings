@@ -270,7 +270,7 @@
   color: #444444;
 }
 .card_bordered {
-  border: 1px solid #000000;
+  border: 1px solid #222222;
   padding: 20px;
   background-color: #ffffff;
 }
@@ -315,14 +315,14 @@
   padding: 10px;
   width: 100%;
   text-align: center;
-  border-top: 5px solid #000000;
+  border-top: 5px solid #222222;
 }
 .spacer__title {
   color: #ffffff;
   font-size: 19px;
   text-transform: capitalize;
   font-weight: 500;
-  color: #000000;
+  color: #222222;
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 700;
   position: relative;
@@ -456,6 +456,11 @@
 .feedback__btn:hover {
   background-color: #ffffff;
   color: #0e3a5d;
+}
+.feedback__propose {
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .rating__explain {
