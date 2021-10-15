@@ -103,6 +103,76 @@
   cursor: pointer;
 }
 
+.footer {
+  background-color: #222222;
+  padding: 30px 0 40px;
+  font-size: 15px;
+  color: #ffffff;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer__logo {
+  flex: 160px 0 0;
+}
+.footer__title {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.footer__privacy {
+  color: #8d8d8d;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.footer__info {
+  padding-left: 20px;
+  flex: 300px 0 1;
+  font-weight: 300;
+}
+.footer__contacts {
+  flex: auto 1 1;
+  text-align: right;
+}
+
+.link.link_privacy {
+  color: #8d8d8d;
+  font-weight: 300;
+}
+
+.contacts__mail {
+  font-size: 19px;
+  color: #ff8383;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .footer__wrapper {
+    flex-wrap: wrap;
+  }
+  .footer__info {
+    flex: 60% 1 1;
+    padding-left: 5px;
+  }
+  .footer__logo {
+    flex: 170px 0 0;
+  }
+  .footer__contacts {
+    flex: 100% 1 1;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .contacts__mail, .contacts__text {
+    display: inline-block;
+  }
+}
+@media (max-width: 479px) {
+  .footer__logo {
+    flex: 100% 1 1;
+  }
+}
 .attorney {
   padding-top: 30px;
   padding-bottom: 60px;

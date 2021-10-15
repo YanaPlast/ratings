@@ -1,5 +1,4 @@
 .main-menu {
-    // height: 70px;
     padding: 15px 0;
     border-bottom: 10px solid $accentColor;
     background-color: #ffffff;
@@ -149,7 +148,7 @@
                 height: 3px;
                 left: 10px;
                 background-color: $accentColor;
-                transition: 0.3s ease-in-out;
+                transition: 0.2s ease-in-out;
             }
             &:before {
                 top: 10px;
@@ -201,9 +200,10 @@
             padding-left: 0;
             padding-right: 0;
             box-shadow: 0 5px 10px -2px rgba(48, 71, 88, 0.25);
+            transition: 0.6s ease-in-out;
             &_active {
                 top: 50px;
-                transition: 0.3s ease-in-out;
+                transition: 0.6s ease-in-out;
             }
         }
         &__item {
