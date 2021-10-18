@@ -152,7 +152,7 @@
     flex-wrap: wrap;
   }
   .footer__info {
-    flex: 60% 1 1;
+    flex: 50% 1 1;
     padding-left: 5px;
   }
   .footer__logo {
@@ -170,7 +170,7 @@
 }
 @media (max-width: 479px) {
   .footer__logo {
-    flex: 100% 1 1;
+    margin-bottom: 20px;
   }
 }
 .attorney {

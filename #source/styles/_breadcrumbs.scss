@@ -32,6 +32,9 @@
             }
         }
     }
+    &__item:last-child .breadcrumbs__link:after {
+        content: '';
+    }
 }
 
 @media (max-width: 767px) {
