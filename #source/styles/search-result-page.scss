@@ -34,19 +34,16 @@ p {
     background-size: 12% auto;
 }
 .search-result {
-    color: $fontColor;
-    line-height: 1.1;
-    font-family: inherit;
     &__title {
         font-size: 24px;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
     &__header {
         padding: 0 0 0 0;
     }
     &__subtitle {
         padding-bottom: 40px;
-        font-size: 18px;
+        font-size: 16px;
         border-bottom: 2px solid #f2f2f2;
     }
 }

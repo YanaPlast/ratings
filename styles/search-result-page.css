@@ -327,21 +327,16 @@ p {
   background-size: 12% auto;
 }
 
-.search-result {
-  color: #444444;
-  line-height: 1.1;
-  font-family: inherit;
-}
 .search-result__title {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .search-result__header {
   padding: 0 0 0 0;
 }
 .search-result__subtitle {
   padding-bottom: 40px;
-  font-size: 18px;
+  font-size: 16px;
   border-bottom: 2px solid #f2f2f2;
 }
 

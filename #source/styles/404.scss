@@ -1,0 +1,154 @@
+@import 'variables';
+@import 'footer'; // файл footer.css не будет создан 
+
+body,
+html {
+    min-height: 100%;
+}
+.not-found {
+    &__wrapper {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    &__main {
+        flex: auto 1 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 40px;
+    }
+    &__title {
+        width: 100%;
+        font-family: "Raleway", "Arial", sans-serif;
+        color: #444444;
+        font-size: 35px;
+        line-height: 1.1;
+        font-weight: 500;
+        text-align: center;
+        padding: 0;
+        margin: 0 0 15px 0;
+    }
+    &__descrip {
+        text-align: center;
+    }
+}
+.content-container {
+    text-align: center;
+    flex: auto 1 1;
+}
+.img-wrapper {
+    margin: 30px 0 40px 0;
+}
+.img-wrapper img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.footer {
+    width: 100%;
+    &__wrapper {
+        justify-content: flex-start;
+        padding: 0 40px;
+    }
+    &__info {
+        text-align: left;
+        padding-left: 10px;
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 14px;
+    }
+    &__privacy {
+        margin-bottom: 0;
+    }
+    &__logo {
+        flex: 120px 0 1;
+        margin-bottom: 0;
+    }
+}
+.logo {
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.button_small {
+    padding: 10px 20px;
+    margin: 45px 0 80px 0;
+    &:hover {
+        background-color: #222222;
+        border: 2px solid #222222;
+    }
+}
+// ==================================================== Adaptive ====================================
+
+@media (max-width: 979px)  {
+    .header {
+        background-color: #f0f1f3;
+        &__main {
+            background-size: 100%;
+        }
+        &__title {
+            margin-top: 20px;
+            font-size: 30px;
+        }
+        &__subtitle {
+            font-size: 24px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        } 
+        &__wrapper {
+            width: 100%;     
+        }
+        &__article {
+            &:before {
+                opacity: 1;
+            }
+            &_last {
+                width: 50%;
+            }
+        }
+    }
+}
+@media (max-width: 767.98px) {
+    .not-found {
+        &__main {
+            padding: 0 20px;
+        }
+    }
+    .footer {
+        &__wrapper {
+            padding: 0 20px;
+        }
+    }
+
+}
+
+@media (max-width: 479px) {
+    .not-found {
+        &__title {
+            font-size: 24px;
+        }
+    }
+    .button {
+        &_small {
+            margin-bottom: 40px;
+        }
+    }
+    .footer {
+        padding: 20px 0;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__logo {
+            flex: 40px 1 1;
+            margin: 0 auto 10px auto;
+        }
+        &__info {
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+}
