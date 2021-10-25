@@ -33,10 +33,26 @@
 </head>
 
 <body>
-    <header class="header">  
+    <div class="location__page-wrapper">
+
+        <header class="header">  
             <div class="main-menu">
                 <div class="content-container">
                     <div class="main-menu__wrapper">
+                    <div class="main-menu__burger-adaptive">
+	                        <span></span>
+	                        <span></span>
+	                        <span></span>
+                        </div>
+                        <div class="main-menu__adaptive">
+	                        <a class="close-btn" href="#close">&times;</a>
+		                    <ul class="main-menu__adaptive-list">
+			                    <li class="main-menu__adaptive-link"><a href="#">Главная</a></li>
+			                    <li class="main-menu__adaptive-link"><a href="#">О нас</a></li>
+			                    <li class="main-menu__adaptive-link"><a href="#">Реестр</a></li>
+			                    <li class="main-menu__adaptive-link"><a href="#">Справка</a></li>
+		                    </ul>
+	                    </div>
                         <div class="main-menu__logo logo">
                             <div class="logo__picture">
                                 <img src="images/logo_160x50.jpg" alt="">
@@ -57,31 +73,36 @@
                                 <button class="searching__btn" type="submit"></button>
                             </form>
                         </div>
-                        <div class="main-menu__burger">
-                            <span></span>
-                        </div>
                     </div>
                 </div> <!--end of content-container inside main-menu -->
             </div> <!--end of main-menu-->
-    </header>
+        </header>
 
-    <main>
+        <main>
         <section class="location__header">
-            <div class="content-container">
+            <div class="content-container location__content-container">
                 <ul class="breadcrumbs location__breadcrumbs">
                     <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">главная</a></li>
                     <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">реестр</a></li>
                     <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Патентные поверенные Екатеринбурга</a></li>
                 </ul>
-                <h1 class="location__title title">Патентные поверенные города Екатеринбург</h1>
-                <p class="location__subtitle subtitle">информация о патентных поверенных</p>
+                <div class="location__flag">
+                    <picture>
+	                    <source srcset="images/geo-attorneys/flag_ekb.webp" type="image/webp">
+	                    <img src="images/geo-attorneys/flag_ekb.jpg" alt="Екатеринбург">
+                    </picture>
+                </div>
+                <div class="location__city">
+                    <h1 class="location__title title">Патентные поверенные города Екатеринбург</h1>
+                    <p class="location__subtitle subtitle">информация о патентных поверенных</p>
+                </div>
             </div>
         </section>
 
         <section class="location__list list">
 
             <div class="content-container">
-                <div class="list__row">
+                <div class="list__row" id="list-pagination">
 
                     <div class="list__card attorney-card">
                         <p class="attorney-card__row attorney-card__rating">
@@ -108,7 +129,7 @@
                     </div>
 
                     <div class="list__card attorney-card">
-                        <p class="attorney-card__row attorney-card__name">Стахровская Татьяна Евгеньевна</p>
+                        <p class="attorney-card__row attorney-card__name">Тиссен Татьяна Евгеньевна</p>
                         <p class="attorney-card__row attorney-card__rating">
                             <div class="rating attorney__rating">
                                 <div class="rating__body">
@@ -132,7 +153,7 @@
                     </div>
 
                     <div class="list__card attorney-card">
-                        <p class="attorney-card__row attorney-card__name">Янц Виолетта Корнелиевна</p>
+                        <p class="attorney-card__row attorney-card__name">Шахова Виолетта Корнелиевна</p>
                         <p class="attorney-card__row attorney-card__rating">
                             <div class="rating attorney__rating">
                                 <div class="rating__body">
@@ -204,7 +225,7 @@
                     </div>
                     
                     <div class="list__card attorney-card">
-                        <p class="attorney-card__row attorney-card__name">Янц Виолетта Корнелиевна</p>
+                        <p class="attorney-card__row attorney-card__name">Дедкова Виолетта Корнелиевна</p>
                         <p class="attorney-card__row attorney-card__rating">
                             <div class="rating attorney__rating">
                                 <div class="rating__body">
@@ -228,7 +249,7 @@
                     </div>
 
                     <div class="list__card attorney-card">
-                        <p class="attorney-card__row attorney-card__name">Стахровская Татьяна Евгеньевна</p>
+                        <p class="attorney-card__row attorney-card__name">Левина Татьяна Евгеньевна</p>
                         <p class="attorney-card__row attorney-card__rating">
                             <div class="rating attorney__rating">
                                 <div class="rating__body">
@@ -252,7 +273,7 @@
                     </div>
 
                     <div class="list__card attorney-card">
-                        <p class="attorney-card__row attorney-card__name">Стахровская Татьяна Евгеньевна</p>
+                        <p class="attorney-card__row attorney-card__name">Величко Татьяна Евгеньевна</p>
                         <p class="attorney-card__row attorney-card__rating">
                             <div class="rating attorney__rating">
                                 <div class="rating__body">
@@ -276,7 +297,7 @@
                     </div>
                     
                     <div class="list__card attorney-card">
-                        <p class="attorney-card__row attorney-card__name">Янц Виолетта Корнелиевна</p>
+                        <p class="attorney-card__row attorney-card__name">Егоров Виолетта Корнелиевна</p>
                         <p class="attorney-card__row attorney-card__rating">
                             <div class="rating attorney__rating">
                                 <div class="rating__body">
@@ -299,14 +320,15 @@
                         <p class="attorney-card__row attorney-card__experience"><span>Дата регистрации:</span> 30.11.2004</p>
                     </div>
                 </div> <!-- end of list__row-->
+
             </div> <!-- end of content-container-->
 
         </section>
 
 
-    </main>
+        </main>
 
-    <footer class="footer">
+        <footer class="footer">
          <div class="content-container">
             <div class="footer__wrapper">
 
@@ -329,13 +351,15 @@
 
             </div>
          </div>
-    </footer>
+        </footer>
+
+    </div> <!-- end of location__page-wrapper-->
 
 
     <script src="scripts/jquery.min.js"></script>
-    <script src="scripts/search-result-page.js"></script>
     <script src="scripts/starrating.js"></script>
-    
+    <script src="scripts/buzina-pagination.min.js"></script>
+    <script src="scripts/geo-attorneys.js"></script>
    
 
 </body>

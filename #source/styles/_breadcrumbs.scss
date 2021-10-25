@@ -5,11 +5,12 @@
     justify-content: flex-start;
     align-items: center;
     padding: 30px 0;
+    flex-wrap: wrap;
     &__link {
         font-size: 13px;
         color: #757575;
         position: relative;
-
+        word-break: break-all;
         &:hover {
             text-decoration: underline;
         }
@@ -32,6 +33,9 @@
             }
         }
     }
+    &__item:last-child .breadcrumbs__link {
+        color: #615353;
+    }
     &__item:last-child .breadcrumbs__link:after {
         content: '';
     }
@@ -46,7 +50,8 @@
 @media (max-width: 550px) {
     .breadcrumbs {
         &__link {
-            color: $fontColor;
+            // color: $fontColor;
+            font-size: 12px;
             &:after {
                 width: 10px;
             }

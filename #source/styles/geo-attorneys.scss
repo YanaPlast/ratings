@@ -2,6 +2,7 @@
 @import 'raiting';
 @import 'breadcrumbs';
 @import 'footer';
+@import 'main-menu-v2';
 
 *::before,
 *::after {
@@ -27,12 +28,52 @@ p {
 }
 
 .location {
+    &__page-wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        background-color: #f2f2f2;
+    }
+    &__content-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    &__title, 
+    &__subtitle {
+        line-height: 1.2;
+    }
+    &__title {
+        margin-bottom: 10px;
+    }
+    main {
+        flex: auto 1 1;
+    }
     &__header {
         padding-bottom: 30px;
+        background-color: #ffffff;
+    }
+    &__breadcrumbs {
+        flex: 100%;
+    }
+    &__flag {
+        flex: 200px 0 1;
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+    &__flag img {
+        max-width: 100%;
+    }
+    &__city {
+        flex: 60% 1 1;
+        padding-left: 30px;
     }
     &__list {
         padding: 40px 0;
-        background-color: #f2f2f2;
     }
 }
 .list {
@@ -76,4 +117,119 @@ p {
 }
 .rating {
     margin-bottom: 10px;
+}
+//  пагинация отзывов  buzina-pagination
+
+.content-page {
+    display: none;
+}
+
+.content-page-active {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+}
+
+#feedback-pagination--pager {
+    margin-top: 15px;
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.page-item {
+    margin-right: 5px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.page-link {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    font-size: 14px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #1d7d7d;
+    }
+
+    &__active {
+        background-color: $accentColor;
+        color: #ffffff;
+    }
+}
+
+.page-item:hover .page-link {
+    color: #ffffff !important;
+}
+
+// ================= media =================
+
+@media (max-width: 979.98px) {
+    .list {
+        &__card {
+            flex-basis: 48%;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .location {
+        &__title {
+            font-size: 25px;
+        }
+        &__subtitle {
+            font-size: 16px;
+        }
+        &__flag {
+            flex-basis: 120px;
+            margin-bottom: 20px;
+        }
+        &__flag img {
+            max-height: 120px;
+            width: auto;
+        }
+    }
+    .list {
+        &__card {
+            flex-basis: 100%;
+        }
+    }
+    .attorney-card {
+        padding: 10px 15px;
+        &__row {
+            font-size: 14px;
+        }
+        &__name {
+            font-size: 16px;
+        }
+    }
+    .rating__value {
+        font-size: 50%;
+    }
+}
+@media (max-width: 480px) {
+    .location {
+        &__content-container {
+            flex-direction: column;
+        }
+        &__flag {
+            flex: 100px 1 1;
+        }
+        &__city {
+            padding-left: 0;
+        }
+    }
 }

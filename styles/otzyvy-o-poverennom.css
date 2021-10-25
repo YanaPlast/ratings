@@ -188,11 +188,13 @@
   justify-content: flex-start;
   align-items: center;
   padding: 30px 0;
+  flex-wrap: wrap;
 }
 .breadcrumbs__link {
   font-size: 13px;
   color: #757575;
   position: relative;
+  word-break: break-all;
 }
 .breadcrumbs__link:hover {
   text-decoration: underline;
@@ -210,6 +212,9 @@
 .breadcrumbs__link_last:hover {
   text-decoration: none;
 }
+.breadcrumbs__item:last-child .breadcrumbs__link {
+  color: #615353;
+}
 .breadcrumbs__item:last-child .breadcrumbs__link:after {
   content: "";
 }
@@ -221,7 +226,7 @@
 }
 @media (max-width: 550px) {
   .breadcrumbs__link {
-    color: #444444;
+    font-size: 12px;
   }
   .breadcrumbs__link:after {
     width: 10px;

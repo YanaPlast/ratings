@@ -606,6 +606,9 @@
                 background-size: no-repeat;
             }
         }
+        &__info {
+            display: none;
+        }
     }
 }
 @media (max-width: 650px) {

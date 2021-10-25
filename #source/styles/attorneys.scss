@@ -45,10 +45,8 @@
     }
 
     &__spacer {
-        margin: 25px 0 0;
-        -webkit-box-shadow: 0 5px 10px -2px rgba(48, 71, 88, .25);
-        -moz-box-shadow: 0 5px 10px -2px rgba(48, 71, 88, .25);
-        box-shadow: 0 5px 10px -2px rgba(48, 71, 88, .25);
+        margin-bottom: 20px;
+        margin-top: -20px;
     }
 
     &__image-wrapper {
@@ -429,9 +427,9 @@
 }
 
 .feedback-block {
-    padding: 20px;
+    margin-top: 20px;
     &__item {
-        padding-bottom: 15px;
+        padding: 0 20px 15px 20px;
         border-bottom: 1px solid #c0c0c0;
         margin-bottom: 20px;
         &:last-child {
