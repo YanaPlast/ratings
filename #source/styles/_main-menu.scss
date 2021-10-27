@@ -1,3 +1,5 @@
+@import 'raiting';
+
 .main-menu {
     padding: 15px 0;
     border-bottom: 10px solid $accentColor;
@@ -14,6 +16,8 @@
         display: none;
     }
    &__list {
+       position: relative;
+       z-index: 50;
         flex: 0 1 auto;
         display: flex;
         justify-content: center;
@@ -25,6 +29,7 @@
        margin-right: 20px;
        font-weight: 400;
        position: relative;
+       cursor: pointer;
        &:after {
            content: '';
            position: absolute;
@@ -68,6 +73,7 @@
     }
 }
 .searching {
+    position: relative;
     &__form {
         position: relative;
         width: 250px;
@@ -118,6 +124,98 @@
     ::-moz-placeholder          {opacity:0.7; color: $accentColor;font-family: $mainFont; font-weight: 300;}/* Firefox 19+ */
     :-moz-placeholder           {opacity:0.7; color: $accentColor;font-family: $mainFont; font-weight: 300;}/* Firefox 18- */
     :-ms-input-placeholder      {opacity:0.7; color: $accentColor;font-family: $mainFont; font-weight: 300;}
+}
+
+// предварительные результаты поиска
+
+.search-results {
+    width: 600px;
+    max-height: 500px;
+    overflow: auto;
+    position: absolute;
+    right: 0;
+    // top: 35px;
+    top: 55px;
+    opacity: 0;
+    z-index: 15;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+    box-shadow: 0px 0px 14px 0px rgba(30, 88, 133, 0.32);
+    transition: all 0.2s ease-in-out;
+    &.active {
+        top: 35px;
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+    }
+    &__inner {
+        width: 100%;
+        padding: 10px 20px 10px;
+        background: #fff;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    &__columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item {
+        flex: 49% 0 0;
+        border-radius: 5px;
+        background-color: #ffffff;
+        border: 1px solid #f1f1f1;
+        margin-bottom: 10px;
+        padding: 5px 8px;
+        text-align: left;
+        -webkit-box-shadow: 0px 0px 3px 0px rgba(34, 60, 80, 0.08);
+        -moz-box-shadow: 0px 0px 3px 0px rgba(34, 60, 80, 0.08);
+        box-shadow: 0px 0px 3px 0px rgba(34, 60, 80, 0.08);
+        cursor: pointer;
+        &:hover {
+            -webkit-box-shadow: 0px 0px 13px 2px rgba(255, 197, 197, 0.51);
+            -moz-box-shadow: 0px 0px 13px 2px rgba(255, 197, 197, 0.51);
+            box-shadow: 0px 0px 13px 2px rgba(255, 197, 197, 0.51);
+        }
+    }
+    &__name {
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    &__link {
+        color: $linkColor;
+        font-weight: 500;
+        margin-top: 5px;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: #0f4b4b;
+            transform: translateX(1px);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    &__more-link {
+        text-align: right;
+        margin-top: 10px;
+        color: $linkColor;
+        font-weight: 500;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: #0f4b4b;
+            transform: translateX(1px);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    .rating {
+        margin-bottom: 10px;
+    }
+    .rating__value {
+        font-size: 45%;
+        line-height: 1.3;
+    }
 }
 
 /* ===================== Adaptive ======================================================= */
@@ -236,9 +334,7 @@
         padding: 20px 0;
         height: auto;
         &__wrapper {
-            // flex-wrap: wrap;
             align-items: center;
-            // justify-content: flex-start;
         }
         &__searching {
             flex: auto;
@@ -262,6 +358,12 @@
         }
         &__text {
             display: none;
+        }
+    }
+    .search-results {
+        width: 100%;
+        &__item {
+            flex-basis: 100%;
         }
     }
 }

@@ -267,6 +267,9 @@
   margin-right: 20px;
   font-weight: 400;
   position: relative;
+  cursor: pointer;
+  line-height: 1.6;
+  cursor: pointer;
 }
 .main-menu__item:after {
   content: "";

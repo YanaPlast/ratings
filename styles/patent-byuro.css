@@ -178,10 +178,16 @@
   padding-bottom: 60px;
   background-color: #f9f9f9;
 }
+.attorney__title-block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-bottom: 25px;
+}
 .attorney__title {
   padding-left: 20px;
   position: relative;
-  margin-bottom: 20px;
+  word-break: break-all;
 }
 .attorney__title:before {
   content: "";
@@ -191,6 +197,17 @@
   background-color: #d13030;
   left: 0;
   top: 0;
+}
+.attorney__logo {
+  flex: 200px 1 1;
+  margin-right: 30px;
+}
+.attorney__logo .img-container {
+  width: 100%;
+}
+.attorney__logo .img-container img {
+  width: 100%;
+  height: auto;
 }
 .attorney__subtitle {
   display: block;
@@ -249,7 +266,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  padding: 5px 20px 5px 20px;
+  padding: 5px 20px 10px 20px;
   background-color: #ffffff;
 }
 .card__row_top-margin {
@@ -303,7 +320,8 @@
   text-align: left;
   padding-left: 15px;
   font-family: "Rubik", "Arial", sans-serif;
-  border-left: 1px solid #000000;
+  border-left: 1px solid #222222;
+  line-height: 1.15;
 }
 .card__text_equival {
   flex-basis: 55%;
@@ -508,15 +526,25 @@
 
 .feedback {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: auto;
   background-color: #0e3a5d;
   border: none;
   box-shadow: 0 5px 10px -2px rgba(48, 71, 88, 0.25);
 }
 .feedback__title {
   color: #ffffff;
+  flex: 100% 1 1;
+}
+.feedback__rating {
+  flex: 100% 1 1;
+}
+.feedback__right {
+  flex: 100% 1 1;
+  text-align: right;
 }
 .feedback__btn {
   background-color: transparent;
@@ -667,6 +695,20 @@
     font-size: 30px;
     line-height: 1.2;
   }
+  .attorney__logo {
+    flex-basis: 100px;
+  }
+  .attorney__title-block {
+    flex-direction: column;
+  }
+  .attorney__title-block .img-container {
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  .attorney__title-block .img-container img {
+    max-height: 100%;
+    width: auto;
+  }
 
   .card__graph {
     flex-direction: column;
@@ -716,6 +758,9 @@
   }
 }
 @media (max-width: 450px) {
+  .attorney__title {
+    font-size: 25px;
+  }
   .attorney__rating {
     flex-wrap: wrap;
     justify-content: center;

@@ -7,10 +7,16 @@
     padding-top: 30px;
     padding-bottom: 60px;
     background-color: #f9f9f9;
+    &__title-block {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin-bottom: 25px;
+    }
     &__title {
         padding-left: 20px;
         position: relative;
-        margin-bottom: 20px;
+        word-break: break-all;
         &:before {
             content: '';
             position: absolute;
@@ -19,6 +25,17 @@
             background-color: $accentColor;
             left: 0;
             top: 0;
+        }
+    }
+    &__logo {
+        flex: 200px 1 1;
+        margin-right: 30px;
+        .img-container {
+            width: 100%;
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
     }
     &__subtitle {
@@ -89,8 +106,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: stretch;
-        padding: 5px 20px 5px 20px;
-        // border: 1px solid #ffffff;
+        padding: 5px 20px 10px 20px;
         background-color: #ffffff;
 
         &_top-margin {
@@ -149,7 +165,8 @@
         text-align: left;
         padding-left: 15px;
         font-family: $mainFont;
-        border-left: 1px solid #000000;
+        border-left: 1px solid #222222;
+        line-height: 1.15;
         &_equival {
             flex-basis: 55%;
             line-height: 1.2;
@@ -161,28 +178,6 @@
             flex-direction: column;
             align-items: flex-start;
             position: relative;
-            // &:after {
-            //     content: attr(data-reason);
-            //     display: inline-block;
-            //     position: absolute;
-            //     top: -13px;
-            //     left: 70px;
-            //     padding: 10px;
-            //     border: 1px solid #e2e9f1;
-            //     background-color: #ffffff;
-            //     border-radius: 10px;
-            //     -webkit-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
-            //     -moz-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
-            //     box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.19);
-            //     opacity: 0;
-            //     max-width: 550px;
-            //     font-size: 14px;
-            // }
-            // &:hover:after {
-            //     opacity: 1;
-            //     transition: all 0.4s ease; 
-            // }
-
             img {
                 margin-right: 10px;
                 margin-bottom: 5px;              
@@ -272,17 +267,6 @@
         font-family: $accentFont;
         font-weight: 700;
         position: relative;
-        // &:after {
-        //     content: '';
-        //     width: 20%;
-        //     height: 0.5px;
-        //     position: absolute;
-        //     bottom: -10px;
-        //     left: 50%;
-        //     transform: translateX(-50%);
-        //     background-color: $baseColor;
-
-        // }
     }
 }
 .perform {
@@ -395,14 +379,24 @@
 
 .feedback {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: auto;
     background-color: #0e3a5d;
     border: none;
     box-shadow: 0 5px 10px -2px rgba(48, 71, 88, 0.25);
     &__title {
         color: #ffffff;
+        flex: 100% 1 1;
+    }
+    &__rating {
+        flex: 100% 1 1;
+    }
+    &__right {
+        flex: 100% 1 1;
+        text-align: right;
     }
     &__btn {
         background-color: transparent;
@@ -580,6 +574,20 @@
             font-size: 30px;
             line-height: 1.2;
         }
+        &__logo {
+            flex-basis: 100px;
+        }
+        &__title-block {
+            flex-direction: column;
+            .img-container {
+                height: 100px;
+                margin-bottom: 20px;
+                img {
+                    max-height: 100%;
+                    width: auto;
+                }
+            }
+        }
     }
     .card {
         &__graph {
@@ -634,6 +642,9 @@
 }
 @media (max-width: 450px) {
     .attorney {
+        &__title {
+            font-size: 25px;
+        }
         &__rating {
             flex-wrap: wrap;
             justify-content: center;

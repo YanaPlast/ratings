@@ -26,7 +26,7 @@
     <link rel="dns-prefetch" href="//yastatic.net/">
     <link rel="dns-prefetch" href="//google-analytics.com/">
     <link rel="stylesheet" href="styles/critical.css">
-    <link rel="stylesheet" href="styles/attorneys.css">
+    <link rel="stylesheet" href="styles/patent-byuro.css">
     <!--[if lt IE 9]>
     <script src="scripts/html5.js"></script> <![endif]-->
 
@@ -251,53 +251,74 @@
 
         <div class="attorney">
             <div class="content-container">
-                <h1 class="title attorney__title">
-                    <span class="attorney__subtitle">патентный поверенный № XXX</span>
-                    Иванова Иванна Ивановна
-                </h1>
+                <div class="attorney__title-block">
+                    <div class="attorney__logo">
+                        <div class="img-container">
+                            <img src="images/attorney-page/company-logo.png" alt="логотип компании">
+                        </div>
+                    </div>
+                    <h1 class="title attorney__title">
+                        <span class="attorney__subtitle">патентное бюро</span>
+                        РегистраторзнаковРФ
+                    </h1>
+                </div>
                 <div class="attorney__columns columns">
 
                     <div class="attorney__left">
 
                         <div class="card">
                             <div class="card__row">
-                                <div class="card__title">ФИО</div>
-                                <div class="card__text">Иванова Иванна Ивановна</div> 
+                                <div class="card__title">Наименование</div>
+                                <div class="card__text">Общество с ограниченной ответственностью РегистраторЗнаковРФ</div> 
                             </div>
                             <div class="card__row">
-                                <div class="card__title">№</div>
-                                <div class="card__text">1245</div> 
+                                <div class="card__title">ИНН</div>
+                                <div class="card__text">88888888888</div> 
                             </div>
                             <div class="card__row">
-                                <div class="card__title">Регион</div>
+                                <div class="card__title">КПП</div>
+                                <div class="card__text">88888888888</div> 
+                            </div>
+                            <div class="card__row">
+                                <div class="card__title">ОГРН</div>
+                                <div class="card__text">88888888888</div> 
+                            </div>
+                            <div class="card__row">
+                                <div class="card__title">Юр. адрес</div>
                                 <div class="card__text card__text_for-images card__text_shadowed">
-                                    <a><span class="link">Екатеринбург,</span> <span class="link nowrap">Свердловская область</span></a>  
-                                    <img src="images/attorney-page/flag_ekb.jpg" alt="" height="100">                           
+                                    <a>109456, г. Рязань, Рязанский пр-т, д. 105, корп. 2, эт.1, пом 6, оф. 15</a>                           
                                 </div>                                   
                             </div>
                             <div class="card__row">
-                                <div class="card__title">Зарегистрирован в <a class="link" href="#">реестре патентных поверенных</a></div>
+                                <div class="card__title">Фактический (почтовый) адрес</div>
+                                <div class="card__text card__text_for-images card__text_shadowed">
+                                    <a>109456, г. Москва, Рязанский пр-т, д. 75, корп. 4, эт.6, пом XIII, ком. 8</a>                           
+                                </div>                                   
+                            </div>
+                            <div class="card__row">
+                                <div class="card__title">Патентные поверенные</div>
+                                <div class="card__text card__text_for-images card__text_shadowed">
+                                    <ul>
+                                        <li><a class="link" href="#">Иванова Иванна Ивановна</a></li>
+                                        <li><a class="link" href="#">Комаровская Анна Ивановна</a></li>
+                                        <li><a class="link" href="#">Пчелкин Андрей Иванович</a></li>
+                                    </ul>                   
+                                </div>                                   
+                            </div>
+                            <div class="card__row">
+                                <div class="card__title">Зарегистрирована</div>
                                 <div class="card__text">20.04.15</div> 
                             </div>
                             <div class="card__row">
-                                <div class="card__title">Стаж</div>
-                                <div class="card__text">6 лет</div> 
-                            </div> 
-                            <div class="card__row">
-                                <div class="card__title card__title_red">ИСКЛЮЧЕН:</div>
-                                <div class="card__text card__text_for-images tooltip" data-reason="По решению суда">
-                                    <img src="images/attorney-page/isklyuchen.png" alt="По решению суда"> 
-                                </div> 
-                            </div>
-                            <div class="card__row">
-                                <div class="card__title">Специализация</div>
+                                <div class="card__title">Услуги</div>
                                 <div class="card__text">
                                     <div class="card__list">
-                                        <div class="card__item">Товарные знаки и знаки обслуживания</div>
-                                        <div class="card__item">Наименования мест происхождения товара</div>
-                                        <div class="card__item">Изобретения и полезные модели</div>
+                                        <div class="card__item">Регистрация товарных знаков</div>
+                                        <div class="card__item">Патенты на изобретения</div>
+                                        <div class="card__item">Полезные модели</div>
                                         <div class="card__item">Промышленные образцы</div>
                                         <div class="card__item">Программы для ЭВМ, базы данных, топология интегральных схем</div>
+                                        <div class="card__item">Международная регистрация ТЗ</div>
                                     </div>
                                 </div> 
                             </div>
@@ -340,10 +361,9 @@
                             </div>
                         </div>
 
-                        <div class="attorney__card card_bordered card_margined feedback"> <!-- отзывы-->
-                            <div class="feedback__left">
-                                <div class="block-title feedback__title">Отзывы о ПП <span class="nowrap">№{-номер ПП}</span></div>
-                                <div class="rating attorney__rating">
+                        <div class="attorney__card card_bordered card_margined feedback"> 
+                                <div class="block-title feedback__title">Отзывы о патентном бюро {РегситраторЗнаковРФ Регистратор и партнеры}</div>
+                                <div class="rating attorney__rating feedback__rating">
                                     <div class="rating__body">
                                         <div class="rating__active"></div>
                                         <div class="rating__items">
@@ -357,28 +377,25 @@
                                     <div class="rating__value">4.3</div>
                                     <p class="rating__explain rating__explain_white">на основе 34 отзывов</p>
                                 </div>
-                                    
-                            </div>
-                            <div class="feedback__right">
-                                <a href="" class="button button_white feedback__btn">Посмотреть</a>
-                            </div>                           
+                                <div class="feedback__right">
+                                    <a href="" class="button button_white feedback__btn">Посмотреть</a>
+                                </div>                           
                         </div> 
-
-                        <!-- Если нет отзывов о патентном поверенном
+                      
                                
                         <div class="attorney__card card_bordered card_margined feedback"> 
                             <div class="feedback__left">
-                                <div class="block-title feedback__title">О ПП <span class="nowrap">№{-номер ПП}</span> нет отзывов</div>
+                                <div class="block-title feedback__title">О ПП о патентном поверенном {РегситраторЗнаковРФ Регистратор и партнеры} нет отзывов</div>
                                 <div class="feedback__propose">вы можете написать первый отзыв об этом поверенном</div>                                    
                             </div>
                             <div class="feedback__right">
                                 <a href="" class="button button_white feedback__btn">Написать</a>
                             </div>                           
-                        </div>  -->
+                        </div>  
 
                         <div class="card feedback-block">
                             <div class="spacer attorney__spacer">
-                                <div class="spacer__title">Отзывы о патентном поверенном <span class="nowrap">№ {XXXX}</span></div>
+                                <div class="spacer__title">Отзывы о патентном поверенном {РегситраторЗнаковРФ Регистратор и партнеры}</div>
                             </div>
                             <div class="feedback-block__item">
                                 <div class="feedback-block__date">15.04.21</div>
@@ -450,8 +467,8 @@
 
                         <div class="card_bordered card_margined card_border_blue"> <!-- Это вы?-->
                             <div class="question">
-                                <div class="block-title question__title">Это вы?</div>
-                                <div class="question__text">Зарегистрируйтесь и получите возможность управлять отображением информации о патентном поверенном</div>
+                                <div class="block-title question__title">Это ваша компания?</div>
+                                <div class="question__text">Зарегистрируйтесь и получите возможность управлять отображением информации о патентном бюро</div>
                                 <div class="button-container question__button-container">
                                     <a href="" class="button button_blue">Внести изменения</a>
                                 </div>
@@ -463,7 +480,7 @@
                     <div class="attorney__right" data-da=".attorney__left,992,2">
 
                         <div class="attorney__more more"> <!-- Ссылка ещё отзывы-->
-                            <p class="more__text">Ещё <span class="more__text_big">1539</span> патентных поверенных в независимом рейтинге ХХХ</p>
+                            <p class="more__text">Ещё <span class="more__text_big">1539</span> патентных поверенных и бюро в независимом рейтинге ХХХ</p>
                             <div class="button-container">
                                 <a class="button button_red button_arrowed more__button">Смотреть рейтинг</a>
                             </div>
@@ -471,18 +488,18 @@
 
                         <div class="card card_bordered card_border_red card_margined">
                             <div class="attorney__perform perform">
-                                <div class="perform__title">Личная эффективность <span>*</span></div>
+                                <div class="perform__title">Эффективность патентного бюро<span>*</span> </div>
                                 <div class="perform__status perform__rate perform__rate_pictured">0.6 - средняя</div>
                                 <div class="perfom__text">
-                                    <p class="perform__row">За {стаж} лет работы патентный поверенный зарегистрировал {X} знаков</p>
-                                    <p class="perform__row">{ФИО} регистрирует в среднем {X} знаков в год</p>
-                                    <p class="perform__row">показатель личной эффективности ниже, чем у {X}% поверенных</p>
+                                    <p class="perform__row">За {стаж} лет работы патентное бюро зарегистрировало {X} знаков</p>
+                                    <p class="perform__row">{РегситраторЗнаковРФ Регистратор и партнеры} регистрирует в среднем {X} знаков в год</p>
+                                    <p class="perform__row">показатель эффективности ниже, чем у {X}% бюро</p>
                                     <p class="perform__row perform__rate">Жалоба</p>
                                     <div class="perform__row tooltip" data-reason="Ненадлежащее оформление отношений с клиентами">
                                         <img src="images/attorney-page/zhaloba.png" alt="По решению суда">                                   
                                     </div> 
                                 </div>
-                                <div class="perform__note">* Как рассчитывается личная эффективность?</div>
+                                <a class="perform__note">* Как рассчитывается личная эффективность?</a>
                             </div>                              
                         </div>
 
@@ -531,7 +548,7 @@
                             </div>            
                         </div>
                           
-                        <div class="card card_margined">
+<!--                         <div class="card card_margined">
                             <div class="spacer attorney__spacer">
                                 <div class="spacer__title">Прочая информация</div>
                             </div>
@@ -551,19 +568,19 @@
                                 <div class="card__title  card__title_linewise card__title_equival">ИП</div>
                                 <div class="card__text card__text_linewise card__text_equival">нет</div> 
                             </div>
-                        </div>
+                        </div> -->
 
 
                         <div class="attorney__card card card_bordered card_margined" data-da=".attorney__left,992,last">
                             <div class="attorney__other other">
-                                <div class="other__title">Другие патентные поверенные</div>
+                                <div class="other__title">Другие патентные бюро</div>
                                 <ul class="other__list">
-                                    <li class="other__item"><a class="other__name">Черных Маргарита Иннокентьевна</a></li>
-                                    <li class="other__item"><a class="other__name">Белых Игорь Миронович</a></li>
-                                    <li class="other__item"><a class="other__name">Седых Инесса Леопольдовна</a></li>
-                                    <li class="other__item"><a class="other__name">Черных Маргарита Иннокентьевна</a></li>
-                                    <li class="other__item"><a class="other__name">Белых Игорь Миронович</a></li>
-                                    <li class="other__item"><a class="other__name">Седых Инесса Леопольдовна</a></li>
+                                    <li class="other__item"><a class="other__name">ЗарегистрируйЗнак</a></li>
+                                    <li class="other__item"><a class="other__name">Знаки  у нас</a></li>
+                                    <li class="other__item"><a class="other__name">Знаки 24 для вас</a></li>
+                                    <li class="other__item"><a class="other__name">Сейчас</a></li>
+                                    <li class="other__item"><a class="other__name">Иванов Иван Иванович и сыновья его Иваны</a></li>
+                                    <li class="other__item"><a class="other__name">Юрист Платон Платонов и партнеры</a></li>
                                 </ul>                                   
                             </div>                                                                           
                         </div>                              
