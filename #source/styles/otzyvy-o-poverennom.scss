@@ -65,9 +65,10 @@
         }
     }
     &__title {
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 18px;
         font-weight: 500;
-        margin-top: 10px;
+        margin-top: 15px;
     }
     &__diagram {
         width: 39%;
@@ -204,7 +205,9 @@
         border: 2px solid $accentColor;
     }
 }
-
+.rating {
+    margin-top: 10px;
+}
 .feedback {
     border: 1px solid #000000;
     padding: 20px 30px 30px;
@@ -570,7 +573,7 @@
 
     }
     .rating {
-        margin-top: 10px;
+        margin-top: 20px;
         &_big {
             font-size: 35px;
             padding-left: 0;

@@ -279,7 +279,7 @@
                                                 </div>
                                                 <div class="rating__value">4.3</div>
                                             </div>
-                                            <p class="raitings__title">Рекомендуют {X}% клиентов</p>    
+                                            <p class="raitings__title">{X}% клиентов поставили положительную оценку</p>    
                                         </div>
                                         <div class="raitings__button-container button-container">
                                             <div class="button button_blue leave-feedback-btn">Добавить отзыв</div>
@@ -345,13 +345,13 @@
                             <div class="feedback-form__head">Написать отзыв</div>
                             <form action="#" id="feedbackForm" method="post">
                                 <div class="feedback-form__row">
-                                    <label class="feedback-form__title" for="name-input">Имя *</label>
+                                    <label class="feedback-form__title" for="name-input">Имя <sup>*</sup></label>
                                     <div class="feedback-form__field">
                                         <input class="feedback-form__input" id="name-input" name="name-input" type="text" required placeholder="Введите имя">
                                     </div>
                                 </div>
                                 <div class="feedback-form__row">
-                                    <label class="feedback-form__title" for="feedback-textarea">Отзыв *</label>
+                                    <label class="feedback-form__title" for="feedback-textarea">Отзыв <sup>*</sup></label>
                                     <div class="feedback-form__field">
                                         <textarea class="feedback-form__textarea" id="feedback-textarea" placeholder="Введите текст вашего отзыва" required name="feedback-textarea" rows="5"></textarea>
                                     </div>
@@ -359,18 +359,18 @@
                                 <div class="feedback-form__row">
                                     <label class="feedback-form__title" for="advant-input">Достоинства</label>
                                     <div class="feedback-form__field">
-                                        <textarea class="feedback-form__textarea" id="advant-area" name="advant-area" required placeholder="Достоинства патентного поверенного" rows="2"></textarea>   
+                                        <textarea class="feedback-form__textarea" id="advant-area" name="advant-area" required placeholder="Что понравилось при работе с ПП" rows="2"></textarea>   
                                     </div>
                                 </div>
                                 <div class="feedback-form__row">
                                     <label class="feedback-form__title" for="disadv-input">Недостатки</label>
                                     <div class="feedback-form__field">
-                                        <textarea class="feedback-form__textarea" id="disadv-area" name="disadv-area" required placeholder="Недостатки патентного поверенного" rows="2"></textarea>   
+                                        <textarea class="feedback-form__textarea" id="disadv-area" name="disadv-area" required placeholder="Что не понравилось при работе с ПП" rows="2"></textarea>   
                                     </div>
                                 </div>
                                 <div class="feedback-form__row feedback-form__row_margined">
                                     <div class="feedback-form__title">
-                                        <p>Оценка</p>
+                                        <p>Оценка <sup>*</sup></p>
                                     </div>
                                     <div class="feedback-form__field">
                                         <div class="rating rating_set">
@@ -594,21 +594,17 @@
          <div class="content-container">
             <div class="footer__wrapper">
 
-                <div class="footer__logo logo">
-                    <div class="logo__picture">
+                <div class="footer__logo">
+                    <div class="footer__picture">
                         <img src="images/logo_160x50.jpg" alt="">
                     </div>
+                    <p class="footer__title">Рейтинг ПП - независимый сервис <br> оценки и сравнения</p>
                 </div>
 
-                <div class="footer__info">
-                    <p class="footer__title">Рейтинг ПП - независимый сервис оценки и сравнения</p>
+                <div class="footer__info info">
+                    <p class="info__text">Ваши вопросы и предложения пишите на mail@mail.ru</p>
                     <p class="footer__privacy">Находясь на сайте, вы принимаете <a class="link link_privacy">политику конфиденциальности.</a></p>
                     <p class="footer__privacy">© Рейтинг ПП, 2021.</p>
-                </div>
-
-                <div class="footer__contacts contacts">
-                    <p class="contacts__text">Ваши вопросы и предложения пишите на</p>
-                    <a href="" class="contacts__mail">mail@mail.ru</a>
                 </div>
 
             </div>
@@ -622,6 +618,7 @@
         <script src="scripts/readmore.js"></script>
         <script src="scripts/buzina-pagination.min.js"></script>
         <script src="scripts/otzyvy-o-poverennom.js"></script>
+        <script src="scripts/dropdown.js"></script>
 
         <script type="application/ld+json">     
            { 

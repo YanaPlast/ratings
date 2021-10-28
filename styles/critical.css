@@ -139,6 +139,7 @@
 }
 .logo__picture {
   flex-shrink: 0;
+  max-width: 160px;
 }
 .logo__text {
   font-size: 14px;
@@ -832,6 +833,10 @@ img {
 }
 .box-wrapper_top-margined {
   margin-top: 10px;
+}
+
+sup {
+  font-size: 1.2rem;
 }
 
 /* ===================== Media ======================================================= */

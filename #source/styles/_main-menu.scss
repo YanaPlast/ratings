@@ -64,6 +64,7 @@
     align-items: center;
     &__picture {
         flex-shrink: 0;
+        max-width: 160px;
     }
     &__text {
         font-size: 14px;
