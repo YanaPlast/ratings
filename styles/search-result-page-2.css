@@ -672,13 +672,12 @@ p {
   box-shadow: 0px 0px 8px 0px rgba(99, 124, 143, 0.2);
   max-height: 200px;
   overflow: auto;
-  border-bottom: 1px solid #d9d9d9;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 .dropdown__list-item {
   border: 1px solid #d9d9d9;
-  border-bottom: 0px;
+  border-top: 0px;
 }
 .dropdown__list-item a {
   color: #444444;
@@ -687,11 +686,12 @@ p {
   background: rgba(176, 198, 225, 0.26);
 }
 .dropdown__list-item:first-child {
+  border-top: 1px solid #d9d9d9;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
 .dropdown__list-item:last-child {
-  border-bottom: 0;
+  border-bottom: 1px solid #d9d9d9;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }

@@ -75,6 +75,17 @@
         margin-bottom: 10px;
         align-items: center;
     }
+    &__link {
+        display: block;
+        color: $linkColor;
+        margin: 20px 0 0 auto;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        &:hover {
+            color: #0f3b3b;
+            transition: all 0.2s ease-in-out;
+        }        
+    }
 }
 
 .card {
@@ -251,17 +262,7 @@
         font-family: $accentFont;
         font-weight: 700;
         position: relative;
-        // &:after {
-        //     content: '';
-        //     width: 20%;
-        //     height: 0.5px;
-        //     position: absolute;
-        //     bottom: -10px;
-        //     left: 50%;
-        //     transform: translateX(-50%);
-        //     background-color: $baseColor;
-
-        // }
+        line-height: 1.3;
     }
 }
 .perform {
@@ -307,6 +308,7 @@
                 color: $accentColor;
                 bottom: -7px;
                 left: -20px;
+                pointer-events: none;
             }
         }
     }
@@ -629,7 +631,6 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-        &__spacer,
         &__more {
             margin-top: 15px;
         }
@@ -640,13 +641,13 @@
         }
     }
     .card {
-        padding: 15px;
         &_margined {
             margin-top: 15px;
         }
         &__row {
             flex-direction: column;
-            padding: 0;
+            padding-left: 10px;
+            padding-right: 10px;
         }
         &__title {
             text-align: center;

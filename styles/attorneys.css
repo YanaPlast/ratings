@@ -220,6 +220,18 @@
   margin-bottom: 10px;
   align-items: center;
 }
+.attorney__link {
+  display: block;
+  color: #1d7d7d;
+  margin: 20px 0 0 auto;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+.attorney__link:hover {
+  color: #0f3b3b;
+  transition: all 0.2s ease-in-out;
+}
 
 .card {
   box-shadow: 0 5px 10px -2px rgba(48, 71, 88, 0.25);
@@ -380,6 +392,7 @@
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 700;
   position: relative;
+  line-height: 1.3;
 }
 
 .perform {
@@ -428,6 +441,7 @@
   color: #d13030;
   bottom: -7px;
   left: -20px;
+  pointer-events: none;
 }
 .perform__note {
   font-size: 14px;
@@ -717,7 +731,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  .attorney__spacer, .attorney__more {
+  .attorney__more {
     margin-top: 15px;
   }
 
@@ -725,15 +739,13 @@
     margin-top: 10px;
   }
 
-  .card {
-    padding: 15px;
-  }
   .card_margined {
     margin-top: 15px;
   }
   .card__row {
     flex-direction: column;
-    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .card__title {
     text-align: center;

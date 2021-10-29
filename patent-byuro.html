@@ -285,14 +285,14 @@
                             </div>
                             <div class="card__row">
                                 <div class="card__title">Юр. адрес</div>
-                                <div class="card__text card__text_for-images card__text_shadowed">
-                                    <a>109456, г. Рязань, Рязанский пр-т, д. 105, корп. 2, эт.1, пом 6, оф. 15</a>                           
+                                <div class="card__text card__text_shadowed">
+                                    <p>109456, г. Рязань, Рязанский пр-т, д. 105, корп. 2, эт.1, пом 6, оф. 15</p>                           
                                 </div>                                   
                             </div>
                             <div class="card__row">
                                 <div class="card__title">Фактический (почтовый) адрес</div>
-                                <div class="card__text card__text_for-images card__text_shadowed">
-                                    <a>109456, г. Москва, Рязанский пр-т, д. 75, корп. 4, эт.6, пом XIII, ком. 8</a>                           
+                                <div class="card__text card__text_shadowed">
+                                    <p>109456, г. Москва, Рязанский пр-т, д. 75, корп. 4, эт.6, пом XIII, ком. 8</p>                           
                                 </div>                                   
                             </div>
                             <div class="card__row">
@@ -382,8 +382,9 @@
                                 </div>                           
                         </div> 
                       
-                               
-                        <div class="attorney__card card_bordered card_margined feedback"> 
+                        <!-- Если о патентном бюро нет отзывов -->
+
+                  <!--  <div class="attorney__card card_bordered card_margined feedback"> 
                             <div class="feedback__left">
                                 <div class="block-title feedback__title">О ПП о патентном поверенном {РегситраторЗнаковРФ Регистратор и партнеры} нет отзывов</div>
                                 <div class="feedback__propose">вы можете написать первый отзыв об этом поверенном</div>                                    
@@ -391,7 +392,7 @@
                             <div class="feedback__right">
                                 <a href="" class="button button_white feedback__btn">Написать</a>
                             </div>                           
-                        </div>  
+                        </div>   -->
 
                         <div class="card feedback-block">
                             <div class="spacer attorney__spacer">
@@ -465,6 +466,9 @@
                             </div>
                         </div>
 
+                        <!-- Если нет отзывов о патентном поверенном, то блок ниже закомментировать  -->
+                        <a href="" class="attorney__link">Посмотреть все отзывы</a>
+
                         <div class="card_bordered card_margined card_border_blue"> <!-- Это вы?-->
                             <div class="question">
                                 <div class="block-title question__title">Это ваша компания?</div>
@@ -499,7 +503,7 @@
                                         <img src="images/attorney-page/zhaloba.png" alt="По решению суда">                                   
                                     </div> 
                                 </div>
-                                <a class="perform__note">* Как рассчитывается личная эффективность?</a>
+                                <a class="perform__note tooltip" data-reason="Личная эффективность рассчитывается как отношение количества поданых знаков к количеству знаков, прошедших регистрацию">*Как рассчитывается эффективность бюро?</a>
                             </div>                              
                         </div>
 

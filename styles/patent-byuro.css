@@ -183,6 +183,7 @@
 .attorney__logo {
   flex: 200px 1 1;
   margin-right: 30px;
+  pointer-events: none;
 }
 .attorney__logo .img-container {
   width: 100%;
@@ -236,6 +237,18 @@
   margin-top: 15px;
   margin-bottom: 10px;
   align-items: center;
+}
+.attorney__link {
+  display: block;
+  color: #1d7d7d;
+  margin: 20px 0 0 auto;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+.attorney__link:hover {
+  color: #0f3b3b;
+  transition: all 0.2s ease-in-out;
 }
 
 .card {
@@ -375,6 +388,7 @@
   max-width: 550px;
   font-size: 14px;
   z-index: 999;
+  color: #444444;
 }
 .tooltip:hover:after {
   opacity: 1;
@@ -397,6 +411,7 @@
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 700;
   position: relative;
+  line-height: 1.3;
 }
 
 .perform {
@@ -436,6 +451,7 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  pointer-events: none;
 }
 .perform__rate_pictured:before {
   content: "";
@@ -447,11 +463,17 @@
   left: -20px;
 }
 .perform__note {
+  display: block;
   font-size: 14px;
   line-height: 1;
   padding-top: 10px;
   color: #1d7d7d;
   border-top: 1px solid #e9e9e9;
+  position: relative;
+}
+.perform__note.tooltip:after {
+  line-height: 1.5;
+  top: 45px;
 }
 .perform__wrapper {
   display: flex;
@@ -747,7 +769,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  .attorney__spacer, .attorney__more {
+  .attorney__more {
     margin-top: 15px;
   }
 
@@ -755,22 +777,21 @@
     margin-top: 10px;
   }
 
-  .card {
-    padding: 15px;
-  }
   .card_margined {
     margin-top: 15px;
   }
   .card__row {
     flex-direction: column;
-    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
   }
   .card__title {
     text-align: center;
     width: 100%;
     background-color: #eeeeee;
     padding: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
   .card__text {
     width: 100%;
@@ -779,6 +800,7 @@
     padding-right: 5px;
     text-align: center;
     font-size: 14px;
+    line-height: 1.2;
   }
   .card__text_shadowed {
     align-items: center;

@@ -750,6 +750,10 @@
 }
 
 @media (max-width: 979px) {
+  .main_empty {
+    padding: 40px 0;
+  }
+
   .otzyvy__top {
     background-image: url(../images/otzyvy-page/otzyvy-bg-middle.jpg);
     background-position: top right;
@@ -758,9 +762,6 @@
   }
   .otzyvy__columns {
     flex-direction: column;
-  }
-  .otzyvy__more {
-    margin-top: 10px;
   }
   .otzyvy__info, .otzyvy__more {
     width: 100%;
@@ -864,6 +865,7 @@
 @media (max-width: 479px) {
   .raitings__total {
     width: 100%;
+    margin-top: 0;
   }
   .raitings__diagram {
     width: 70%;
