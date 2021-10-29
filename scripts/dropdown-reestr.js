@@ -63,7 +63,7 @@ document.addEventListener('keydown', function(e){
 
 // фильтрация списка регионов по первым буквам при вводе в инпут
 
-/* var regionInput = document.getElementById("regionInput");
+var regionInput = document.getElementById("regionInput");
 
 function regionFilter() {
     var filter, ul, li, a, i, txtValue;
@@ -81,62 +81,11 @@ function regionFilter() {
     }
 }
 
-regionInput.onkeyup = regionFilter; */
-
-
-// фильтрация списка регионов по первым буквам при вводе в инпут
-
- function regionFilter(item) {
-        var filter, parentOfUl, ul, li, a, i, txtValue;
-        filter = item.value.toUpperCase();
-        console.log(filter);
-        parentOfUl = item.parentNode;
-        console.log(filter);
-        ul = parentOfUl.querySelector('.region-list')
-        li = ul.getElementsByTagName("li");
-
-        for (i = 0; i < li.length; i++) {
-            a = li[i].getElementsByTagName("a")[0];
-            txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().startsWith(filter)) {
-                li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
-        }
-    }
-
-    // навешиваем событие на каждый инпут - фильтровать названия регионов при вводе в инпут
-
-
-/*     bur = document.querySelector('#byuroRegion');
-    bur.addEventListener("keyup", function(){
-         regionFilter(bur);
-    });  
-
-    pov = document.querySelector('#poverenRegion');
-    pov.addEventListener("keyup", function(){
-         regionFilter(pov);
-    });  
-
-    both = document.querySelector('#bothRegion');
-    both.addEventListener("keyup", function(){
-         regionFilter(both);
-    });   */
+regionInput.onkeyup = regionFilter; 
 
 
 
-var regionInputs = document.querySelectorAll('.region-input'),
-    index, regionInput;
 
 
-for (index = 0; index < regionInputs.length; index++) {
-    regionInput = regionInputs[index];
-    regionInput.addEventListener('keyup', regionFilterInsertParam)
-}
-
-function regionFilterInsertParam() {
-    regionFilter(this); 
-}
 
 
